@@ -1,0 +1,32 @@
+2019/11/24 16:37:11 sqlE:/GoProject/goods/models/auth.go:258.9884msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 1
+2019/11/24 16:37:11 sqlE:/GoProject/goods/models/auth.go:456.0005msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 1
+2019/11/24 16:37:11 sqlE:/GoProject/goods/models/auth.go:514.0096msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 1
+2019/11/24 16:37:11 sqlE:/GoProject/goods/models/models.go:646.0105msUPDATE `logins` SET `login` = ?  WHERE `logins`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 0
+2019/11/24 16:37:19 sqlE:/GoProject/goods/models/auth.go:2525.9971msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 12345] 0
+2019/11/24 16:37:47 sqlE:/GoProject/goods/models/auth.go:257.0037msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 654321] 0
+2019/11/24 16:37:59 sqlE:/GoProject/goods/models/auth.go:255.9989msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 1
+2019/11/24 16:37:59 sqlE:/GoProject/goods/models/auth.go:457.9956msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 1
+2019/11/24 16:37:59 sqlE:/GoProject/goods/models/auth.go:517.9993msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 1
+2019/11/24 16:37:59 sqlE:/GoProject/goods/models/models.go:645.0047msUPDATE `logins` SET `login` = ?  WHERE `logins`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 0
+2019/11/24 16:38:20 sqlE:/GoProject/goods/models/auth.go:255.9984msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456789] 0
+2019/11/24 16:41:14 sqlE:/GoProject/goods/models/auth.go:258.997msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 1
+2019/11/24 16:41:14 sqlE:/GoProject/goods/models/auth.go:4514.0009msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 1
+2019/11/24 16:41:14 sqlE:/GoProject/goods/models/auth.go:517.9995msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 1
+2019/11/24 16:41:14 sqlE:/GoProject/goods/models/models.go:644.0008msUPDATE `logins` SET `login` = ?  WHERE `logins`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 0
+2019/11/24 16:41:30 sqlE:/GoProject/goods/models/auth.go:2529.0008msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456789] 0
+2019/11/24 16:47:39 sqlE:/GoProject/goods/models/auth.go:258.9983msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 1
+2019/11/24 16:47:40 sqlE:/GoProject/goods/models/auth.go:453.978msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 1
+2019/11/24 16:47:40 sqlE:/GoProject/goods/models/auth.go:512.9995msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 1
+2019/11/24 16:47:40 sqlE:/GoProject/goods/models/models.go:642.996msUPDATE `logins` SET `login` = ?  WHERE `logins`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 0
+2019/11/24 16:53:04 sqlE:/GoProject/goods/models/auth.go:255.9994msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 1
+2019/11/24 16:53:04 sqlE:/GoProject/goods/models/auth.go:4510.9931msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 1
+2019/11/24 16:53:04 sqlE:/GoProject/goods/models/auth.go:516.0005msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 1
+2019/11/24 16:53:04 sqlE:/GoProject/goods/models/models.go:648.9654msUPDATE `logins` SET `login` = ?  WHERE `logins`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 0
+2019/11/24 16:55:19 sqlE:/GoProject/goods/models/auth.go:258.9973msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 1
+2019/11/24 16:55:19 sqlE:/GoProject/goods/models/auth.go:454.9958msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 1
+2019/11/24 16:55:19 sqlE:/GoProject/goods/models/auth.go:515.0036msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 1
+2019/11/24 16:55:19 sqlE:/GoProject/goods/models/models.go:642.9927msUPDATE `logins` SET `login` = ?  WHERE `logins`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 0
+2019/11/24 16:55:26 sqlE:/GoProject/goods/models/auth.go:259.9987msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123465] 0
+2019/11/24 16:57:04 sqlE:/GoProject/goods/models/auth.go:2513.0002msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123465] 0
+2019/11/24 16:58:46 sqlE:/GoProject/goods/models/auth.go:256.007msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123465] 0
+2019/11/24 17:00:20 sqlE:/GoProject/goods/models/auth.go:2511.0037msSELECT * FROM `logins`  WHERE `logins`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123465] 0

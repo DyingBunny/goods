@@ -1,0 +1,70 @@
+basePath: '{{.BasePath}}'
+host: '{{.Host}}'
+info:
+  contact: {}
+  description: '{{.Description}}'
+  license: {}
+  title: '{{.Title}}'
+  version: '{{.Version}}'
+paths:
+  /auth:
+    get:
+      parameters:
+      - description: username,password
+        in: query
+        name: name
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"code":200,"data":{},"msg":"ok"}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":400,"data":{},"msg":"fail"}'
+          schema:
+            type: string
+      summary: token获取b
+  /login:
+    post:
+      parameters:
+      - description: username,password
+        in: query
+        name: name
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: "{\"code\":code,\t\"msg\" : e.GetMsg(code),\t\"Logintime\":time.Now()}"
+          schema:
+            type: string
+        "400":
+          description: "{\"code\":code,\t\"msg\" : e.GetMsg(code),}"
+          schema:
+            type: string
+      summary: 登录
+  /profile:
+    get:
+      parameters:
+      - description: username
+        in: query
+        name: name
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: "{\"code\" : code,\t\"msg\" : e.GetMsg(code),\t\"user_id\":auth.User_id,\t\"username\":auth.Username,\t\"password\":auth.Password,\t\"gender\":auth.Gender,\t\"email\":auth.Email,\t\"login\":auth.Login,\t\"role\":auth.Role,}"
+          schema:
+            type: string
+        "400":
+          description: "{\"code\" : code,\t\"msg\" : e.GetMsg(code),}"
+          schema:
+            type: string
+      summary: 信息查看
+swagger: "2.0"
