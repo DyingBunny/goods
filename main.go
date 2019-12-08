@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"goods/models/test"
 	"goods/pkg/setting"
 	"goods/routers"
 	"net/http"
@@ -20,4 +21,5 @@ func main() {
 		MaxHeaderBytes: 1 << 20,
 	}
 	_ = s.ListenAndServe()
+	test.TestAdd()
 }

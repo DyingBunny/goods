@@ -51,3 +51,18 @@ func FindRole(username string,password string)string{
 	Db.First(&people,"Username=? AND Password=?",username,password)
 	return people.Role
 }
+
+//增加用户
+func AddUser(name string,pwd string,gender string,email string,role string){
+	Db.Create(&table.Login{
+		Username:name,
+		Password:pwd,
+		Gender:gender,
+		Email:email,
+		Role:role})
+}
+
+//改变登录状态
+func Turnstatus(userid interface{},people table.Login,change interface{}){
+	Db.Model(&people).Where("user_id=?",userid).Update("Login",change)
+}

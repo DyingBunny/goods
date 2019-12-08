@@ -53,7 +53,7 @@ CREATE TABLE `order`(
     `create_time` date NOT NULL COMMENT '创建时间',
     `complete_time` date DEFAULT NULL COMMENT '完成时间',
     `price` int(11) unsigned NOT NULL COMMENT '价格',
-    `distance` double unsigned NOT NULL COMMENT '距离',
+    `distance` decimal(10,2) unsigned NOT NULL COMMENT '距离',
     `deleted_at` date,
     PRIMARY KEY(`order_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'订单';

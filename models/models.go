@@ -4,7 +4,6 @@ import (
 	"fmt"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
-	"goods/models/table"
 	"goods/pkg/logging/database"
 	"goods/pkg/setting"
 	"log"
@@ -49,20 +48,6 @@ func Init(){
 	Db.LogMode(true)
 }
 
-//增加用户
-func AddUser(name string,pwd string,gender string,email string,role string){
-	Db.Create(&table.Login{
-		Username:name,
-		Password:pwd,
-		Gender:gender,
-		Email:email,
-		Role:role})
-}
-
-//改变登录状态
-func Turnstatus(userid interface{},people table.Login,change interface{}){
-	Db.Model(&people).Where("user_id=?",userid).Update("Login",change)
-}
 
 
 
