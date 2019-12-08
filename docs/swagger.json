@@ -27,13 +27,106 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "{\"code\":200,\"data\":{},\"msg\":\"ok\"}",
+                        "description": "{\"code\":code,\"msg\" : e.GetMsg(code),\"data\":{\"token\":token,\"role\":role,\"login_time\":time.Now()}}",
                         "schema": {
                             "type": "string"
                         }
                     },
                     "400": {
-                        "description": "{\"code\":400,\"data\":{},\"msg\":\"fail\"}",
+                        "description": "{\"code\":code,\"msg\" : e.GetMsg(code)}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/comprehensive": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "查看司机评价",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "user_id",
+                        "name": "name",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"code\":code,\"msg\" : e.GetMsg(code),\"data\":{\"mark\":mark}}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "{\"code\":code,\"msg\" : e.GetMsg(code)}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/deliver_address": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "获取用户发货位置",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "username",
+                        "name": "name",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"code\" : code,\t\"msg\" : e.GetMsg(code),\t\"data\":{\"address\":address.Address,\"lng\":address.Lng,\"lat\":address.Lat}}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "{\"code\" : code,\t\"msg\" : e.GetMsg(code),}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/evaluate": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "评价",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "user_id,mark",
+                        "name": "name",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"code\":code,\t\"msg\" : e.GetMsg(code)}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "{\"code\":code,\t\"msg\" : e.GetMsg(code)}",
                         "schema": {
                             "type": "string"
                         }
@@ -58,13 +151,13 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "{\"code\":code,\t\"msg\" : e.GetMsg(code),\t\"Logintime\":time.Now()}",
+                        "description": "{\"code\":code,\"msg\" : e.GetMsg(code),\t\"data\":{\"login_time\":time.Now()}}",
                         "schema": {
                             "type": "string"
                         }
                     },
                     "400": {
-                        "description": "{\"code\":code,\t\"msg\" : e.GetMsg(code),}",
+                        "description": "{\"code\":code,\"msg\" : e.GetMsg(code)}",
                         "schema": {
                             "type": "string"
                         }
@@ -89,13 +182,44 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "{\"code\" : code,\t\"msg\" : e.GetMsg(code),\t\"user_id\":auth.User_id,\t\"username\":auth.Username,\t\"password\":auth.Password,\t\"phone_number\":auth.PhoneNumber,\t\"gender\":auth.Gender,\t\"email\":auth.Email,\t\"login\":auth.Login,\t\"role\":auth.Role,\"role_id\":auth.RoleId }",
+                        "description": "{\"code\" : code,\t\"msg\" : e.GetMsg(code),\t\"data\":{\"user_id\":auth.User_id,\t\"username\":auth.Username,\t\"password\":auth.Password,\t\"phone_number\":auth.PhoneNumber,\t\"gender\":auth.Gender,\t\"email\":auth.Email,\t\"login\":auth.Login,\t\"role\":auth.Role,\"role_id\":auth.RoleId}}",
                         "schema": {
                             "type": "string"
                         }
                     },
                     "400": {
                         "description": "{\"code\" : code,\t\"msg\" : e.GetMsg(code)}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
+        "/receive_address": {
+            "get": {
+                "produces": [
+                    "application/json"
+                ],
+                "summary": "获取用户收货位置",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "username",
+                        "name": "name",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "{\"code\" : code,\t\"msg\" : e.GetMsg(code),\t\"data\":{\"address\":address.Address,\"lng\":address.Lng,\"lat\":address.Lat}}",
+                        "schema": {
+                            "type": "string"
+                        }
+                    },
+                    "400": {
+                        "description": "{\"code\" : code,\t\"msg\" : e.GetMsg(code),}",
                         "schema": {
                             "type": "string"
                         }

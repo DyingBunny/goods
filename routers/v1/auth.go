@@ -14,8 +14,8 @@ import (
 // @Summary token获取
 // @Produce  json
 // @Param name query string true "username,password"
-// @Success 200 {string} json "{"code":200,"data":{},"msg":"ok"}"
-// @Failure 400 {string} json "{"code":400,"data":{},"msg":"fail"}"
+// @Success 200 {string} json "{"code":code,"msg" : e.GetMsg(code),"data":{"token":token,"role":role,"login_time":time.Now()}}"
+// @Failure 400 {string} json "{"code":code,"msg" : e.GetMsg(code)}"
 // @Router /auth [get]
 func GetAuth(c *gin.Context) {
 	username := c.Query("username")
@@ -32,12 +32,13 @@ func GetAuth(c *gin.Context) {
 			if err != nil {
 				code = e.ERROR_AUTH_TOKEN
 			} else {
-				userid:=models.FindUserId(username,password)
+				userId :=models.FindUserId(username,password)
 				role:=models.FindRole(username,password)
 				data["token"] = token
 				data["role"]=role
+				data["login_time"]=time.Now()
 				code = e.SUCCESS
-				models.UpdateSta(userid)
+				models.UpdateSta(userId)
 			}
 		} else {
 			code = e.ERROR_AUTH
@@ -51,14 +52,13 @@ func GetAuth(c *gin.Context) {
 		"code" : code,
 		"msg" : e.GetMsg(code),
 		"data" : data,
-		"Logintime":time.Now(),
 	})
 }
 // @Summary 登录
 // @Produce  json
 // @Param name query string true "username,password"
-// @Success 200 {string} json "{"code":code,	"msg" : e.GetMsg(code),	"Logintime":time.Now()}"
-// @Failure 400 {string} json "{"code":code,	"msg" : e.GetMsg(code),}"
+// @Success 200 {string} json "{"code":code,"msg" : e.GetMsg(code),	"data":{"login_time":time.Now()}}"
+// @Failure 400 {string} json "{"code":code,"msg" : e.GetMsg(code)}"
 // @Router /login [post]
 func Login(context *gin.Context){
 	var people table.Login
@@ -66,11 +66,13 @@ func Login(context *gin.Context){
 		if models.Check(people.Username,people.Password){
 			userid:=models.FindUserId(people.Username,people.Password)
 			models.UpdateSta(userid)
+			data := make(map[string]interface{})
 			code:=e.SUCCESS
+			data["login_time"]=time.Now()
 			context.JSON(http.StatusOK,gin.H{
 				"code":code,
 				"msg" : e.GetMsg(code),
-				"Logintime":time.Now(),
+				"data":data,
 			})
 		}else{
 			code:=e.ERROR
@@ -84,7 +86,7 @@ func Login(context *gin.Context){
 // @Summary 信息查看
 // @Produce  json
 // @Param name query string true "user_id"
-// @Success 200 {string} json "{"code" : code,	"msg" : e.GetMsg(code),	"user_id":auth.User_id,	"username":auth.Username,	"password":auth.Password,	"phone_number":auth.PhoneNumber,	"gender":auth.Gender,	"email":auth.Email,	"login":auth.Login,	"role":auth.Role,"role_id":auth.RoleId }"
+// @Success 200 {string} json "{"code" : code,	"msg" : e.GetMsg(code),	"data":{"user_id":auth.User_id,	"username":auth.Username,	"password":auth.Password,	"phone_number":auth.PhoneNumber,	"gender":auth.Gender,	"email":auth.Email,	"login":auth.Login,	"role":auth.Role,"role_id":auth.RoleId}}"
 // @Failure 400 {string} json "{"code" : code,	"msg" : e.GetMsg(code)}"
 // @Router /profile [get]
 func Profile(context *gin.Context){

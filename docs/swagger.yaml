@@ -19,14 +19,74 @@ paths:
       - application/json
       responses:
         "200":
-          description: '{"code":200,"data":{},"msg":"ok"}'
+          description: '{"code":code,"msg" : e.GetMsg(code),"data":{"token":token,"role":role,"login_time":time.Now()}}'
           schema:
             type: string
         "400":
-          description: '{"code":400,"data":{},"msg":"fail"}'
+          description: '{"code":code,"msg" : e.GetMsg(code)}'
           schema:
             type: string
       summary: token获取
+  /comprehensive:
+    get:
+      parameters:
+      - description: user_id
+        in: query
+        name: name
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: '{"code":code,"msg" : e.GetMsg(code),"data":{"mark":mark}}'
+          schema:
+            type: string
+        "400":
+          description: '{"code":code,"msg" : e.GetMsg(code)}'
+          schema:
+            type: string
+      summary: 查看司机评价
+  /deliver_address:
+    get:
+      parameters:
+      - description: username
+        in: query
+        name: name
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: "{\"code\" : code,\t\"msg\" : e.GetMsg(code),\t\"data\":{\"address\":address.Address,\"lng\":address.Lng,\"lat\":address.Lat}}"
+          schema:
+            type: string
+        "400":
+          description: "{\"code\" : code,\t\"msg\" : e.GetMsg(code),}"
+          schema:
+            type: string
+      summary: 获取用户发货位置
+  /evaluate:
+    get:
+      parameters:
+      - description: user_id,mark
+        in: query
+        name: name
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: "{\"code\":code,\t\"msg\" : e.GetMsg(code)}"
+          schema:
+            type: string
+        "400":
+          description: "{\"code\":code,\t\"msg\" : e.GetMsg(code)}"
+          schema:
+            type: string
+      summary: 评价
   /login:
     post:
       parameters:
@@ -39,11 +99,11 @@ paths:
       - application/json
       responses:
         "200":
-          description: "{\"code\":code,\t\"msg\" : e.GetMsg(code),\t\"Logintime\":time.Now()}"
+          description: "{\"code\":code,\"msg\" : e.GetMsg(code),\t\"data\":{\"login_time\":time.Now()}}"
           schema:
             type: string
         "400":
-          description: "{\"code\":code,\t\"msg\" : e.GetMsg(code),}"
+          description: '{"code":code,"msg" : e.GetMsg(code)}'
           schema:
             type: string
       summary: 登录
@@ -59,8 +119,7 @@ paths:
       - application/json
       responses:
         "200":
-          description: "{\"code\" : code,\t\"msg\" : e.GetMsg(code),\t\"user_id\":auth.User_id,\t\"username\":auth.Username,\t\"password\":auth.Password,\t\"phone_number\":auth.PhoneNumber,\t\"gender\":auth.Gender,\t\"email\":auth.Email,\t\"login\":auth.Login,\t\"role\":auth.Role,\"role_id\":auth.RoleId
-            }"
+          description: "{\"code\" : code,\t\"msg\" : e.GetMsg(code),\t\"data\":{\"user_id\":auth.User_id,\t\"username\":auth.Username,\t\"password\":auth.Password,\t\"phone_number\":auth.PhoneNumber,\t\"gender\":auth.Gender,\t\"email\":auth.Email,\t\"login\":auth.Login,\t\"role\":auth.Role,\"role_id\":auth.RoleId}}"
           schema:
             type: string
         "400":
@@ -68,4 +127,24 @@ paths:
           schema:
             type: string
       summary: 信息查看
+  /receive_address:
+    get:
+      parameters:
+      - description: username
+        in: query
+        name: name
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: "{\"code\" : code,\t\"msg\" : e.GetMsg(code),\t\"data\":{\"address\":address.Address,\"lng\":address.Lng,\"lat\":address.Lat}}"
+          schema:
+            type: string
+        "400":
+          description: "{\"code\" : code,\t\"msg\" : e.GetMsg(code),}"
+          schema:
+            type: string
+      summary: 获取用户收货位置
 swagger: "2.0"

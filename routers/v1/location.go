@@ -10,9 +10,9 @@ import (
 // @Summary 获取用户发货位置
 // @Produce  json
 // @Param name query string true "username"
-// @Success 200 {string} json "{"code" : code,	"msg" : e.GetMsg(code),	"address":address.Address,"lng":address.Lng,	"lat":address.Lat}"
+// @Success 200 {string} json "{"code" : code,	"msg" : e.GetMsg(code),	"data":{"address":address.Address,"lng":address.Lng,"lat":address.Lat}}"
 // @Failure 400 {string} json "{"code" : code,	"msg" : e.GetMsg(code),}"
-// @Router /profile [get]
+// @Router /deliver_address [get]
 func DeliverAddress(context *gin.Context){
 	UserId:=context.Query("user_id")
 	address,isExist := models.FindDelAddress(UserId)
@@ -36,12 +36,12 @@ func DeliverAddress(context *gin.Context){
 		})
 	}
 }
-// @Summary 获取用户发货位置
+// @Summary 获取用户收货位置
 // @Produce  json
 // @Param name query string true "username"
-// @Success 200 {string} json "{"code" : code,	"msg" : e.GetMsg(code),	"address":address.Address,"lng":address.Lng,	"lat":address.Lat}"
+// @Success 200 {string} json "{"code" : code,	"msg" : e.GetMsg(code),	"data":{"address":address.Address,"lng":address.Lng,"lat":address.Lat}}"
 // @Failure 400 {string} json "{"code" : code,	"msg" : e.GetMsg(code),}"
-// @Router /profile [get]
+// @Router /receive_address [get]
 func ReceiveAddress(context *gin.Context){
 	UserId:=context.Query("user_id")
 	address,isExist := models.FindRecAddress(UserId)
