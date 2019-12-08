@@ -1,0 +1,89 @@
+2019/12/08 14:48:09 logE:/GoProject/goods/models/test/test.go:10Error 1146: Table 'goods.logins' doesn't exist
+2019/12/08 14:48:09 sqlE:/GoProject/goods/models/test/test.go:103.9927msINSERT  INTO `logins` (`user_id`,`username`,`password`,`phone_number`,`gender`,`email`,`role`,`role_id`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?)[0 dyingbunny Qq594112087 13772005470 male dyingbunny9@gmail.com buyer 0 <nil>] 0
+2019/12/08 14:48:09 sqlE:/GoProject/goods/models/test/test.go:100sSELECT `login` FROM `logins`  [] 0
+2019/12/08 14:48:09 logE:/GoProject/goods/models/test/test.go:20Error 1146: Table 'goods.drivers' doesn't exist
+2019/12/08 14:48:09 sqlE:/GoProject/goods/models/test/test.go:201.9818msINSERT  INTO `drivers` (`driver_id`,`address_id`,`deleted_at`) VALUES (?,?,?)[0 1 <nil>] 0
+2019/12/08 14:48:09 sqlE:/GoProject/goods/models/test/test.go:200sSELECT `evaluation`, `count` FROM `drivers`  [] 0
+2019/12/08 14:48:09 logE:/GoProject/goods/models/test/test.go:25Error 1146: Table 'goods.receive_mappings' doesn't exist
+2019/12/08 14:48:09 sqlE:/GoProject/goods/models/test/test.go:25996.4µsINSERT  INTO `receive_mappings` (`user_address_id`,`pid`,`cid`,`deleted_at`) VALUES (?,?,?,?)[0 1 2 <nil>] 0
+2019/12/08 14:48:09 logE:/GoProject/goods/models/test/test.go:31Error 1146: Table 'goods.deliver_mappings' doesn't exist
+2019/12/08 14:48:09 sqlE:/GoProject/goods/models/test/test.go:311.9908msINSERT  INTO `deliver_mappings` (`user_address_id`,`pid`,`cid`,`deleted_at`) VALUES (?,?,?,?)[0 1 2 <nil>] 0
+2019/12/08 14:48:09 logE:/GoProject/goods/models/test/test.go:37Error 1146: Table 'goods.addresses' doesn't exist
+2019/12/08 14:48:09 sqlE:/GoProject/goods/models/test/test.go:372.0055msINSERT  INTO `addresses` (`address_id`,`address`,`lng`,`lat`,`deleted_at`) VALUES (?,?,?,?,?)[0 陕西省西安工业大学未央校区 109.11379651119837 34.53572956652158 <nil>] 0
+2019/12/08 14:48:09 logE:/GoProject/goods/models/test/test.go:44Error 1146: Table 'goods.orders' doesn't exist
+2019/12/08 14:48:09 sqlE:/GoProject/goods/models/test/test.go:441.9954msINSERT  INTO `orders` (`order_id`,`text`,`create_time`,`complete_time`,`price`,`distance`,`deleted_at`) VALUES (?,?,?,?,?,?,?)[0 meikuangyunshu 2019-12-08 14:48:09.7215715 +0800 CST m=+0.104997601 2019-12-08 14:48:09.7215715 +0800 CST m=+0.104997601 500 8.5 <nil>] 0
+2019/12/08 14:48:09 sqlE:/GoProject/goods/models/test/test.go:440sSELECT `complete` FROM `orders`  [] 0
+2019/12/08 14:51:41 logE:/GoProject/goods/models/models.go:55Error 1146: Table 'goods.logins' doesn't exist
+2019/12/08 14:51:41 sqlE:/GoProject/goods/models/models.go:552.0001msINSERT  INTO `logins` (`user_id`,`username`,`password`,`phone_number`,`gender`,`email`,`role`,`role_id`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?)[0 dyingbunny Qq594112087 13772005470 male dyingbunny9@gmail.com buyer 0 <nil>] 0
+2019/12/08 14:51:41 sqlE:/GoProject/goods/models/models.go:550sSELECT `login` FROM `logins`  [] 0
+2019/12/08 14:51:41 logE:/GoProject/goods/models/models.go:65Error 1146: Table 'goods.drivers' doesn't exist
+2019/12/08 14:51:41 sqlE:/GoProject/goods/models/models.go:652.999msINSERT  INTO `drivers` (`driver_id`,`address_id`,`deleted_at`) VALUES (?,?,?)[0 1 <nil>] 0
+2019/12/08 14:51:41 sqlE:/GoProject/goods/models/models.go:650sSELECT `evaluation`, `count` FROM `drivers`  [] 0
+2019/12/08 14:51:41 logE:/GoProject/goods/models/models.go:70Error 1146: Table 'goods.receive_mappings' doesn't exist
+2019/12/08 14:51:41 sqlE:/GoProject/goods/models/models.go:70994.1µsINSERT  INTO `receive_mappings` (`user_address_id`,`pid`,`cid`,`deleted_at`) VALUES (?,?,?,?)[0 1 2 <nil>] 0
+2019/12/08 14:51:41 logE:/GoProject/goods/models/models.go:76Error 1146: Table 'goods.deliver_mappings' doesn't exist
+2019/12/08 14:51:41 sqlE:/GoProject/goods/models/models.go:761.9958msINSERT  INTO `deliver_mappings` (`user_address_id`,`pid`,`cid`,`deleted_at`) VALUES (?,?,?,?)[0 1 2 <nil>] 0
+2019/12/08 14:51:41 logE:/GoProject/goods/models/models.go:82Error 1146: Table 'goods.addresses' doesn't exist
+2019/12/08 14:51:41 sqlE:/GoProject/goods/models/models.go:822.0164msINSERT  INTO `addresses` (`address_id`,`address`,`lng`,`lat`,`deleted_at`) VALUES (?,?,?,?,?)[0 陕西省西安工业大学未央校区 109.11379651119837 34.53572956652158 <nil>] 0
+2019/12/08 14:51:41 logE:/GoProject/goods/models/models.go:89Error 1146: Table 'goods.orders' doesn't exist
+2019/12/08 14:51:41 sqlE:/GoProject/goods/models/models.go:892.0143msINSERT  INTO `orders` (`order_id`,`text`,`create_time`,`complete_time`,`price`,`distance`,`deleted_at`) VALUES (?,?,?,?,?,?,?)[0 meikuangyunshu 2019-12-08 14:51:41.4304058 +0800 CST m=+0.125003001 2019-12-08 14:51:41.4304058 +0800 CST m=+0.125003001 500 8.5 <nil>] 0
+2019/12/08 14:51:41 sqlE:/GoProject/goods/models/models.go:890sSELECT `complete` FROM `orders`  [] 0
+2019/12/08 14:52:31 logE:/GoProject/goods/models/models.go:55Error 1146: Table 'goods.logins' doesn't exist
+2019/12/08 14:52:31 sqlE:/GoProject/goods/models/models.go:554.0027msINSERT  INTO `logins` (`user_id`,`username`,`password`,`phone_number`,`gender`,`email`,`role`,`role_id`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?)[0 dyingbunny Qq594112087 13772005470 male dyingbunny9@gmail.com buyer 0 <nil>] 0
+2019/12/08 14:52:31 sqlE:/GoProject/goods/models/models.go:550sSELECT `login` FROM `logins`  [] 0
+2019/12/08 14:52:31 logE:/GoProject/goods/models/models.go:65Error 1146: Table 'goods.drivers' doesn't exist
+2019/12/08 14:52:31 sqlE:/GoProject/goods/models/models.go:651.9976msINSERT  INTO `drivers` (`driver_id`,`address_id`,`deleted_at`) VALUES (?,?,?)[0 1 <nil>] 0
+2019/12/08 14:52:31 sqlE:/GoProject/goods/models/models.go:650sSELECT `evaluation`, `count` FROM `drivers`  [] 0
+2019/12/08 14:52:31 logE:/GoProject/goods/models/models.go:70Error 1146: Table 'goods.receive_mappings' doesn't exist
+2019/12/08 14:52:31 sqlE:/GoProject/goods/models/models.go:708.9857msINSERT  INTO `receive_mappings` (`user_address_id`,`pid`,`cid`,`deleted_at`) VALUES (?,?,?,?)[0 1 2 <nil>] 0
+2019/12/08 14:52:31 logE:/GoProject/goods/models/models.go:76Error 1146: Table 'goods.deliver_mappings' doesn't exist
+2019/12/08 14:52:31 sqlE:/GoProject/goods/models/models.go:762.0031msINSERT  INTO `deliver_mappings` (`user_address_id`,`pid`,`cid`,`deleted_at`) VALUES (?,?,?,?)[0 1 2 <nil>] 0
+2019/12/08 14:52:31 logE:/GoProject/goods/models/models.go:82Error 1146: Table 'goods.addresses' doesn't exist
+2019/12/08 14:52:31 sqlE:/GoProject/goods/models/models.go:821.0071msINSERT  INTO `addresses` (`address_id`,`address`,`lng`,`lat`,`deleted_at`) VALUES (?,?,?,?,?)[0 陕西省西安工业大学未央校区 109.11379651119837 34.53572956652158 <nil>] 0
+2019/12/08 14:52:31 logE:/GoProject/goods/models/models.go:89Error 1146: Table 'goods.orders' doesn't exist
+2019/12/08 14:52:31 sqlE:/GoProject/goods/models/models.go:892.0092msINSERT  INTO `orders` (`order_id`,`text`,`create_time`,`complete_time`,`price`,`distance`,`deleted_at`) VALUES (?,?,?,?,?,?,?)[0 meikuangyunshu 2019-12-08 14:52:31.4720977 +0800 CST m=+0.112997001 2019-12-08 14:52:31.4720977 +0800 CST m=+0.112997001 500 8.5 <nil>] 0
+2019/12/08 14:52:31 sqlE:/GoProject/goods/models/models.go:890sSELECT `complete` FROM `orders`  [] 0
+2019/12/08 14:53:38 logE:/GoProject/goods/models/models.go:55Error 1146: Table 'goods.logins' doesn't exist
+2019/12/08 14:53:38 sqlE:/GoProject/goods/models/models.go:553.9817msINSERT  INTO `logins` (`user_id`,`username`,`password`,`phone_number`,`gender`,`email`,`role`,`role_id`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?)[0 dyingbunny Qq594112087 13772005470 male dyingbunny9@gmail.com buyer 0 <nil>] 0
+2019/12/08 14:53:38 sqlE:/GoProject/goods/models/models.go:550sSELECT `login` FROM `logins`  [] 0
+2019/12/08 14:53:40 logE:/GoProject/goods/models/models.go:65Error 1146: Table 'goods.drivers' doesn't exist
+2019/12/08 14:53:40 sqlE:/GoProject/goods/models/models.go:651.9958msINSERT  INTO `drivers` (`driver_id`,`address_id`,`deleted_at`) VALUES (?,?,?)[0 1 <nil>] 0
+2019/12/08 14:53:40 sqlE:/GoProject/goods/models/models.go:650sSELECT `evaluation`, `count` FROM `drivers`  [] 0
+2019/12/08 14:56:29 logE:/GoProject/goods/models/models.go:56Error 1054: Unknown column 'phone_number' in 'field list'
+2019/12/08 14:56:29 sqlE:/GoProject/goods/models/models.go:562.004msINSERT  INTO `login` (`user_id`,`username`,`password`,`phone_number`,`gender`,`email`,`role`,`role_id`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?)[0 dyingbunny Qq594112087 13772005470 male dyingbunny9@gmail.com buyer 0 <nil>] 0
+2019/12/08 14:56:29 sqlE:/GoProject/goods/models/models.go:560sSELECT `login` FROM `login`  [] 0
+2019/12/08 14:56:29 sqlE:/GoProject/goods/models/models.go:663.0024msINSERT  INTO `driver` (`driver_id`,`address_id`,`deleted_at`) VALUES (?,?,?)[0 1 <nil>] 1
+2019/12/08 14:56:29 sqlE:/GoProject/goods/models/models.go:662.0009msSELECT `evaluation`, `count` FROM `driver`  [] 1
+2019/12/08 14:56:29 logE:/GoProject/goods/models/models.go:71Error 1146: Table 'goods.receive_mapping' doesn't exist
+2019/12/08 14:56:29 sqlE:/GoProject/goods/models/models.go:711.9987msINSERT  INTO `receive_mapping` (`user_address_id`,`pid`,`cid`,`deleted_at`) VALUES (?,?,?,?)[0 1 2 <nil>] 0
+2019/12/08 14:56:29 sqlE:/GoProject/goods/models/models.go:772.0007msINSERT  INTO `deliver_mapping` (`user_address_id`,`pid`,`cid`,`deleted_at`) VALUES (?,?,?,?)[0 1 2 <nil>] 1
+2019/12/08 14:56:29 sqlE:/GoProject/goods/models/models.go:834.0008msINSERT  INTO `address` (`address_id`,`address`,`lng`,`lat`,`deleted_at`) VALUES (?,?,?,?,?)[0 陕西省西安工业大学未央校区 109.11379651119837 34.53572956652158 <nil>] 1
+2019/12/08 14:56:29 sqlE:/GoProject/goods/models/models.go:902.9989msINSERT  INTO `order` (`order_id`,`text`,`create_time`,`complete_time`,`price`,`distance`,`deleted_at`) VALUES (?,?,?,?,?,?,?)[0 meikuangyunshu 2019-12-08 14:56:29.8624015 +0800 CST m=+0.357062601 2019-12-08 14:56:29.8624015 +0800 CST m=+0.357062601 500 8.5 <nil>] 1
+2019/12/08 14:56:29 sqlE:/GoProject/goods/models/models.go:902.001msSELECT `complete` FROM `order`  [] 1
+2019/12/08 14:59:10 logE:/GoProject/goods/models/test/test.go:10Error 1054: Unknown column 'phone_number' in 'field list'
+2019/12/08 14:59:10 sqlE:/GoProject/goods/models/test/test.go:10998.7µsINSERT  INTO `login` (`user_id`,`username`,`password`,`phone_number`,`gender`,`email`,`role`,`role_id`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?)[0 dyingbunny Qq594112087 13772005470 male dyingbunny9@gmail.com buyer 0 <nil>] 0
+2019/12/08 14:59:10 sqlE:/GoProject/goods/models/test/test.go:101.0011msSELECT `login` FROM `login`  [] 0
+2019/12/08 14:59:10 sqlE:/GoProject/goods/models/test/test.go:202.0038msINSERT  INTO `driver` (`driver_id`,`address_id`,`deleted_at`) VALUES (?,?,?)[0 1 <nil>] 1
+2019/12/08 14:59:10 sqlE:/GoProject/goods/models/test/test.go:20996.4µsSELECT `evaluation`, `count` FROM `driver`  [] 2
+2019/12/08 14:59:10 logE:/GoProject/goods/models/test/test.go:25Error 1146: Table 'goods.receive_mapping' doesn't exist
+2019/12/08 14:59:10 sqlE:/GoProject/goods/models/test/test.go:251.9769msINSERT  INTO `receive_mapping` (`user_address_id`,`pid`,`cid`,`deleted_at`) VALUES (?,?,?,?)[0 1 2 <nil>] 0
+2019/12/08 14:59:10 sqlE:/GoProject/goods/models/test/test.go:311.9861msINSERT  INTO `deliver_mapping` (`user_address_id`,`pid`,`cid`,`deleted_at`) VALUES (?,?,?,?)[0 1 2 <nil>] 1
+2019/12/08 14:59:10 sqlE:/GoProject/goods/models/test/test.go:373.0084msINSERT  INTO `address` (`address_id`,`address`,`lng`,`lat`,`deleted_at`) VALUES (?,?,?,?,?)[0 陕西省西安工业大学未央校区 109.11379651119837 34.53572956652158 <nil>] 1
+2019/12/08 14:59:10 sqlE:/GoProject/goods/models/test/test.go:443.9948msINSERT  INTO `order` (`order_id`,`text`,`create_time`,`complete_time`,`price`,`distance`,`deleted_at`) VALUES (?,?,?,?,?,?,?)[0 meikuangyunshu 2019-12-08 14:59:10.2844626 +0800 CST m=+0.334580401 2019-12-08 14:59:10.2844626 +0800 CST m=+0.334580401 500 8.5 <nil>] 1
+2019/12/08 14:59:10 sqlE:/GoProject/goods/models/test/test.go:441.0001msSELECT `complete` FROM `order`  [] 2
+2019/12/08 15:01:23 logE:/GoProject/goods/models/test/test.go:10Error 1054: Unknown column 'phone_number' in 'field list'
+2019/12/08 15:01:23 sqlE:/GoProject/goods/models/test/test.go:101.9884msINSERT  INTO `login` (`user_id`,`username`,`password`,`phone_number`,`gender`,`email`,`role`,`role_id`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?)[0 dyingbunny Qq594112087 13772005470 male dyingbunny9@gmail.com buyer 0 <nil>] 0
+2019/12/08 15:01:23 sqlE:/GoProject/goods/models/test/test.go:100sSELECT `login` FROM `login`  [] 0
+2019/12/08 15:03:18 sqlE:/GoProject/goods/models/test/test.go:105.0002msINSERT  INTO `login` (`user_id`,`username`,`password`,`phone_number`,`gender`,`email`,`role`,`role_id`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?)[0 dyingbunny Qq594112087 13772005470 male dyingbunny9@gmail.com buyer 0 <nil>] 1
+2019/12/08 15:03:18 sqlE:/GoProject/goods/models/test/test.go:102.0006msSELECT `login` FROM `login`  [] 1
+2019/12/08 15:40:23 sqlE:/GoProject/goods/models/auth.go:258.0006msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2019/12/08 15:40:26 sqlE:/GoProject/goods/models/auth.go:395.9068msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2019/12/08 15:40:26 sqlE:/GoProject/goods/models/auth.go:455.0313msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2019/12/08 15:40:26 sqlE:/GoProject/goods/models/auth.go:675.0279msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 1
+2019/12/08 15:43:13 sqlE:/GoProject/goods/models/address.go:1211.006msSELECT * FROM `deliver_mapping`  WHERE `deliver_mapping`.`deleted_at` IS NULL AND ((pid=?)) LIMIT 1[1] 1
+2019/12/08 15:43:13 sqlE:/GoProject/goods/models/address.go:153.9948msSELECT * FROM `address`  WHERE `address`.`deleted_at` IS NULL AND ((address_id=?)) LIMIT 1[2] 1
+2019/12/08 15:53:50 sqlE:/GoProject/goods/models/auth.go:257.9605msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2019/12/08 15:53:50 sqlE:/GoProject/goods/models/auth.go:394.0424msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2019/12/08 15:53:50 sqlE:/GoProject/goods/models/auth.go:452.969msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2019/12/08 15:53:50 sqlE:/GoProject/goods/models/auth.go:676.9987msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 0
+2019/12/08 15:54:51 sqlE:/GoProject/goods/models/auth.go:117.9966msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[1] 1

@@ -31,6 +31,10 @@ func InitRouter() *gin.Engine{
 		api.POST("/login",v1.Login)
 		//查看信息
 		api.GET("/profile",v1.Profile)
+		//获取用户发货位置
+		api.GET("/deliver_address",v1.DeliverAddress)
+		//获取用户收货位置
+		api.GET("/receive_address",v1.ReceiveAddress)
 	}
 	return r
 }

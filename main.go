@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"goods/models/test"
 	"goods/pkg/setting"
 	"goods/routers"
 	"net/http"
@@ -20,6 +19,9 @@ func main() {
 		//http请求最大长度
 		MaxHeaderBytes: 1 << 20,
 	}
-	_ = s.ListenAndServe()
+	/*
+	//Test
 	test.TestAdd()
+	*/
+	_ = s.ListenAndServe()
 }

@@ -11,7 +11,7 @@ import (
 	"net/http"
 	"time"
 )
-// @Summary token获取b
+// @Summary token获取
 // @Produce  json
 // @Param name query string true "username,password"
 // @Success 200 {string} json "{"code":200,"data":{},"msg":"ok"}"
@@ -83,9 +83,9 @@ func Login(context *gin.Context){
 }
 // @Summary 信息查看
 // @Produce  json
-// @Param name query string true "username"
-// @Success 200 {string} json "{"code" : code,	"msg" : e.GetMsg(code),	"user_id":auth.User_id,	"username":auth.Username,	"password":auth.Password,	"gender":auth.Gender,	"email":auth.Email,	"login":auth.Login,	"role":auth.Role,}"
-// @Failure 400 {string} json "{"code" : code,	"msg" : e.GetMsg(code),}"
+// @Param name query string true "user_id"
+// @Success 200 {string} json "{"code" : code,	"msg" : e.GetMsg(code),	"user_id":auth.User_id,	"username":auth.Username,	"password":auth.Password,	"phone_number":auth.PhoneNumber,	"gender":auth.Gender,	"email":auth.Email,	"login":auth.Login,	"role":auth.Role,"role_id":auth.RoleId }"
+// @Failure 400 {string} json "{"code" : code,	"msg" : e.GetMsg(code)}"
 // @Router /profile [get]
 func Profile(context *gin.Context){
 	UserId := context.Query("user_id")
@@ -102,10 +102,12 @@ func Profile(context *gin.Context){
 		data["user_id"]=auth.UserId
 		data["username"]=auth.Username
 		data["password"]=auth.Password
+		data["phone_number"]=auth.PhoneNumber
 		data["gender"]=auth.Gender
 		data["email"]=auth.Email
 		data["login"]=auth.Login
 		data["role"]=auth.Role
+		data["role_id"]=auth.RoleId
 		context.JSON(http.StatusOK, gin.H{
 			"code" : code,
 			"msg" : e.GetMsg(code),

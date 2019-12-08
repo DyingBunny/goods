@@ -15,7 +15,7 @@
                 "produces": [
                     "application/json"
                 ],
-                "summary": "token获取b",
+                "summary": "token获取",
                 "parameters": [
                     {
                         "type": "string",
@@ -81,7 +81,7 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "username",
+                        "description": "user_id",
                         "name": "name",
                         "in": "query",
                         "required": true
@@ -89,13 +89,13 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "{\"code\" : code,\t\"msg\" : e.GetMsg(code),\t\"user_id\":auth.User_id,\t\"username\":auth.Username,\t\"password\":auth.Password,\t\"gender\":auth.Gender,\t\"email\":auth.Email,\t\"login\":auth.Login,\t\"role\":auth.Role,}",
+                        "description": "{\"code\" : code,\t\"msg\" : e.GetMsg(code),\t\"user_id\":auth.User_id,\t\"username\":auth.Username,\t\"password\":auth.Password,\t\"phone_number\":auth.PhoneNumber,\t\"gender\":auth.Gender,\t\"email\":auth.Email,\t\"login\":auth.Login,\t\"role\":auth.Role,\"role_id\":auth.RoleId }",
                         "schema": {
                             "type": "string"
                         }
                     },
                     "400": {
-                        "description": "{\"code\" : code,\t\"msg\" : e.GetMsg(code),}",
+                        "description": "{\"code\" : code,\t\"msg\" : e.GetMsg(code)}",
                         "schema": {
                             "type": "string"
                         }

@@ -33,12 +33,6 @@ func Check(username string,password string) bool{
 	}
 	return true
 }
-//登录状态更新
-func UpdateSta(userid interface{})bool{
-	var auth table.Login
-	Turnstatus(userid,auth,"True")
-	return true
-}
 //用户名和密码查找id
 func FindUserId(username string,password string)uint{
 	var people table.Login
@@ -53,16 +47,24 @@ func FindRole(username string,password string)string{
 }
 
 //增加用户
-func AddUser(name string,pwd string,gender string,email string,role string){
+func AddLogin(name string,pwd string,num string,gender string,email string,role string){
 	Db.Create(&table.Login{
 		Username:name,
 		Password:pwd,
+		PhoneNumber:num,
 		Gender:gender,
 		Email:email,
 		Role:role})
 }
-
+//登录状态更新
+func UpdateSta(userid interface{})bool{
+	var auth table.Login
+	Turnstatus(userid,auth,"True")
+	return true
+}
 //改变登录状态
 func Turnstatus(userid interface{},people table.Login,change interface{}){
 	Db.Model(&people).Where("user_id=?",userid).Update("Login",change)
 }
+
+

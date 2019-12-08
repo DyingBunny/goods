@@ -46,7 +46,9 @@ func Init(){
 	logger:=log.New(F, DefaultPrefix, log.LstdFlags)
 	Db.SetLogger(logger)
 	Db.LogMode(true)
+	Db.SingularTable(true)
 }
+
 
 
 
