@@ -47,7 +47,7 @@ func FindRole(username string,password string)string{
 }
 
 //增加用户
-func AddLogin(name string,pwd string,num string,gender string,email string,role string){
+func AddUser(name string,pwd string,num string,gender string,email string,role string){
 	Db.Create(&table.Login{
 		Username:name,
 		Password:pwd,

@@ -147,4 +147,24 @@ paths:
           schema:
             type: string
       summary: 获取用户收货位置
+  /register:
+    post:
+      parameters:
+      - description: username,password,phone_number,gender,email,role
+        in: query
+        name: name
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: "{\"code\":code,\"msg\" : e.GetMsg(code),\t\"data\":{\"login_time\":time.Now()}}"
+          schema:
+            type: string
+        "400":
+          description: '{"code":code,"msg" : e.GetMsg(code)}'
+          schema:
+            type: string
+      summary: 注册
 swagger: "2.0"

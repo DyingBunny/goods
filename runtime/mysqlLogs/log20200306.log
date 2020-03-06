@@ -1,0 +1,3 @@
+2020/03/06 15:46:26 sqlE:/GoProject/goods/models/auth.go:2531.0006msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[liuhaifeng 123] 0
+2020/03/06 15:46:26 sqlE:/GoProject/goods/models/auth.go:5129.9984msINSERT  INTO `login` (`user_id`,`username`,`password`,`phone_number`,`gender`,`email`,`role`,`role_id`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?)[0 liuhaifeng 123 15952987052 male q302989778@126.com owner 0 <nil>] 1
+2020/03/06 15:46:26 sqlE:/GoProject/goods/models/auth.go:5114.0339msSELECT `login` FROM `login`  [] 2

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+
+        <script src="http://cdn.bootcss.com/jquery/2.1.1/jquery.min.js"></script>
+        <!--调用百度地图api-->
+        <script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true">
+        </script>
+        <title>货来了定位</title>
+        <style>
+            /*服务网点*/
+
+            #wrap {
+                width: 1196px;
+                height: 540;
+                margin: auto;
+                overflow: hidden;
+            }
+
+            #wrap div ._left {
+                width: 281px;
+                float: left;
+                height: 339px;
+                border-right: 1px solid #CCCCCC;
+            }
+
+            #wrap ul {
+                width: 1196px;
+                height: 50px;
+                border-bottom: 1px solid #CCCCCC;
+                border-top: 1px solid #CCCCCC;
+                margin-bottom: 57px;
+            }
+            /*搜索框城市*/
+
+            #input {
+                width: 360px;
+                height: 37px;
+                margin-left: 51px;
+            }
+        </style>
+    </head>
+    <body>
+
+        <!--服务网点与帮助中心-->
+        <div id="wrap">
+        <ul></ul>
+
+            <!--服务网点-->
+
+            <!--百度地图容器-->
+            <div style="width: 563px; height: 435px; float: left;  margin-bottom: 142px;" id="dituContent"></div>
+            <div style="float: left;">
+                <input type="text" id="input" />
+
+                <input type="button" onclick="searchMap();" value="搜索地图" style="width: 160px; height: 39px;" />
+            </div>
+            <!--百度地图容器结束-->
+
+        </div>
+
+    </body>
+    <script type="text/javascript">
+        //创建和初始化地图函数：
+        function initMap() {
+            createMap(114.025974, 22.546054); //创建地图
+            setMapEvent(); //设置地图事件
+            addMapControl(); //向地图添加控件
+        }
+        //地图搜索
+        function searchMap() {
+            var area = document.getElementById("input").value; //得到地区
+            var ls = new BMap.LocalSearch(map);
+            ls.setSearchCompleteCallback(function(rs) {
+                if(ls.getStatus() == BMAP_STATUS_SUCCESS) {
+                    var poi = rs.getPoi(0);
+                    if(poi) {
+                        createMap(poi.point.lng, poi.point.lat); //创建地图(经度poi.point.lng,纬度poi.point.lat)
+                        setMapEvent(); //设置地图事件
+                        addMapControl(); //向地图添加控件
+                    }
+                }
+            });
+            ls.search(area);
+        }
+        //创建地图函数：
+        function createMap(x, y) {
+            var map = new BMap.Map("dituContent"); //在百度地图容器中创建一个地图
+            var point = new BMap.Point(x, y); //定义一个中心点坐标
+            map.centerAndZoom(point, 12); //设定地图的中心点和坐标并将地图显示在地图容器中
+            window.map = map; //将map变量存储在全局
+        }
+        //地图事件设置函数：
+        function setMapEvent() {
+            map.enableDragging(); //启用地图拖拽事件，默认启用(可不写)
+            map.enableScrollWheelZoom(); //启用地图滚轮放大缩小
+            map.enableDoubleClickZoom(); //启用鼠标双击放大，默认启用(可不写)
+            map.enableKeyboard(); //启用键盘上下左右键移动地图
+        }
+        //地图控件添加函数：
+        function addMapControl() {
+            //向地图中添加缩放控件
+            var ctrl_nav = new BMap.NavigationControl({
+                anchor: BMAP_ANCHOR_TOP_LEFT,
+                type: BMAP_NAVIGATION_CONTROL_LARGE
+            });
+            map.addControl(ctrl_nav);
+            //向地图中添加缩略图控件
+            var ctrl_ove = new BMap.OverviewMapControl({
+                anchor: BMAP_ANCHOR_BOTTOM_RIGHT,
+                isOpen: 1
+            });
+            map.addControl(ctrl_ove);
+            //向地图中添加比例尺控件
+            var ctrl_sca = new BMap.ScaleControl({
+                anchor: BMAP_ANCHOR_BOTTOM_LEFT
+            });
+            map.addControl(ctrl_sca);
+        }
+        initMap(); //创建和初始化地图
+    </script>
+
+</html>
+

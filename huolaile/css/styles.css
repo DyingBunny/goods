@@ -1,0 +1,19 @@
+#page {
+    padding-top: 60px;
+}
+.ui-autocomplete-loading {
+	background: white url("../images/ui-anim_basic_16x16.gif") right center no-repeat;
+}
+.remove_div {
+    margin-top: 2em;
+    display: table;
+}
+
+.table.th-center th {
+	text-align:center;
+}
+
+input[type="text"].ui-autocomplete-input {
+	border-bottom-style: solid;
+	border-bottom-width: 4px
+}

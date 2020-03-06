@@ -1,0 +1,27 @@
+2020/02/06 11:42:28 sqlE:/GoProject/goods/models/auth.go:2513.0178msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2020/02/06 11:42:28 sqlE:/GoProject/goods/models/auth.go:397.9998msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2020/02/06 11:42:28 sqlE:/GoProject/goods/models/auth.go:456.0039msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2020/02/06 11:42:28 sqlE:/GoProject/goods/models/auth.go:679.9617msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 0
+2020/02/06 11:45:19 sqlE:/GoProject/goods/models/auth.go:253.9839msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2020/02/06 11:45:19 sqlE:/GoProject/goods/models/auth.go:399.0068msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2020/02/06 11:45:19 sqlE:/GoProject/goods/models/auth.go:453.9917msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2020/02/06 11:45:19 sqlE:/GoProject/goods/models/auth.go:6713.0001msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 0
+2020/02/06 11:48:24 sqlE:/GoProject/goods/models/auth.go:254.9499msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2020/02/06 11:48:24 sqlE:/GoProject/goods/models/auth.go:394.9986msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2020/02/06 11:48:24 sqlE:/GoProject/goods/models/auth.go:674.9994msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 0
+2020/02/06 11:50:16 sqlE:/GoProject/goods/models/auth.go:256.0135msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2020/02/06 11:50:16 sqlE:/GoProject/goods/models/auth.go:399.9859msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2020/02/06 11:50:16 sqlE:/GoProject/goods/models/auth.go:674.9994msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 0
+2020/02/06 11:51:01 sqlE:/GoProject/goods/models/auth.go:256.0044msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2020/02/06 11:51:01 sqlE:/GoProject/goods/models/auth.go:396.9963msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2020/02/06 11:51:01 sqlE:/GoProject/goods/models/auth.go:6712.9959msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 0
+2020/02/06 12:40:05 sqlE:/GoProject/goods/models/auth.go:2514.0002msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2020/02/06 12:40:07 sqlE:/GoProject/goods/models/auth.go:396.0003msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2020/02/06 12:40:07 sqlE:/GoProject/goods/models/auth.go:675.0145msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 0
+2020/02/06 12:40:57 sqlE:/GoProject/goods/models/auth.go:256.9909msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2020/02/06 12:40:57 sqlE:/GoProject/goods/models/auth.go:399.0018msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2020/02/06 12:40:57 sqlE:/GoProject/goods/models/auth.go:675.0004msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 0
+2020/02/06 22:31:15 sqlE:/GoProject/goods/models/auth.go:2524.9984msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 0
+2020/02/06 22:32:22 sqlE:/GoProject/goods/models/auth.go:254.9994msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2020/02/06 22:32:22 sqlE:/GoProject/goods/models/auth.go:394.0039msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny Qq594112087] 1
+2020/02/06 22:32:22 sqlE:/GoProject/goods/models/auth.go:6710.0018msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 1

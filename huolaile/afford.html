@@ -1,0 +1,366 @@
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta name="viewport"
+        content="width=device-width,initial-scale=1,user-scalable=0">
+   <title>支付首页</title>
+   <link rel="stylesheet"
+        href="//cdn.bootcss.com/weui/1.1.1/style/weui.min.css">
+   <link rel="stylesheet"
+        href="//cdn.bootcss.com/jquery-weui/1.0.1/css/jquery-weui.min.css">
+   <link rel="stylesheet" href="#(ctxPath)/static/css/demos.css">
+</head>
+<body>
+<body ontouchstart>
+<header >
+   <h1 class="demos-title">支付Demo</h1>
+</header>
+<div class="weui-cells weui-cells_form">
+   <div class="weui-cell">
+      <div class="weui-cell__hd"><label class="weui-label">产品ID</label></div>
+      <div class="weui-cell__bd">
+         <input class="weui-input" type="number" id="product_id" placeholder="请输入产品ID">
+      </div>
+   </div>
+   <div class="weui-cell">
+      <div class="weui-cell__hd">
+         <label class="weui-label">金额(￥)</label>
+      </div>
+      <div class="weui-cell__bd">
+         <input class="weui-input" type="number" id="total_fee" placeholder="请输入数字金额,单位分">
+      </div>
+   </div>
+   <div class="weui-cell">
+      <div class="weui-cell__hd">
+         <label class="weui-label">条形码</label>
+      </div>
+      <div class="weui-cell__bd">
+         <input class="weui-input" type="number" id="auth_code" placeholder="请输入条形码">
+      </div>
+   </div>
+   <div class="weui-tab">
+      <div class="weui-navbar">
+         <a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+            微信支付
+         </a>
+         <a class="weui-navbar__item" href="#tab2">
+            支付宝支付
+         </a>
+         <a class="weui-navbar__item" href="#tab3">
+            银联支付
+         </a>
+         <a class="weui-navbar__item" href="#tab4">
+            Ping++
+         </a>
+      </div>
+      <div class="weui-tab__bd">
+         <div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+            <div class="weui-cells weui-cells_radio">
+               <label class="weui-cell weui-check__label" for="w1">
+                  <div class="weui-cell__bd">
+                     <p>扫码支付模式一：用户输入金额</p>
+                  </div>
+                  <div class="weui-cell__ft">
+                     <input type="radio" class="weui-check" name="radio1" id="w1" value="scancode1" checked="checked">
+                     <span class="weui-icon-checked"></span>
+                  </div>
+               </label>
+               <label class="weui-cell weui-check__label" for="w2">
+                  <div class="weui-cell__bd">
+                     <p>扫码支付模式二：确定支付金额</p>
+                  </div>
+                  <div class="weui-cell__ft">
+                     <input type="radio" name="radio1" class="weui-check" id="w2" value="scancode2">
+                     <span class="weui-icon-checked"></span>
+                  </div>
+               </label>
+               <label class="weui-cell weui-check__label" for="w3">
+                  <div class="weui-cell__bd">
+                     <p>刷卡支付</p>
+                  </div>
+                  <div class="weui-cell__ft">
+                     <input type="radio" name="radio1" class="weui-check" id="w3" value="micropay">
+                     <span class="weui-icon-checked"></span>
+                  </div>
+               </label>
+               <label class="weui-cell weui-check__label" for="w4">
+                  <div class="weui-cell__bd">
+                     <p>公众号支付</p>
+                  </div>
+                  <div class="weui-cell__ft">
+                     <input type="radio" name="radio1" class="weui-check" id="w4" value="webpay">
+                     <span class="weui-icon-checked"></span>
+                  </div>
+               </label>
+               <label class="weui-cell weui-check__label" for="w5">
+                  <div class="weui-cell__bd">
+                     <p>H5支付</p>
+                  </div>
+                  <div class="weui-cell__ft">
+                     <input type="radio" name="radio1" class="weui-check" id="w5" value="h5pay">
+                     <span class="weui-icon-checked"></span>
+                  </div>
+               </label>
+               <label class="weui-cell weui-check__label" for="w6">
+                  <div class="weui-cell__bd">
+                     <p>APP支付</p>
+                  </div>
+                  <div class="weui-cell__ft">
+                     <input type="radio" name="radio1" class="weui-check" id="w6" value="wxapppay">
+                     <span class="weui-icon-checked"></span>
+                  </div>
+               </label>
+            </div>
+         </div>
+         <div id="tab2" class="weui-tab__bd-item">
+            <div class="weui-cells weui-cells_radio">
+               <label class="weui-cell weui-check__label" for="z1">
+                  <div class="weui-cell__bd">
+                     <p>手机网站支付</p>
+                  </div>
+                  <div class="weui-cell__ft">
+                     <input type="radio" class="weui-check" name="radio1" id="z1" value="wappay">
+                     <span class="weui-icon-checked"></span>
+                  </div>
+               </label>
+               <label class="weui-cell weui-check__label" for="z2">
+                  <div class="weui-cell__bd">
+                     <p>电脑网站支付</p>
+                  </div>
+                  <div class="weui-cell__ft">
+                     <input type="radio" class="weui-check" name="radio1" id="z2" value="pcpay">
+                     <span class="weui-icon-checked"></span>
+                  </div>
+               </label>
+               <label class="weui-cell weui-check__label" for="z3">
+                  <div class="weui-cell__bd">
+                     <p>当面付：条码支付</p>
+                  </div>
+                  <div class="weui-cell__ft">
+                     <input type="radio" class="weui-check" name="radio1" id="z3" value="tradepay">
+                     <span class="weui-icon-checked"></span>
+                  </div>
+               </label>
+               <label class="weui-cell weui-check__label" for="z4">
+                  <div class="weui-cell__bd">
+                     <p>当面付：扫码支付</p>
+                  </div>
+                  <div class="weui-cell__ft">
+                     <input type="radio" class="weui-check" name="radio1" id="z4" value="tradeprepay">
+                     <span class="weui-icon-checked"></span>
+                  </div>
+               </label>
+               <label class="weui-cell weui-check__label" for="z5">
+                  <div class="weui-cell__bd">
+                     <p>APP支付</p>
+                  </div>
+                  <div class="weui-cell__ft">
+                     <input type="radio" class="weui-check" name="radio1" id="z5" value="aliapppay">
+                     <span class="weui-icon-checked"></span>
+                  </div>
+               </label>
+            </div>
+         </div>
+         <div id="tab3" class="weui-tab__bd-item">
+            对接中...
+         </div>
+         <div id="tab4" class="weui-tab__bd-item">
+            对接中...
+         </div>
+      </div>
+   </div>
+</div>
+<div style="text-align: center;">
+   <img id="qrcode1" alt="" src="">
+</div>
+<div class="weui-btn-area" style="margin-top: -400px;">
+   <a href="javascript:pay();" class="weui-btn weui-btn_primary">确定支付</a>
+   <a href="#(ctxPath)/toOauth?state=wxpay" class="weui-btn weui-btn_primary">获取微信openId</a>
+</div>
+</body>
+<script src="//cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery-weui/1.0.1/js/jquery-weui.min.js"></script>
+<script src="#(ctxPath)/static/layer/layer.js"></script>
+<script type="text/javascript" src="#(ctxPath)/static/js/jquery.qrcode.min.js"></script>
+<script type="text/javascript">
+    function pay(){
+        var product_id = $.trim($("#product_id").val());
+        var total_fee = $.trim($("#total_fee").val());
+        var auth_code = $.trim($("#auth_code").val());
+        var pay_mode = $("input[name='radio1']:checked").val();
+        if(pay_mode=="scancode1"){//微信
+            scancode1(product_id,total_fee,auth_code);
+        }else if(pay_mode=="scancode2"){
+            scancode2(product_id,total_fee,auth_code);
+        }else if(pay_mode=="micropay"){
+            micropay(product_id,total_fee,auth_code);
+        }else if(pay_mode=="webpay"){
+            webpay(product_id,total_fee,auth_code);
+        }else if(pay_mode=="h5pay"){
+            h5pay(product_id,total_fee,auth_code);
+      }else if(pay_mode=="wxapppay"){
+            wxapppay(product_id,total_fee,auth_code);
+      }else if(pay_mode=="wappay"){//支付宝
+         wappay(product_id,total_fee,auth_code);
+      }else if(pay_mode=="pcpay"){
+            pcpay(product_id,total_fee,auth_code);
+        }else if(pay_mode=="tradepay"){
+            tradepay(product_id,total_fee,auth_code);
+        }else if(pay_mode=="tradeprepay"){
+            tradeprepay(product_id,total_fee,auth_code);
+        }else if(pay_mode=="aliapppay"){
+            aliapppay(product_id,total_fee,auth_code);
+        }
+    }
+    /* 微信扫码支付 */
+    function scancode1(product_id,total_fee,auth_code) {
+      alert("微信扫码支付模式一");
+        $.showLoading("正在加载...");
+        $.post("#(ctxPath)/wxpay/scancode1", {
+            productId : product_id,
+        }, function(res) {
+            $.hideLoading();
+            if (res.code == 0) {
+                var name = res.data;
+                console.log(name);
+                showScanCode('#qrcode1', name);
+            } else {
+                if (res.code == 2) {
+                    layer.alert(res.message);
+                } else {
+                    layer.msg("error：" + res.message, {
+                        shift : 6
+                    });
+                }
+            }
+        });
+    }
+    function scancode2(product_id,total_fee,auth_code) {
+      alert("微信扫码支付模式二");
+        $.showLoading("正在加载...");
+        $.post("#(ctxPath)/wxpay/scancode2", {
+            total_fee : total_fee,
+        }, function(res) {
+            $.hideLoading();
+            if (res.code == 0) {
+                var name = res.data;
+                console.log(name);
+                showScanCode('#qrcode1', name);
+            } else {
+                if (res.code == 2) {
+                    layer.alert(res.message);
+                } else {
+                    layer.msg("error：" + res.message, {
+                        shift : 6
+                    });
+                }
+            }
+        });
+    }
+    function showScanCode(id, name) {
+        $(id).attr("src", "#(ctxPath)/" + name);
+    }
+    /* 微信扫码支付 END*/
+    /* 微信刷卡支付 */
+    function micropay(product_id,total_fee,auth_code) {
+        $.showLoading("正在加载...");
+        $.post("#(ctxPath)/wxpay/micropay", {
+            total_fee : total_fee,
+            auth_code : auth_code,
+        }, function(res) {
+            $.hideLoading();
+            if (res.code == 0) {
+                layer.msg("支付成功", {
+                    shift : 6
+                });
+                self.location = "#(ctxPath)/success";
+            } else {
+                if (res.code == 2) {
+                    layer.alert(res.message);
+                } else {
+                    layer.msg("error：" + res.message, {
+                        shift : 6
+                    });
+                }
+            }
+        });
+    }
+    /* 微信刷卡支付 END*/
+    /* 微信公众号支付支付 */
+    function webpay(product_id,total_fee,auth_code) {
+      alert("公众号支付记得传OpenId");
+        $.showLoading("正在加载...");
+        var total_fee = total_fee;
+        $.post("#(ctxPath)/wxpay/webpay", {
+            total_fee : total_fee,
+        }, function(res) {
+            $.hideLoading();
+            if (res.code == 0) {
+                var data = $.parseJSON(res.data);
+                if (typeof WeixinJSBridge == "undefined") {
+                    if (document.addEventListener) {
+                        document.addEventListener('WeixinJSBridgeReady',
+                            onBridgeReady(data), false);
+                    } else if (document.attachEvent) {
+                        document.attachEvent('WeixinJSBridgeReady',
+                            onBridgeReady(data));
+                        document.attachEvent('onWeixinJSBridgeReady',
+                            onBridgeReady(data));
+                    }
+                } else {
+                    onBridgeReady(data);
+                }
+            } else {
+                if (res.code == 2) {
+                    layer.alert(res.message);
+                } else {
+                    layer.msg("error：" + res.message, {
+                        shift : 6
+                    });
+                }
+            }
+        });
+    }
+    function onBridgeReady(json) {
+        WeixinJSBridge.invoke('getBrandWCPayRequest', json, function(res) {
+            // 使用以上方式判断前端返回,微信团队郑重提示：res.err_msg将在用户支付成功后返回    ok，但并不保证它绝对可靠。
+            if (res.err_msg == "get_brand_wcpay_request:ok") {
+                layer.msg("支付成功", {
+                    shift : 6
+                });
+                self.location = "#(ctxPath)/success";
+            } else {
+                layer.msg("支付失败", {
+                    shift : 6
+                });
+            }
+        });
+    }
+    /* 微信公众号支付支付 END */
+    function h5pay(product_id,total_fee,auth_code){
+        window.open("#(ctxPath)/wxpay/h5pay?total_fee="+total_fee);
+   }
+    function wxapppay(product_id,total_fee,auth_code){
+        window.open("#(ctxPath)/wxpay/apppay?total_fee="+total_fee);
+    }
+
+
+    /*支付宝*/
+    function wappay(product_id,total_fee,auth_code){
+      window.open("#(ctxPath)/alipay/wapPay?total_fee="+total_fee);
+   }
+    function pcpay(product_id,total_fee,auth_code){
+        window.open("#(ctxPath)/alipay/pcPay?total_fee="+total_fee);
+    }
+    function tradepay(product_id,total_fee,auth_code){
+        window.open("#(ctxPath)/alipay/tradePay?total_fee="+total_fee+"&auth_code="+auth_code);
+    }
+    function tradeprepay(product_id,total_fee,auth_code){
+        window.open("#(ctxPath)/alipay/tradePrePay?total_fee="+total_fee+"&auth_code="+auth_code);
+    }
+    function aliapppay(product_id,total_fee,auth_code) {
+        window.open("#(ctxPath)/alipay/appPay?total_fee="+total_fee+"&auth_code="+auth_code);
+    }
+</script>
+</body>
+</html>

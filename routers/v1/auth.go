@@ -118,4 +118,29 @@ func Profile(context *gin.Context){
 		})
 	}
 }
+// @Summary 注册
+// @Produce  json
+// @Param name query string true "username,password,phone_number,gender,email,role"
+// @Success 200 {string} json "{"code":code,"msg" : e.GetMsg(code)}"
+// @Failure 400 {string} json "{"code":code,"msg" : e.GetMsg(code)}"
+// @Router /register [post]
+func Register(context *gin.Context){
+	var people table.Login
+	if context.BindJSON(&people)==nil{
+		if models.Check(people.Username,people.Password)==false{
+			models.AddUser(people.Username,people.Password,people.PhoneNumber,people.Gender,people.Email,people.Role)
+			code:=e.SUCCESS
+			context.JSON(http.StatusOK,gin.H{
+				"code":code,
+				"msg" : e.GetMsg(code),
+			})
+		}else{
+			code:=e.ERROR
+			context.JSON(http.StatusOK,gin.H{
+				"code":code,
+				"msg" : e.GetMsg(code),
+			})
+		}
+	}
+}
 

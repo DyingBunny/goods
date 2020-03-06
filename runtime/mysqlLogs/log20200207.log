@@ -1,0 +1,16 @@
+2020/02/07 13:36:32 sqlE:/GoProject/goods/models/auth.go:2526.966msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny 123456] 1
+2020/02/07 13:36:32 sqlE:/GoProject/goods/models/auth.go:3926.0096msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny 123456] 1
+2020/02/07 13:36:32 sqlE:/GoProject/goods/models/auth.go:6723.9988msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 0
+2020/02/07 13:36:38 sqlE:/GoProject/goods/models/auth.go:2526.0002msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny 123456] 1
+2020/02/07 13:36:38 sqlE:/GoProject/goods/models/auth.go:3925.9962msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[dyingbunny 123456] 1
+2020/02/07 13:36:38 sqlE:/GoProject/goods/models/auth.go:6724.997msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 0
+2020/02/07 13:40:36 sqlE:/GoProject/goods/models/auth.go:5127.9992msINSERT  INTO `login` (`user_id`,`username`,`password`,`phone_number`,`gender`,`email`,`role`,`role_id`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?)[0 qianzihang 123456 13772005470 male 302989778@qq.com seller 0 <nil>] 1
+2020/02/07 13:40:36 sqlE:/GoProject/goods/models/auth.go:5114.0553msSELECT `login` FROM `login`  [] 2
+2020/02/07 13:41:57 sqlE:/GoProject/goods/models/auth.go:2526.0197msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123456] 0
+2020/02/07 13:42:32 sqlE:/GoProject/goods/models/auth.go:2526.0009msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123] 0
+2020/02/07 13:42:55 sqlE:/GoProject/goods/models/auth.go:2525.993msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang1 1234] 0
+2020/02/07 13:43:35 sqlE:/GoProject/goods/models/auth.go:2528.4857msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123] 0
+2020/02/07 13:45:07 sqlE:/GoProject/goods/models/auth.go:2524.9974msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123] 0
+2020/02/07 13:46:11 sqlE:/GoProject/goods/models/auth.go:2526.0171msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qianzihang 123] 0
+2020/02/07 13:46:11 sqlE:/GoProject/goods/models/auth.go:5126.0557msINSERT  INTO `login` (`user_id`,`username`,`password`,`phone_number`,`gender`,`email`,`role`,`role_id`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?)[0 qianzihang 123 13772005470 male 302989778@qq.com seller 0 <nil>] 1
+2020/02/07 13:46:11 sqlE:/GoProject/goods/models/auth.go:5112.9979msSELECT `login` FROM `login`  [] 2
