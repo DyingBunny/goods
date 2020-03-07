@@ -1,6 +1,8 @@
 package routers
 
 import (
+	"bytes"
+	"encoding/json"
 	_ "fmt"
 	"github.com/gin-gonic/gin"
 	_ "github.com/swaggo/gin-swagger"
@@ -10,7 +12,39 @@ import (
 	"goods/pkg/logging/serve"
 	_ "goods/pkg/sdk"
 	"goods/pkg/setting"
+	"io/ioutil"
+	"net/http/httptest"
 )
+
+//构造Get请求
+func Get(url string,router *gin.Engine)[]byte{
+	//构造请求
+	req:=httptest.NewRequest("GET",url,nil)
+	//初始化响应
+	w:=httptest.NewRecorder()
+	router.ServeHTTP(w,req)
+	//提取响应
+	result:=w.Result()
+	defer result.Body.Close()
+	//读取响应Body
+	body,_:=ioutil.ReadAll(result.Body)
+	return body
+}
+
+//构造Post请求Json
+func PostJson(url string,param map[string]interface{},router *gin.Engine)[]byte{
+	//json转化
+	jsonByte,_:=json.Marshal(param)
+	//构造请求，传递数据
+	req:=httptest.NewRequest("POST",url,bytes.NewReader(jsonByte))
+	w:=httptest.NewRecorder()
+	router.ServeHTTP(w,req)
+	result:=w.Result()
+	defer result.Body.Close()
+	body,_:=ioutil.ReadAll(result.Body)
+	return body
+}
+
 //初始化路由
 //func InitRouter() *gin.Engine{
 //	gin.SetMode(setting.RunMode)
