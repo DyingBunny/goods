@@ -4,6 +4,7 @@ import (
 	"github.com/astaxie/beego/validation"
 	"goods/models/table"
 	"goods/pkg/logging/serve"
+	"time"
 )
 //以用户id进行查找
 func Find(UserId string) (table.Login,bool){
@@ -47,14 +48,38 @@ func FindRole(username string,password string)string{
 }
 
 //增加用户
-func AddUser(name string,pwd string,num string,gender string,email string,role string){
+func AddUser(name string,pwd string,num string,gender string,role string){
 	Db.Create(&table.Login{
 		Username:name,
 		Password:pwd,
 		PhoneNumber:num,
 		Gender:gender,
-		Email:email,
 		Role:role})
+}
+//增加买家
+func AddBuyer(buyerId uint){
+	Db.Create(&table.Buyer{
+		BuyerId:buyerId})
+}
+//填写收货地址
+func ModifyAddress(people table.Login,address string){
+	if people.Role=="buyer"{
+		var buyer table.Buyer
+		Db.Model(&buyer).Where("buyer_id=?",people.UserId).Update("receive_address",address)
+	}else{
+		var seller table.Seller
+		Db.Model(&seller).Where("seller_id=?",people.UserId).Update("deliver_address",address)
+	}
+}
+//增加卖家
+func AddSeller(sellerId uint){
+	Db.Create(&table.Seller{
+		SellerId:sellerId})
+}
+//增加车主
+func AddDriver(sellerId uint){
+	Db.Create(&table.Seller{
+		SellerId:sellerId})
 }
 //登录状态更新
 func UpdateSta(userid interface{})bool{
@@ -64,7 +89,8 @@ func UpdateSta(userid interface{})bool{
 }
 //改变登录状态
 func Turnstatus(userid interface{},people table.Login,change interface{}){
-	Db.Model(&people).Where("user_id=?",userid).Update("Login",change)
+	Db.Model(&people).Where("user_id=?",userid).Update("login",change)
+	Db.Model(&people).Where("user_id=?",userid).Update("last_time",time.Now())
 }
 
 

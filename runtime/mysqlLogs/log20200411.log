@@ -1,0 +1,45 @@
+2020/04/11 15:36:47 sqlE:/GoProject/goods/models/auth.go:2524.9338msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wxe 123] 0
+2020/04/11 15:36:49 sqlE:/GoProject/goods/models/auth.go:5123.1096msINSERT  INTO `login` (`user_id`,`username`,`password`,`phone_number`,`gender`,`last_time`,`role`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?)[0 wxe 123 15245983268 male <nil> buyer <nil>] 1
+2020/04/11 15:36:49 sqlE:/GoProject/goods/models/auth.go:5112.0155msSELECT `login` FROM `login`  [] 1
+2020/04/11 15:36:49 sqlE:/GoProject/goods/models/auth.go:6024.2036msINSERT  INTO `buyer` (`buyer_id`,`receive_address`,`deleted_at`) VALUES (?,?,?)[0  <nil>] 1
+2020/04/11 15:37:52 sqlE:/GoProject/goods/models/auth.go:2523.9482msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[we 123] 0
+2020/04/11 15:37:52 sqlE:/GoProject/goods/models/auth.go:5122.3873msINSERT  INTO `login` (`user_id`,`username`,`password`,`phone_number`,`gender`,`last_time`,`role`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?)[0 we 123 15245983268 male <nil> buyer <nil>] 1
+2020/04/11 15:37:52 sqlE:/GoProject/goods/models/auth.go:5111.9774msSELECT `login` FROM `login`  [] 2
+2020/04/11 15:37:52 logE:/GoProject/goods/models/auth.go:60Error 1062: Duplicate entry '0' for key 'buyer.PRIMARY'
+2020/04/11 15:37:52 sqlE:/GoProject/goods/models/auth.go:6022.8145msINSERT  INTO `buyer` (`buyer_id`,`receive_address`,`deleted_at`) VALUES (?,?,?)[0  <nil>] 0
+2020/04/11 15:37:57 sqlE:/GoProject/goods/models/auth.go:2523.9362msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[weww 123] 0
+2020/04/11 15:37:57 sqlE:/GoProject/goods/models/auth.go:5122.8971msINSERT  INTO `login` (`user_id`,`username`,`password`,`phone_number`,`gender`,`last_time`,`role`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?)[0 weww 123 15245983268 male <nil> buyer <nil>] 1
+2020/04/11 15:37:57 sqlE:/GoProject/goods/models/auth.go:5112.9867msSELECT `login` FROM `login`  [] 3
+2020/04/11 15:37:57 logE:/GoProject/goods/models/auth.go:60Error 1062: Duplicate entry '0' for key 'buyer.PRIMARY'
+2020/04/11 15:37:57 sqlE:/GoProject/goods/models/auth.go:6022.9419msINSERT  INTO `buyer` (`buyer_id`,`receive_address`,`deleted_at`) VALUES (?,?,?)[0  <nil>] 0
+2020/04/11 15:48:24 sqlE:/GoProject/goods/models/auth.go:2526.9279msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[weww 123] 0
+2020/04/11 15:48:24 sqlE:/GoProject/goods/models/auth.go:5126.9306msINSERT  INTO `login` (`user_id`,`username`,`password`,`phone_number`,`gender`,`last_time`,`role`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?)[0 weww 123 15245983268 male <nil> buyer <nil>] 1
+2020/04/11 15:48:24 sqlE:/GoProject/goods/models/auth.go:5113.9597msSELECT `login` FROM `login`  [] 2
+2020/04/11 15:48:24 sqlE:/GoProject/goods/models/auth.go:3925.1347msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[weww 123] 1
+2020/04/11 15:48:24 sqlE:/GoProject/goods/models/auth.go:6024.9052msINSERT  INTO `buyer` (`buyer_id`,`receive_address`,`deleted_at`) VALUES (?,?,?)[4  <nil>] 1
+2020/04/11 15:58:40 sqlE:/GoProject/goods/models/auth.go:2624.9335msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qzh 123] 0
+2020/04/11 15:59:00 sqlE:/GoProject/goods/models/auth.go:2627.0049msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wxe 123] 1
+2020/04/11 15:59:00 sqlE:/GoProject/goods/models/auth.go:4024.8602msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wxe 123] 1
+2020/04/11 15:59:00 sqlE:/GoProject/goods/models/auth.go:8423.9399msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 1
+2020/04/11 15:59:00 sqlE:/GoProject/goods/models/auth.go:8524.281msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-11 15:59:00.3484794 +0800 CST m=+21.982488101 1] 1
+2020/04/11 15:59:00 sqlE:/GoProject/goods/models/auth.go:4624.931msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wxe 123] 1
+2020/04/11 16:01:53 sqlE:/GoProject/goods/models/auth.go:1225.9293msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[4] 1
+2020/04/11 16:13:44 sqlE:/GoProject/goods/models/auth.go:7323.9057msUPDATE `seller` SET `deliver_address` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[北京市 4] 0
+2020/04/11 16:14:43 sqlE:/GoProject/goods/models/auth.go:7323.9597msUPDATE `seller` SET `deliver_address` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[北京市 4] 0
+2020/04/11 16:42:27 sqlE:/GoProject/goods/models/auth.go:1240.8903msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[] 0
+2020/04/11 16:42:55 sqlE:/GoProject/goods/models/auth.go:1226.9248msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[] 0
+2020/04/11 16:43:40 sqlE:/GoProject/goods/models/auth.go:1225.9722msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[] 0
+2020/04/11 16:46:44 sqlE:/GoProject/goods/models/auth.go:1224.9921msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[] 0
+2020/04/11 16:47:39 sqlE:/GoProject/goods/models/auth.go:1225.2175msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[1] 1
+2020/04/11 17:01:20 sqlE:/GoProject/goods/models/auth.go:1227.9283msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[] 0
+2020/04/11 17:01:45 sqlE:/GoProject/goods/models/auth.go:1223.9353msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[] 0
+2020/04/11 17:03:04 sqlE:/GoProject/goods/models/auth.go:1224.9342msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[] 0
+2020/04/11 17:03:18 sqlE:/GoProject/goods/models/auth.go:1225.913msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[] 0
+2020/04/11 17:05:22 sqlE:/GoProject/goods/models/auth.go:1223.9372msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[4] 1
+2020/04/11 17:05:23 sqlE:/GoProject/goods/models/auth.go:6821.9457msUPDATE `buyer` SET `receive_address` = ?  WHERE `buyer`.`deleted_at` IS NULL AND ((buyer_id=?))[北京市 4] 1
+2020/04/11 18:09:50 sqlE:/GoProject/goods/models/auth.go:1225.9306msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[4] 1
+2020/04/11 18:09:50 sqlE:/GoProject/goods/models/auth.go:6824.7734msUPDATE `buyer` SET `receive_address` = ?  WHERE `buyer`.`deleted_at` IS NULL AND ((buyer_id=?))[南京市 4] 1
+2020/04/11 18:10:36 sqlE:/GoProject/goods/models/auth.go:1224.932msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[1] 1
+2020/04/11 18:10:36 sqlE:/GoProject/goods/models/auth.go:7125.0933msUPDATE `seller` SET `deliver_address` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[南京市 1] 0
+2020/04/11 18:15:53 sqlE:/GoProject/goods/models/auth.go:1228.9319msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[4] 1
+2020/04/11 18:15:53 sqlE:/GoProject/goods/routers/v1/auth.go:5923.9322msSELECT * FROM `buyer`  WHERE `buyer`.`deleted_at` IS NULL AND ((buyer_id=?)) LIMIT 1[4] 1

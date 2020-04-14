@@ -12,6 +12,7 @@
     "paths": {
         "/auth": {
             "get": {
+                "description": "用户通过账号密码获取token",
                 "produces": [
                     "application/json"
                 ],
@@ -19,21 +20,28 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "username,password",
-                        "name": "name",
+                        "description": "用户名",
+                        "name": "username",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "密码",
+                        "name": "password",
                         "in": "query",
                         "required": true
                     }
                 ],
                 "responses": {
                     "200": {
-                        "description": "{\"code\":code,\"msg\" : e.GetMsg(code),\"data\":{\"token\":token,\"role\":role,\"login_time\":time.Now()}}",
+                        "description": "{\"code\":响应码,\"msg\" : 响应消息,\"data\":{\"token\":token,\"role\":role,\"login_time\":time.Now()}}",
                         "schema": {
                             "type": "string"
                         }
                     },
                     "400": {
-                        "description": "{\"code\":code,\"msg\" : e.GetMsg(code)}",
+                        "description": "{\"code\":响应码,\"msg\" : 响应消息}",
                         "schema": {
                             "type": "string"
                         }
@@ -136,28 +144,42 @@
         },
         "/login": {
             "post": {
+                "description": "用户登录",
                 "produces": [
                     "application/json"
                 ],
                 "summary": "登录",
                 "parameters": [
                     {
-                        "type": "string",
-                        "description": "username,password",
-                        "name": "name",
-                        "in": "query",
-                        "required": true
+                        "description": "用户名",
+                        "name": "username",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "$ref": "#/definitions/string"
+                        }
+                    },
+                    {
+                        "description": "密码",
+                        "name": "password",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "type": "object",
+                            "$ref": "#/definitions/string"
+                        }
                     }
                 ],
                 "responses": {
                     "200": {
-                        "description": "{\"code\":code,\"msg\" : e.GetMsg(code),\t\"data\":{\"login_time\":time.Now()}}",
+                        "description": "{\"code\":响应码,\"msg\" : 响应消息,\t\"data\":{\"login_time\":登录时间}}",
                         "schema": {
                             "type": "string"
                         }
                     },
                     "400": {
-                        "description": "{\"code\":code,\"msg\" : e.GetMsg(code)}",
+                        "description": "{\"code\":响应码,\"msg\" : 响应消息}",
                         "schema": {
                             "type": "string"
                         }
@@ -182,7 +204,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "{\"code\" : code,\t\"msg\" : e.GetMsg(code),\t\"data\":{\"user_id\":auth.User_id,\t\"username\":auth.Username,\t\"password\":auth.Password,\t\"phone_number\":auth.PhoneNumber,\t\"gender\":auth.Gender,\t\"email\":auth.Email,\t\"login\":auth.Login,\t\"role\":auth.Role,\"role_id\":auth.RoleId}}",
+                        "description": "{\"code\" : code,\t\"msg\" : e.GetMsg(code),\t\"data\":{\"user_id\":auth.User_id,\t\"username\":auth.Username,\t\"password\":auth.Password,\t\"phone_number\":auth.PhoneNumber,\t\"gender\":auth.Gender,\t\"login\":auth.Login,\t\"role\":auth.Role,\"role_id\":auth.RoleId}}",
                         "schema": {
                             "type": "string"
                         }
@@ -229,6 +251,7 @@
         },
         "/register": {
             "post": {
+                "description": "用户注册，并且填写必要的信息,角色分为三类buyer\\seller\\owner，买家、卖家、车主",
                 "produces": [
                     "application/json"
                 ],
@@ -236,21 +259,49 @@
                 "parameters": [
                     {
                         "type": "string",
-                        "description": "username,password,phone_number,gender,email,role",
-                        "name": "name",
+                        "description": "用户名",
+                        "name": "username",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "密码",
+                        "name": "password",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "手机号",
+                        "name": "phone_number",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "性别",
+                        "name": "gender",
+                        "in": "query",
+                        "required": true
+                    },
+                    {
+                        "type": "string",
+                        "description": "角色",
+                        "name": "role",
                         "in": "query",
                         "required": true
                     }
                 ],
                 "responses": {
                     "200": {
-                        "description": "{\"code\":code,\"msg\" : e.GetMsg(code),\t\"data\":{\"login_time\":time.Now()}}",
+                        "description": "{\"code\":响应码,\"msg\" : 响应消息}",
                         "schema": {
                             "type": "string"
                         }
                     },
                     "400": {
-                        "description": "{\"code\":code,\"msg\" : e.GetMsg(code)}",
+                        "description": "{\"code\":响应码,\"msg\" : 响应消息}",
                         "schema": {
                             "type": "string"
                         }

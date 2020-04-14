@@ -4,38 +4,40 @@ CREATE TABLE `login` (
   `password` varchar(30) NOT NULL COMMENT'密码',
   `phone_number` varchar(11) NOT NULL COMMENT'手机号',
   `gender` varchar(10) NOT NULL COMMENT'性别',
-  `email` varchar(30) NOT NULL COMMENT'邮箱',
   `login` enum('True','False') NOT NULL DEFAULT 'False' COMMENT'登录状态',
-  `role` enum('buyer','seller','owner') NOT NULL COMMENT'角色',
-  `role_id` int(11) unsigned COMMENT'具体用户id',
+  `last_time` date COMMENT '最后一次登录时间',
+  `role` enum('buyer','seller','driver') NOT NULL COMMENT'角色',
   `deleted_at` date,
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'用户表';
 
-CREATE TABLE `driver`(
-    `driver_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+CREATE TABLE `buyer`(
+    `buyer_id` int(11) unsigned NOT NULL,
+    `receive_address` varchar(84) COMMENT'收货地址',
+    `deleted_at` date,
+    PRIMARY KEY (`buyer_id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'买家';
+
+CREATE TABLE `seller`(
+    `seller_id` int(11) unsigned NOT NULL,
+    `deliver_address` varchar(84) COMMENT'发货地址',
     `evaluation` int(11) unsigned DEFAULT 0 COMMENT'总体评价',
     `count` int(11) unsigned DEFAULT 0 COMMENT'评价次数',
-    `address_id` int(11) unsigned NOT NULL COMMENT'位置编号',
+    `comprehensive` int(11) unsigned DEFAULT 0 COMMENT'综合评价',
+    `deleted_at` date,
+    PRIMARY KEY (`seller_id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'卖家';
+
+CREATE TABLE `driver`(
+    `driver_id` int(11) unsigned NOT NULL,
+    `name` varchar(30) COMMENT'姓名',
+    `identity` varchar(30) COMMENT'身份证',
+    `evaluation` int(11) unsigned DEFAULT 0 COMMENT'总体评价',
+    `count` int(11) unsigned DEFAULT 0 COMMENT'评价次数',
+    `comprehensive` int(11) unsigned DEFAULT 0 COMMENT'综合评价',
     `deleted_at` date,
     PRIMARY KEY (`driver_id`)
-)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'骑手';
-
-CREATE TABLE `receive_mapping`(
-    `user_address_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-    `pid` int(11) unsigned COMMENT '父id',
-    `cid` int(11) unsigned COMMENT '子id',
-    `deleted_at` date,
-    PRIMARY KEY (`user_location_id`)
-)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'收货地表';
-
-CREATE TABLE `deliver_mapping`(
-    `user_address_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-    `pid` int(11) unsigned COMMENT '父id',
-    `cid` int(11) unsigned COMMENT '子id',
-    `deleted_at` date,
-    PRIMARY KEY (`user_address_id`)
-)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'发货地表';
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'车主';
 
 CREATE TABLE `address`(
     `address_id` int(11) unsigned NOT NULL AUTO_INCREMENT,

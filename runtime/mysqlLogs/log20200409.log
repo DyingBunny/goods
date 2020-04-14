@@ -1,0 +1,3 @@
+2020/04/09 11:20:24 sqlE:/GoProject/goods/models/auth.go:2542.8866msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qzh 123] 1
+2020/04/09 11:20:24 sqlE:/GoProject/goods/models/auth.go:3926.9315msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qzh 123] 1
+2020/04/09 11:20:24 sqlE:/GoProject/goods/models/auth.go:6624.935msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 1] 0

@@ -1,0 +1,6 @@
+2020/04/14 21:09:00 sqlE:/GoProject/goods/models/auth.go:1227.9258msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[] 0
+2020/04/14 21:11:32 sqlE:/GoProject/goods/models/auth.go:1229.9189msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[1] 1
+2020/04/14 21:11:32 sqlE:/GoProject/goods/models/auth.go:9223.9358msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[False 1] 1
+2020/04/14 21:11:32 sqlE:/GoProject/goods/models/auth.go:9323.9576msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-14 21:11:32.4930806 +0800 CST m=+8.997080401 1] 0
+2020/04/14 22:00:38 sqlE:/GoProject/goods/routers/v1/auth.go:15834.9086msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((username=?)) LIMIT 1[wxe] 1
+2020/04/14 22:00:53 sqlE:/GoProject/goods/routers/v1/auth.go:15825.9309msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((username=?)) LIMIT 1[wxewwww] 0

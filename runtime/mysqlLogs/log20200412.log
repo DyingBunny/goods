@@ -1,0 +1,28 @@
+2020/04/12 21:23:30 sqlE:/GoProject/goods/models/auth.go:2625.9047msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[weww 123] 1
+2020/04/12 21:23:30 sqlE:/GoProject/goods/models/auth.go:4024.9309msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[weww 123] 1
+2020/04/12 21:23:30 sqlE:/GoProject/goods/models/auth.go:9225.5301msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 4] 0
+2020/04/12 21:23:30 sqlE:/GoProject/goods/models/auth.go:9323.9086msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-12 21:23:30.3128002 +0800 CST m=+12.909452501 4] 0
+2020/04/12 21:23:30 sqlE:/GoProject/goods/models/auth.go:4624.9325msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[weww 123] 1
+2020/04/12 21:23:45 sqlE:/GoProject/goods/models/auth.go:1237.8981msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[] 0
+2020/04/12 21:27:26 sqlE:/GoProject/goods/models/auth.go:1224.9865msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[] 0
+2020/04/12 21:29:03 sqlE:/GoProject/goods/models/auth.go:1226.9283msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[] 0
+2020/04/12 21:30:04 sqlE:/GoProject/goods/models/auth.go:2628.9225msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[weww 123] 1
+2020/04/12 21:30:04 sqlE:/GoProject/goods/models/auth.go:4026.9306msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[weww 123] 1
+2020/04/12 21:30:04 sqlE:/GoProject/goods/models/auth.go:9223.9396msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 4] 0
+2020/04/12 21:30:04 sqlE:/GoProject/goods/models/auth.go:9323.9319msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-12 21:30:04.69793 +0800 CST m=+7.521127601 4] 0
+2020/04/12 21:30:04 sqlE:/GoProject/goods/models/auth.go:4625.1469msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[weww 123] 1
+2020/04/12 21:30:12 sqlE:/GoProject/goods/models/auth.go:1225.9294msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[1] 1
+2020/04/12 21:30:12 sqlE:/GoProject/goods/models/auth.go:7124.9668msUPDATE `seller` SET `deliver_address` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[南京市 1] 0
+2020/04/12 22:05:53 sqlE:/GoProject/goods/models/auth.go:2625.3966msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[weww 123] 1
+2020/04/12 22:05:53 sqlE:/GoProject/goods/models/auth.go:4025.4278msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[weww 123] 1
+2020/04/12 22:05:53 sqlE:/GoProject/goods/models/auth.go:9224.0402msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 4] 0
+2020/04/12 22:05:53 sqlE:/GoProject/goods/models/auth.go:9323.9677msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-12 22:05:53.9470626 +0800 CST m=+2.849159001 4] 0
+2020/04/12 22:05:54 sqlE:/GoProject/goods/models/auth.go:4624.9768msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[weww 123] 1
+2020/04/12 22:10:13 sqlE:/GoProject/goods/models/auth.go:1223.2101msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[1] 1
+2020/04/12 22:17:39 sqlE:/GoProject/goods/models/auth.go:2628.9259msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[weww 123] 1
+2020/04/12 22:17:39 sqlE:/GoProject/goods/models/auth.go:4027.0981msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[weww 123] 1
+2020/04/12 22:17:39 sqlE:/GoProject/goods/models/auth.go:9227.0226msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 4] 0
+2020/04/12 22:17:39 sqlE:/GoProject/goods/models/auth.go:9325.6912msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-12 22:17:39.3892555 +0800 CST m=+13.286654901 4] 0
+2020/04/12 22:17:39 sqlE:/GoProject/goods/models/auth.go:4626.9039msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[weww 123] 1
+2020/04/12 22:18:20 sqlE:/GoProject/goods/models/auth.go:1225.9288msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[1] 1
+2020/04/12 22:18:20 sqlE:/GoProject/goods/models/auth.go:7125.8064msUPDATE `seller` SET `deliver_address` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[南京市 1] 0

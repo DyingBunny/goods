@@ -9,21 +9,27 @@ info:
 paths:
   /auth:
     get:
+      description: 用户通过账号密码获取token
       parameters:
-      - description: username,password
+      - description: 用户名
         in: query
-        name: name
+        name: username
+        required: true
+        type: string
+      - description: 密码
+        in: query
+        name: password
         required: true
         type: string
       produces:
       - application/json
       responses:
         "200":
-          description: '{"code":code,"msg" : e.GetMsg(code),"data":{"token":token,"role":role,"login_time":time.Now()}}'
+          description: '{"code":响应码,"msg" : 响应消息,"data":{"token":token,"role":role,"login_time":time.Now()}}'
           schema:
             type: string
         "400":
-          description: '{"code":code,"msg" : e.GetMsg(code)}'
+          description: '{"code":响应码,"msg" : 响应消息}'
           schema:
             type: string
       summary: token获取
@@ -89,21 +95,31 @@ paths:
       summary: 评价
   /login:
     post:
+      description: 用户登录
       parameters:
-      - description: username,password
-        in: query
-        name: name
+      - description: 用户名
+        in: body
+        name: username
         required: true
-        type: string
+        schema:
+          $ref: '#/definitions/string'
+          type: object
+      - description: 密码
+        in: body
+        name: password
+        required: true
+        schema:
+          $ref: '#/definitions/string'
+          type: object
       produces:
       - application/json
       responses:
         "200":
-          description: "{\"code\":code,\"msg\" : e.GetMsg(code),\t\"data\":{\"login_time\":time.Now()}}"
+          description: "{\"code\":响应码,\"msg\" : 响应消息,\t\"data\":{\"login_time\":登录时间}}"
           schema:
             type: string
         "400":
-          description: '{"code":code,"msg" : e.GetMsg(code)}'
+          description: '{"code":响应码,"msg" : 响应消息}'
           schema:
             type: string
       summary: 登录
@@ -119,7 +135,7 @@ paths:
       - application/json
       responses:
         "200":
-          description: "{\"code\" : code,\t\"msg\" : e.GetMsg(code),\t\"data\":{\"user_id\":auth.User_id,\t\"username\":auth.Username,\t\"password\":auth.Password,\t\"phone_number\":auth.PhoneNumber,\t\"gender\":auth.Gender,\t\"email\":auth.Email,\t\"login\":auth.Login,\t\"role\":auth.Role,\"role_id\":auth.RoleId}}"
+          description: "{\"code\" : code,\t\"msg\" : e.GetMsg(code),\t\"data\":{\"user_id\":auth.User_id,\t\"username\":auth.Username,\t\"password\":auth.Password,\t\"phone_number\":auth.PhoneNumber,\t\"gender\":auth.Gender,\t\"login\":auth.Login,\t\"role\":auth.Role,\"role_id\":auth.RoleId}}"
           schema:
             type: string
         "400":
@@ -149,21 +165,42 @@ paths:
       summary: 获取用户收货位置
   /register:
     post:
+      description: 用户注册，并且填写必要的信息,角色分为三类buyer\seller\owner，买家、卖家、车主
       parameters:
-      - description: username,password,phone_number,gender,email,role
+      - description: 用户名
         in: query
-        name: name
+        name: username
+        required: true
+        type: string
+      - description: 密码
+        in: query
+        name: password
+        required: true
+        type: string
+      - description: 手机号
+        in: query
+        name: phone_number
+        required: true
+        type: string
+      - description: 性别
+        in: query
+        name: gender
+        required: true
+        type: string
+      - description: 角色
+        in: query
+        name: role
         required: true
         type: string
       produces:
       - application/json
       responses:
         "200":
-          description: "{\"code\":code,\"msg\" : e.GetMsg(code),\t\"data\":{\"login_time\":time.Now()}}"
+          description: '{"code":响应码,"msg" : 响应消息}'
           schema:
             type: string
         "400":
-          description: '{"code":code,"msg" : e.GetMsg(code)}'
+          description: '{"code":响应码,"msg" : 响应消息}'
           schema:
             type: string
       summary: 注册
