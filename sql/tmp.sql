@@ -14,6 +14,8 @@ CREATE TABLE `login` (
 CREATE TABLE `buyer`(
     `buyer_id` int(11) unsigned NOT NULL,
     `receive_address` varchar(84) COMMENT'收货地址',
+    `name`  varchar(30) COMMENT'收货人',
+    `deliver_number`    varchar(11) COMMENT'收货号码',
     `deleted_at` date,
     PRIMARY KEY (`buyer_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'买家';

@@ -21,6 +21,8 @@ type Login struct{
 type Buyer struct{
 	BuyerId 	uint   	`json:"buyer_id"`
 	ReceiveAddress		string	`json:"receive_address"`
+	Name	string	`json:"name"`
+	ReceiveNumber	string	`json:"receive_number"`
 	DeletedAt *time.Time `json:"deleted_at"`
 }
 

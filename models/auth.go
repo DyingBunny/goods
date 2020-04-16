@@ -7,11 +7,11 @@ import (
 	"time"
 )
 //以用户id进行查找
-func Find(UserId string) (table.Login,bool){
+func Find(UserId uint) (table.Login,bool){
 	var auth table.Login
 	Db.First(&auth,"user_id=?",UserId)
 	valid:=validation.Validation{}
-	valid.Required(auth.UserId,UserId)
+	valid.Required(auth.UserId, string(UserId))
 	if valid.HasErrors(){
 		for _,err:=range valid.Errors{
 			logging.Info(err.Key,err.Message)
@@ -62,10 +62,12 @@ func AddBuyer(buyerId uint){
 		BuyerId:buyerId})
 }
 //填写收货地址
-func ModifyAddress(people table.Login,address string){
+func ModifyAddress(people table.Login,address string,name string,receiveNumber string){
 	if people.Role=="buyer"{
 		var buyer table.Buyer
 		Db.Model(&buyer).Where("buyer_id=?",people.UserId).Update("receive_address",address)
+		Db.Model(&buyer).Where("buyer_id=?",people.UserId).Update("name",name)
+		Db.Model(&buyer).Where("buyer_id=?",people.UserId).Update("receive_number",receiveNumber)
 	}else{
 		var seller table.Seller
 		Db.Model(&seller).Where("seller_id=?",people.UserId).Update("deliver_address",address)

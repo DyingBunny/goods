@@ -13,11 +13,6 @@ import (
 	"time"
 )
 
-type address struct{
-	UserId  string `json:"user_id"`
-	Address string `json:"address"`
-}
-
 //登录
 func Login(context *gin.Context){
 	var people table.Login
@@ -48,9 +43,9 @@ func Login(context *gin.Context){
 }
 //查看买家信息
 func Profile(context *gin.Context){
-	var address address
-	_ = context.ShouldBindBodyWith(&address,binding.JSON)
-	auth,isExist := models.Find(address.UserId)
+	var auth table.Login
+	_ = context.ShouldBindBodyWith(&auth,binding.JSON)
+	auth,isExist := models.Find(auth.UserId)
 	if isExist==false{
 		code:=e.ERROR
 		context.JSON(http.StatusOK, gin.H{
@@ -60,7 +55,7 @@ func Profile(context *gin.Context){
 	}else{
 		code:=e.SUCCESS
 		var buyer table.Buyer
-		models.Db.First(&buyer,"buyer_id=?",address.UserId)
+		models.Db.First(&buyer,"buyer_id=?",auth.UserId)
 		data := make(map[string]interface{})
 		data["user_id"]=auth.UserId
 		data["username"]=auth.Username
@@ -71,6 +66,8 @@ func Profile(context *gin.Context){
 		data["last_time"]=auth.LastTime
 		data["role"]=auth.Role
 		data["receive_address"]=buyer.ReceiveAddress
+		data["name"]=buyer.Name
+		data["receive_number"]=buyer.ReceiveNumber
 		context.JSON(http.StatusOK, gin.H{
 			"code" : code,
 			"msg" : e.GetMsg(code),
@@ -109,9 +106,9 @@ func Register(context *gin.Context){
 }
 //填写/修改收货/发货地址
 func ModifyAddress(context *gin.Context){
-	var address address
-	_ = context.ShouldBindBodyWith(&address,binding.JSON)
-	auth,isExist := models.Find(address.UserId)
+	var buyer table.Buyer
+	_ = context.ShouldBindBodyWith(&buyer,binding.JSON)
+	auth,isExist := models.Find(buyer.BuyerId)
 	if isExist==false{
 		code:=e.ERROR
 		context.JSON(http.StatusOK, gin.H{
@@ -120,7 +117,7 @@ func ModifyAddress(context *gin.Context){
 		})
 	}else{
 		code:=e.SUCCESS
-		models.ModifyAddress(auth,address.Address)
+		models.ModifyAddress(auth,buyer.ReceiveAddress,buyer.Name,buyer.ReceiveNumber)
 		context.JSON(http.StatusOK, gin.H{
 			"code" : code,
 			"msg" : e.GetMsg(code),
@@ -131,9 +128,9 @@ func ModifyAddress(context *gin.Context){
 
 //退出登录
 func LogOut(context *gin.Context){
-	var address address
-	_=context.ShouldBindBodyWith(&address,binding.JSON)
-	auth,isExist:=models.Find(address.UserId)
+	var people table.Login
+	_=context.ShouldBindBodyWith(&people,binding.JSON)
+	auth,isExist:=models.Find(people.UserId)
 	if isExist==false{
 		code:=e.ERROR
 		context.JSON(http.StatusOK,gin.H{
