@@ -177,3 +177,42 @@ func Duplicate(context *gin.Context){
 		})
 	}
 }
+
+//查看卖家信息
+func SellerProfile(context *gin.Context){
+	var auth table.Login
+	_ = context.ShouldBindBodyWith(&auth,binding.JSON)
+	auth,isExist := models.Find(auth.UserId)
+	if isExist==false{
+		code:=e.ERROR
+		context.JSON(http.StatusOK, gin.H{
+			"code" : code,
+			"msg" : e.GetMsg(code),
+		})
+	}else{
+		code:=e.SUCCESS
+		var seller table.Seller
+		models.Db.First(&seller,"seller_id=?",auth.UserId)
+		data := make(map[string]interface{})
+		data["user_id"]=auth.UserId
+		data["username"]=auth.Username
+		data["password"]=auth.Password
+		data["phone_number"]=auth.PhoneNumber
+		data["gender"]=auth.Gender
+		data["login"]=auth.Login
+		data["last_time"]=auth.LastTime
+		data["role"]=auth.Role
+		data["deliver_address"]=seller.DeliverAddress
+		data["name"]=seller.Name
+		data["receive_number"]=seller.DeliverNumber
+		data["evaluation"]=seller.Evaluation
+		data["count"]=seller.Count
+		data["comprehensive"]=seller.Comprehensive
+		context.JSON(http.StatusOK, gin.H{
+			"code" : code,
+			"msg" : e.GetMsg(code),
+			"data":data,
+			//"data":auth.UserId,auth.Username,
+		})
+	}
+}

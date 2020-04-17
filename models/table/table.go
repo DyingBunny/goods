@@ -12,7 +12,7 @@ type Login struct{
 	PhoneNumber string 	`json:"phone_number"`
 	Gender   	string 	`json:"gender"`
 	Login    	string 	`gorm:"default:'False'"json:"login"`
-	LastTime	*time.Time	`json:"last_time"`
+	LastTime	time.Time	`json:"last_time"`
 	Role     	string 	`json:"role"`
 	DeletedAt 	*time.Time `json:"deleted_at"`
 }
@@ -30,6 +30,8 @@ type Buyer struct{
 type Seller struct{
 	SellerId 	uint   	`json:"seller_id"`
 	DeliverAddress		string	`json:"deliver_address"`
+	Name	string	`json:"name"`
+	DeliverNumber	string	`json:"deliver_number"`
 	Evaluation	uint	`gorm:"default:0"json:"evaluation"`
 	Count 		uint	`gorm:"default:0"json:"count"`
 	Comprehensive	uint	`gorm:"default:0"json:"comprehensive"`
@@ -46,6 +48,23 @@ type Driver struct{
 	AddressId 	uint	`json:"address_id"`
 	DeletedAt *time.Time `json:"deleted_at"`
 }
+
+//商品
+type Goods struct{
+	GoodsId		uint	`json:"goods_id"`
+	Text		string	`json:"text"`
+	SellerId	uint	`json:"seller_id"`
+	SellerUsername	string	`json:"seller_username"`
+	TotalNum	uint	`json:"total_num"`
+	RemainNum	uint	`json:"remain_num"`
+	Price		uint	`json:"price"`
+	TransPrice	uint	`json:"trans_price"`
+	DeliverAddress	string	`json:"deliver_address"`
+	ReceiveAddress	string	`json:"receive_address"`
+	CreateTime	time.Time	`json:"create_time"`
+	DeletedAt *time.Time `json:"deleted_at"`
+}
+
 ////地址
 //type Address struct{
 //	AddressId	uint	`json:"address_id"`

@@ -1,0 +1,18 @@
+2020/04/17 14:49:23 sqlE:/GoProject/goods/models/auth.go:2625.9298msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wxew 123] 1
+2020/04/17 14:49:23 sqlE:/GoProject/goods/models/auth.go:4024.9348msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wxew 123] 1
+2020/04/17 14:49:24 sqlE:/GoProject/goods/models/auth.go:9624.9144msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 6] 1
+2020/04/17 14:49:24 sqlE:/GoProject/goods/models/auth.go:9723.9337msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-17 14:49:24.0410591 +0800 CST m=+20.887033301 6] 0
+2020/04/17 14:49:24 sqlE:/GoProject/goods/models/auth.go:4629.9355msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wxew 123] 1
+2020/04/17 14:49:41 sqlE:/GoProject/goods/models/auth.go:1224.9314msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[6] 1
+2020/04/17 14:49:41 sqlE:/GoProject/goods/models/auth.go:9624.9329msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[False 6] 1
+2020/04/17 14:49:41 sqlE:/GoProject/goods/models/auth.go:9724.0036msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-17 14:49:41.6951993 +0800 CST m=+38.541173501 6] 0
+2020/04/17 14:53:31 sqlE:/GoProject/goods/models/auth.go:2624.9317msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/17 14:53:31 sqlE:/GoProject/goods/models/auth.go:4024.9343msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/17 14:53:31 sqlE:/GoProject/goods/models/auth.go:9623.9355msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/04/17 14:53:31 sqlE:/GoProject/goods/models/auth.go:9723.9623msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-17 14:53:31.131325 +0800 CST m=+27.165018001 7] 1
+2020/04/17 14:53:31 sqlE:/GoProject/goods/models/auth.go:4622.9484msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/17 14:53:41 sqlE:/GoProject/goods/models/auth.go:1227.939msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[7] 1
+2020/04/17 14:53:41 logE:/GoProject/goods/models/goods.go:12Error 1146: Table 'goods.goods' doesn't exist
+2020/04/17 14:53:41 sqlE:/GoProject/goods/models/goods.go:1212.0044msINSERT  INTO `goods` (`goods_id`,`text`,`seller_id`,`seller_username`,`total_num`,`remain_num`,`price`,`trans_price`,`deliver_address`,`receive_address`,`create_time`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)[0 卖东西 7 wx 1000 1000 100 1 南京市 北京市 2020-04-17 14:53:41.357643 +0800 CST m=+37.391336001 <nil>] 0
+2020/04/17 14:54:50 sqlE:/GoProject/goods/models/auth.go:1224.9328msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[7] 1
+2020/04/17 14:54:50 sqlE:/GoProject/goods/models/goods.go:1224.9038msINSERT  INTO `goods` (`goods_id`,`text`,`seller_id`,`seller_username`,`total_num`,`remain_num`,`price`,`trans_price`,`deliver_address`,`receive_address`,`create_time`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?)[0 卖东西 7 wx 1000 1000 100 1 南京市 北京市 2020-04-17 14:54:50.4290644 +0800 CST m=+106.462757401 <nil>] 1

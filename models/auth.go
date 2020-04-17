@@ -71,6 +71,8 @@ func ModifyAddress(people table.Login,address string,name string,receiveNumber s
 	}else{
 		var seller table.Seller
 		Db.Model(&seller).Where("seller_id=?",people.UserId).Update("deliver_address",address)
+		Db.Model(&seller).Where("seller_id=?",people.UserId).Update("name",name)
+		Db.Model(&seller).Where("seller_id=?",people.UserId).Update("deliver_number",receiveNumber)
 	}
 }
 //增加卖家

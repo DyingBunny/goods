@@ -36,10 +36,14 @@ func InitRouter() *gin.Engine{
 	api := r.Group("/api/v1")
 	api.Use(jwt.JWT())
 	{
-		//查看信息
+		//查看买家信息
 		api.POST("/profile",v1.Profile)
+		//查看卖家信息
+		api.POST("seller_profile",v1.SellerProfile)
 		//增加、修改地址
 		api.POST("/modify_address",v1.ModifyAddress)
+		//卖家发布商品
+		api.POST("/release_commodities",v1.ReleaseCommodities)
 		//退出登录
 		api.POST("/logout",v1.LogOut)
 	}
