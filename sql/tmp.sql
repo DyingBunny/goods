@@ -43,15 +43,6 @@ CREATE TABLE `driver`(
     PRIMARY KEY (`driver_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'车主';
 
-CREATE TABLE `address`(
-    `address_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-    `address` varchar(84) NOT NULL COMMENT'位置',
-    `lng` decimal(10,7) NOT NULL COMMENT'经度',
-    `lat` decimal(10,7) NOT NULL COMMENT'纬度',
-    `deleted_at` date,
-    PRIMARY KEY (`address_id`)
-)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'地址表';
-
 CREATE TABLE `goods`(
     `goods_id`  int(11) unsigned NOT NULL AUTO_INCREMENT ,
     `text`  text COMMENT'商品标题',
@@ -62,11 +53,28 @@ CREATE TABLE `goods`(
     `price` int(11) unsigned NOT NULL COMMENT '商品单价',
     `trans_price` int(11) unsigned NOT NULL COMMENT '运输单价',
     `deliver_address` varchar(84) NOT NULL COMMENT'发货地址',
-    `receive_address` varchar(84) NOT NULL COMMENT'收货地址',
     `create_time` date NOT NULL COMMENT '创建时间',
+    `identification` varchar(84) NOT NULL COMMENT'唯一标识',
     `deleted_at` date,
     PRIMARY KEY (`goods_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'商品';
+
+CREATE TABLE `seller_goods`(
+    `seller_goods_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+    `goods_id` int(11) unsigned NOT NULL COMMENT '商品id',
+    `seller_id` int(11) unsigned NOT NULL COMMENT '卖家id',
+    `deleted_at` date,
+    PRIMARY KEY (`seller_goods_id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'卖家-商品映射表';
+
+CREATE TABLE `address`(
+    `address_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+    `address` varchar(84) NOT NULL COMMENT'位置',
+    `lng` decimal(10,7) NOT NULL COMMENT'经度',
+    `lat` decimal(10,7) NOT NULL COMMENT'纬度',
+    `deleted_at` date,
+    PRIMARY KEY (`address_id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'地址表';
 
 CREATE TABLE `order`(
     `order_id`int(11) unsigned NOT NULL AUTO_INCREMENT ,

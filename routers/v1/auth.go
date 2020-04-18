@@ -27,6 +27,7 @@ func Login(context *gin.Context){
 			data["token"]=token
 			data["role"]=role
 			data["user_id"]=userid
+			data["username"]=people.Username
 			data["login_time"]=time.Now()
 			context.JSON(http.StatusOK,gin.H{
 				"code":code,
@@ -36,7 +37,7 @@ func Login(context *gin.Context){
 			code:=e.ERROR
 			context.JSON(http.StatusOK,gin.H{
 				"code":code,
-				"msg" : e.GetMsg(code),
+				"msg" : "用户名或密码错误",
 			})
 		}
 	}
@@ -130,21 +131,13 @@ func ModifyAddress(context *gin.Context){
 func LogOut(context *gin.Context){
 	var people table.Login
 	_=context.ShouldBindBodyWith(&people,binding.JSON)
-	auth,isExist:=models.Find(people.UserId)
-	if isExist==false{
-		code:=e.ERROR
-		context.JSON(http.StatusOK,gin.H{
-			"code":code,
-			"msg":e.GetMsg(code),
-		})
-	}else{
-		code:=e.SUCCESS
-		models.Turnstatus(auth.UserId,auth,"False")
-		context.JSON(http.StatusOK,gin.H{
-			"code":code,
-			"msg":e.GetMsg(code),
-		})
-	}
+	auth,_:=models.Find(people.UserId)
+	code:=e.SUCCESS
+	models.Turnstatus(auth.UserId,auth,"False")
+	context.JSON(http.StatusOK,gin.H{
+		"code":code,
+		"msg":e.GetMsg(code),
+	})
 }
 
 //检查用户名是否重复

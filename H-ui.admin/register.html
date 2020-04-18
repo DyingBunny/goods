@@ -1,0 +1,179 @@
+﻿<!--
+ * @Author: your name
+ * @Date: 2020-04-05 18:57:39
+ * @LastEditTime: 2020-04-09 16:49:19
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: \H-ui.admin\login.html
+ -->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="renderer" content="webkit|ie-comp|ie-stand">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport"
+    content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+  <link href="static/h-ui/css/H-ui.min.css" rel="stylesheet" type="text/css" />
+  <link href="static/h-ui.admin/css/H-ui.login.css" rel="stylesheet" type="text/css" />
+  <link href="static/h-ui.admin/css/style.css" rel="stylesheet" type="text/css" />
+  <link href="lib/Hui-iconfont/1.0.8/iconfont.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="static/layui/css/layui.css">
+  <script src="//captcha.luosimao.com/static/dist/api.js"></script>
+  <!-- iconfont -->
+
+  <!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+  <title>后台登录 - 货来了</title>
+  <meta name="keywords" content="货来了,H-ui网站后台模版,后台模版下载,后台管理系统模版,HTML后台模版下载">
+  <meta name="description" content="货来了，是一款由国人开发的轻量级扁平化网站后台模板，完全免费开源的网站后台管理系统模版，适合中小型CMS后台系统。">
+</head>
+
+<body>
+  <input type="hidden" id="TenantId" name="TenantId" value="" />
+  <!-- <div class="header"></div> -->
+  <div class="loginWraper">
+    <img class="logo" src="./static/h-ui.admin/images/logo.jpg." alt="">
+
+    <div id="loginform" class="loginBox">
+      <div class="row cl">
+        <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60d;</i></label>
+        <div class="formControls col-xs-8">
+          <input id="" name="" type="text" placeholder="用户名" class="input-text size-L username">
+        </div>
+      </div>
+      <div class="row cl">
+        <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+        <div class="formControls col-xs-8">
+          <input id="" name="" type="password" placeholder="密码" class="input-text size-L password">
+        </div>
+      </div>
+      <div class="row cl">
+        <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+        <div class="formControls col-xs-8">
+          <input id="" name="" type="password" placeholder="手机号" class="input-text size-L password">
+        </div>
+      </div>
+      <div class="row cl">
+        <label class="form-label col-xs-3"><i class="Hui-iconfont">&#xe60e;</i></label>
+        <div class="formControls col-xs-8">
+          <span class="select-box">
+            <select class="select gender" size="1" name="demo1">
+              <option value="seller" selected="">矿主</option>
+              <option value="admin">管理员</option>
+              <option value="owner">车主</option>
+              <option value="buyer">买家</option>
+            </select>
+          </span>
+        </div>
+      </div>
+
+      <div class="row cl fn-clear">
+        <label class="form-label col-xs-3 yzmtit fl">图形验证码</label>
+        <div class="formControls col-xs-8">
+          <div class="l-captcha" data-site-key="829517b447ef8c8367c80b6cac3a4f7f"></div>
+        </div>
+      </div>
+      <div class="row cl">
+
+        <div class="formControls col-xs-9 col-xs-offset-2">
+          <a href="javascript:;" class="btn btn-success  radius size-L btn-block register">新用户注册</a>
+        </div>
+      </div>
+      <div class="row cl">
+
+        <div class="formControls col-xs-9 col-xs-offset-2">
+          <a href="./login.html" class="btn btn-default  radius size-L btn-block">立即登录</a>
+
+        </div>
+      </div>
+
+      </form>
+    </div>
+  </div>
+  <div class="footer">Copyright 你的公司名称 by 货来了</div>
+  <script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
+  <script src="static/layui/layui.all.js"></script>
+  <script>
+
+    $(function () {
+      var yzm = true;
+      function getResponse(resp) {
+        if (resp.res == 'success') {
+          yzm = true;
+        }
+
+      }
+      $('.skin-minimal input').iCheck({
+        checkboxClass: 'icheckbox-green',
+        radioClass: 'iradio-green',
+        increaseArea: '20%'
+      })
+      $('.register').on('click', function () {
+        var username = $('.username').val();
+        var password = $('.username').val();
+        var phone_number = $('.username').val();
+        var gender = $('.gender option:selected').text();
+        if (username == '' || password == '' || phone_number == '' || gender == '') {
+          layer.msg('请将内容填写完整', {
+            icon: 2,
+            time: 2000 //2秒关闭（如果不配置，默认是3秒）
+          });
+          return false;
+        } else if (isPhoneNo(phone_number)) {
+          layer.msg('手机号输入有误请重新输入', {
+            icon: 2,
+            time: 2000 //2秒关闭（如果不配置，默认是3秒）
+          }); return false;
+        } else if (yzm == false) {
+          layer.msg('请完成图形验证', {
+            icon: 2,
+            time: 2000 //2秒关闭（如果不配置，默认是3秒）
+          }); return false;
+        } else {
+          $.ajax({
+            dataType: 'json',
+            url: 'http://175.24.22.208:8080/register',
+            'data': JSON.stringify({ username: username, password: password, phone_number: phone_number, gender: gender }),
+            'type': 'POST',
+            'processData': false,
+            headers: { 'Content-Type': 'application/json' },
+            success: function (data) {
+              console.log(data);
+              if (data.code != 200) {
+                layer.msg(data.msg, {
+                  icon: 2,
+                  time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                });
+              } else {
+                layer.msg('登录成功3秒后自动跳转', {
+                  icon: 1,
+                  time: 3000 //2秒关闭（如果不配置，默认是3秒）
+                }, function () {
+                  window.location.href = './login.html'
+                });
+              }
+            }
+          })
+        }
+      })
+      // 验证手机号
+      function isPhoneNo(phone) {
+        var pattern = /^1[34578]\d{9}$/;
+        return pattern.test(phone);
+      }
+    })
+
+  </script>
+</body>
+
+</html>

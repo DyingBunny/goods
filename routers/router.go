@@ -33,6 +33,8 @@ func InitRouter() *gin.Engine{
 	r.POST("/register",v1.Register)
 	//查看用户名是否重复
 	r.POST("/duplicate",v1.Duplicate)
+	//退出登录
+	r.POST("/logout",v1.LogOut)
 	api := r.Group("/api/v1")
 	api.Use(jwt.JWT())
 	{
@@ -44,8 +46,8 @@ func InitRouter() *gin.Engine{
 		api.POST("/modify_address",v1.ModifyAddress)
 		//卖家发布商品
 		api.POST("/release_commodities",v1.ReleaseCommodities)
-		//退出登录
-		api.POST("/logout",v1.LogOut)
+		//查看商品信息
+		api.POST("commodities_profile",v1.CommoditiesProfile)
 	}
 	return r
 }

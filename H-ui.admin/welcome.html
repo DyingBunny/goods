@@ -1,0 +1,197 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+
+    <META HTTP-EQUIV="Expires" CONTENT="0">
+    <!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+    <link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+    <link rel="stylesheet" href="static/layui/css/layui.css">
+    <!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+    <title>我的桌面</title>
+</head>
+
+<body>
+    <div class="page-container">
+        <p class="f-20 text-success">欢迎</p>
+        <p class="username">用户名：</p>
+        <p class="userid">身份：</p>
+        <p class="time">登录时间：</p>
+        <p class="phone_number">手机号：</p>
+        <hr>
+        <h4>用户信息<a class="btn btn-primary radius f-r" onclick="system_category_add('添加/修改地址','system-address.html')"
+                href="javascript:;"><i class="Hui-iconfont"></i> 添加/修改地址</a></h4>
+        <table class="table table-border table-bordered table-bg receive_address">
+            <thead>
+                <tr>
+                    <th scope="col" colspan="9">收货地址</th>
+                </tr>
+                <tr class="text-c">
+                    <th width="40">ID</th>
+                    <th width="350">收货人</th>
+                    <th width="350">手机号</th>
+                    <!-- <th width="350">收货地址</th> -->
+                    <!-- <th width="150">操作</th> -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="text-c">
+                    <td>1</td>
+                    <td></td>
+                    <td></td>
+                    <!-- <td></td> -->
+                    <!-- <td class="td-manage"><a style="text-decoration:none" onClick="admin_stop(this,'10001')" href="javascript:;" title="停用"><i class="Hui-iconfont">&#xe631;</i></a> <a title="编辑" href="javascript:;" onclick="admin_edit('管理员编辑','admin-add.html','1','800','500')"
+                            class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a> <a title="删除" href="javascript:;" onclick="admin_del(this,'1')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
+                 -->
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <footer class="footer mt-20">
+        <!-- <div class="container">
+			<p>
+				感谢jQuery、layer、laypage、Validform、UEditor、My97DatePicker、iconfont、Datatables、WebUploaded、icheck、highcharts、bootstrap-Switch<br>
+				Copyright &copy;2015-2017 货来了 All Rights Reserved.<br>
+				本后台系统由<a href="http://www.h-ui.net/" target="_blank" title="H-ui前端框架">H-ui前端框架</a>提供前端技术支持</p>
+		</div> -->
+    </footer>
+    <!--_footer 作为公共模版分离出去-->
+    <script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
+    <script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
+    <script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script>
+    <script>
+        // 扩充js的内置对象Date方法
+        Object.assign(Date.prototype, {
+            switch(time) {
+                let date = {
+                    "yy": this.getFullYear(),
+                    // 这里月份的key采用大写，为了区别分钟的key
+                    "MM": this.getMonth() + 1,
+                    "dd": this.getDate(),
+                    "hh": this.getHours(),
+                    "mm": this.getMinutes(),
+                    "ss": this.getSeconds()
+                };
+                //输出年 y+:匹配1个到多个y,i:忽略大小写
+                if (/(y+)/i.test(time)) {
+                    time = time.replace(RegExp.$1, (this.getFullYear() + '').substr(4 - RegExp.$1.length));
+                }
+                //输出月、日、时、分、秒
+                Object.keys(date).forEach(function (i) {
+                    //  "(" + i + ")"的结果是字符串"(i+)",
+                    // 只有写成"(" + i + ")"形式，才能在正则表达式中捕获子匹配，进而才能用到RegExp.$1的值
+                    if (new RegExp("(" + i + ")").test(time)) {
+                        // 判断，如果时间为一位数，则在前面加'0' 
+                        // ps：这里有一个小知识点：number类型+string类型 = string类型
+                        if (RegExp.$1.length == 2) {
+                            date[i] < 10 ? date[i] = '0' + date[i] : date[i];
+                        }
+                        //替换初始化函数时候传入yyyy-mm-dd hh:mm:ss(这里可以打印出time、RegExp.$1、date[k])
+                        time = time.replace(RegExp.$1, date[i]);
+                    }
+                })
+                return time;
+            }
+        })
+        /* 判断信息 */
+        var mydata = localStorage.getItem('token');
+        if (mydata != null) {
+            var datas = JSON.parse(mydata)
+            console.log(datas)
+            let newDate = new Date(datas.login_time);
+            $('.time').html('登录时间：' + newDate.switch('yyyy-MM-dd hh:mm:ss'))
+
+            switch (datas.role) {
+                case 'seller':
+                    $('.userid').html('身份：矿主')
+                    break;
+                case 'admin':
+                    $('.userid').html('身份：管理员')
+                    break;
+                case 'owner':
+                    $('.userid').html('身份：车主')
+                    break;
+                case 'buyer':
+                    $('.userid').html('身份：买家')
+                    break;
+            }
+            console.log(newDate.switch('yyyy-MM-dd hh:mm:ss'))
+            $.ajax({
+                dataType: 'json',
+                url: 'http://175.24.22.208:8080/api/v1/seller_profile',
+                'data': JSON.stringify({
+                    user_id: datas.user_id,
+                    token: datas.token
+                }),
+                'type': 'POST',
+                'processData': false,
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                success: function (data) {
+                    console.log(data);
+                    $('.username').html('用户名:' + data.data.username)
+                    $('.phone_number').html('用户名:' + data.data.phone_number)
+                    if (data.data.receive_address == '') {
+                        $('.receive_address').html('<div class="mt-10 text-c">暂无收货地址</div>')
+                    } else {
+                        $('.receive_address .text-c td').eq(0).html(data.data.user_id)
+                        $('.receive_address .text-c td').eq(1).html(data.data.name)
+                        $('.receive_address .text-c td').eq(2).html(data.data.phone_number)
+                        $('.receive_address .text-c td').eq(3).html(data.data.receive_address)
+                    }
+                    // if (data.code != 200) {
+                    //     var mypar = parent;
+                    //     layer.msg(data.msg, {
+                    //         icon: 2,
+                    //         time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                    //     }, function(index) {
+                    //         mypar.layer.close(index);
+                    //         mypar.location.reload();
+                    //     });
+                    // } else {
+                    //     console.log(data.data)
+                    //     localStorage.setItem('token', JSON.stringify(data.data));
+                    //     layer.msg('登录成功3秒后自动跳转', {
+                    //         icon: 1,
+                    //         time: 3000 //2秒关闭（如果不配置，默认是3秒）
+                    //     }, function() {
+                    //         window.location.href = './index.html'
+                    //     });
+                    // }
+                }
+            })
+        }
+        /*系统-栏目-添加*/
+        function system_category_add(title, url, w, h) {
+            layer_show(title, url, w, h);
+        }
+        /*管理员-编辑*/
+        function admin_edit(title, url, id, w, h) {
+            layer_show(title, url, w, h);
+        }
+    </script>
+</body>
+
+</html>

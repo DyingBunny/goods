@@ -60,8 +60,15 @@ type Goods struct{
 	Price		uint	`json:"price"`
 	TransPrice	uint	`json:"trans_price"`
 	DeliverAddress	string	`json:"deliver_address"`
-	ReceiveAddress	string	`json:"receive_address"`
 	CreateTime	time.Time	`json:"create_time"`
+	Identification	string	`json:"identification"`
+	DeletedAt *time.Time `json:"deleted_at"`
+}
+
+type SellerGoods struct{
+	SellerGoodsID	uint	`json:"seller_goods_id"`
+	GoodsId 	uint	`json:"goods_id"`
+	SellerId	uint	`json:"seller_id"`
 	DeletedAt *time.Time `json:"deleted_at"`
 }
 

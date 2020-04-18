@@ -1,0 +1,289 @@
+<!--_meta 作为公共模版分离出去-->
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport"
+        content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <link rel="Bookmark" href="/favicon.ico">
+    <link rel="Shortcut Icon" href="/favicon.ico" />
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <META HTTP-EQUIV="Cache-Control" CONTENT="no-cache">
+
+    <META HTTP-EQUIV="Expires" CONTENT="0">
+    <!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+    <link rel="stylesheet" type="text/css" href="static/h-ui/css/H-ui.min.css" />
+    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/H-ui.admin.css" />
+    <link rel="stylesheet" type="text/css" href="lib/Hui-iconfont/1.0.8/iconfont.css" />
+    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/skin/default/skin.css" id="skin" />
+    <link rel="stylesheet" type="text/css" href="static/h-ui.admin/css/style.css" />
+    <!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+    <!--/meta 作为公共模版分离出去-->
+
+    <title>发布商品</title>
+</head>
+
+<body>
+    <div class="page-container">
+        <form action="" method="post" class="form form-horizontal" id="form-category-add">
+            <div id="tab-category" class="HuiTab">
+                <div class="tabCon">
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-3"> <span class="c-red">*</span>商品标题</label>
+                        <div class="formControls col-xs-8 col-sm-9">
+                            <input type="text" class="input-text text" value="" placeholder="" id="" name="test">
+                        </div>
+                        <div class="col-3">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-3">
+                            <span class="c-red">*</span>
+                            卖家id</label>
+                        <div class="formControls col-xs-8 col-sm-9 user_id">
+                            <!-- <input type="text" class="input-text seller_username" value="" placeholder="" id="" name="seller_username"> -->
+                        </div>
+                        <div class="col-3">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-3">
+                            <span class="c-red">*</span>
+                            卖家用户名</label>
+                        <div class="formControls col-xs-8 col-sm-9 seller_username">
+                            <!-- <input type="text" class="input-text seller_username" value="" placeholder="" id="" name="seller_username"> -->
+                        </div>
+                        <div class="col-3">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-3">
+                            <span class="c-red">*</span>
+                            商品总数量</label>
+                        <div class="formControls col-xs-8 col-sm-9">
+                            <input type="number" class="input-text total_num" value="" placeholder="" id=""
+                                name="total_num">
+                        </div>
+                        <div class="col-3">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-3">
+                            <span class="c-red">*</span>
+                            商品剩余数量</label>
+                        <div class="formControls col-xs-8 col-sm-9">
+                            <input type="number" class="input-text remain_num" value="" placeholder="" id=""
+                                name="remain_num">
+                        </div>
+                        <div class="col-3">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-3">
+                            <span class="c-red">*</span>
+                            商品单价</label>
+                        <div class="formControls col-xs-8 col-sm-9">
+                            <input type="number" class="input-text price" value="" placeholder="" id="" name="price">
+                        </div>
+                        <div class="col-3">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-3">
+                            <span class="c-red">*</span>
+                            运输单价/吨</label>
+                        <div class="formControls col-xs-8 col-sm-9">
+                            <input type="number" class="input-text trans_price" value="" placeholder="" id=""
+                                name="trans_price">
+                        </div>
+                        <div class="col-3">
+                        </div>
+                    </div>
+                    <div class="row cl">
+                        <label class="form-label col-xs-4 col-sm-3">
+                            <span class="c-red">*</span>
+                            发货地址</label>
+                        <div class="formControls col-xs-8 col-sm-9">
+                            <input type="text" class="input-text deliver_address" value="" placeholder="" id=""
+                                name="deliver_address">
+                        </div>
+                        <div class="col-3">
+                        </div>
+                    </div>
+                    <!-- <div class="row cl">
+                            <label class="form-label col-xs-4 col-sm-3">
+                                <span class="c-red">*</span>
+                                收货地址</label>
+                            <div class="formControls col-xs-8 col-sm-9">
+                                <input type="text" class="input-text receive_address" value="" placeholder="" id=""
+                                    name="receive_address">
+                            </div>
+                            <div class="col-3">
+                            </div>
+                        </div> -->
+                </div>
+
+            </div>
+            <div class="row cl">
+                <div class="col-9 col-offset-3">
+                    <input class="btn btn-primary radius" type="submit" value="&nbsp;&nbsp;提交&nbsp;&nbsp;">
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!--_footer 作为公共模版分离出去-->
+    <script type="text/javascript" src="lib/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript" src="lib/layer/2.4/layer.js"></script>
+    <script type="text/javascript" src="static/h-ui/js/H-ui.min.js"></script>
+    <script type="text/javascript" src="static/h-ui.admin/js/H-ui.admin.js"></script>
+    <!--/_footer 作为公共模版分离出去-->
+
+    <!--请在下方写此页面业务相关的脚本-->
+    <script type="text/javascript" src="lib/My97DatePicker/4.8/WdatePicker.js"></script>
+    <script type="text/javascript" src="lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+    <script type="text/javascript" src="lib/jquery.validation/1.14.0/validate-methods.js"></script>
+    <script type="text/javascript" src="lib/jquery.validation/1.14.0/messages_zh.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            var mydata = localStorage.getItem('token');
+            if (mydata != null) {
+                var datas = JSON.parse(mydata)
+                console.log(datas)
+                $('.user_id').html(datas.user_id)
+                $('.seller_username').html(datas.username)
+            }
+            $('.skin-minimal input').iCheck({
+                checkboxClass: 'icheckbox-blue',
+                radioClass: 'iradio-blue',
+                increaseArea: '20%'
+            });
+
+            $("#tab-category").Huitab({
+                index: 0
+            });
+            $
+            $("#form-category-add").validate({
+                rules: {
+                    test: {
+                        required: true
+                    },
+                    total_num: {
+                        required: true
+                    },
+                    remain_num: {
+                        required: true
+                    },
+                    price: {
+                        required: true
+                    },
+                    trans_price: {
+                        required: true
+                    },
+                    deliver_address: {
+                        required: true
+                    },
+                    // receive_address: {
+                    //     required: true
+                    // }
+                },
+                messages: {
+                    test: {
+                        required: '请将内容填写完整'
+                    },
+                    total_num: {
+                        required: '请将内容填写完整'
+                    },
+                    remain_num: {
+                        required: '请将内容填写完整'
+                    },
+                    price: {
+                        required: '请将内容填写完整'
+                    },
+                    trans_price: {
+                        required: '请将内容填写完整'
+                    },
+                    deliver_address: {
+                        required: '请将内容填写完整'
+                    },
+                    // receive_address: {
+                    //     required: '请将内容填写完整'
+                    // }
+                },
+                onkeyup: false,
+                focusCleanup: true,
+                success: "valid",
+                submitHandler: function (form) {
+                    console.log($('.place').val())
+                    console.log(form)
+                    /* 判断信息 */
+                    var mydata = localStorage.getItem('token');
+                    if (mydata != null) {
+                        var datas = JSON.parse(mydata)
+                        $.ajax({
+                            dataType: 'json',
+                            url: 'http://175.24.22.208:8080/api/v1/release_commodities',
+                            'data': JSON.stringify({
+                                seller_id: datas.user_id,
+                                token: datas.token,
+                                text: $('.text').val(),
+                                seller_username: $('.seller_username').html(),
+                                total_num: $('.total_num').val() * 1,
+                                remain_num: $('.remain_num').val() * 1,
+                                price: $('.price').val() * 1,
+                                trans_price: $('.trans_price').val() * 1,
+                                deliver_address: $('.deliver_address').val(),
+                                receive_address: $('.receive_address').val()
+                            }),
+                            'type': 'POST',
+                            'processData': false,
+                            headers: {
+                                'Content-Type': 'application/json'
+                            },
+                            success: function (data) {
+                                if (data.code != 200) {
+
+                                    var mypar = parent;
+                                    layer.msg(data.msg, {
+                                        icon: 2,
+                                        time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                                    });
+                                } else {
+                                    localStorage.setItem('goods', data.data.goods_id);
+                                    layer.msg('操作成功', {
+                                        icon: 1,
+                                        time: 3000 //2秒关闭（如果不配置，默认是3秒）
+                                    }, function (index) {
+                                        parent.layer.close(index);
+                                        parent.location.reload();
+                                    });
+                                }
+                            }
+                        })
+                    } else {
+                        layer.msg('请先登录', {
+                            icon: 2,
+                            time: 2000 //2秒关闭（如果不配置，默认是3秒）
+                        }, function () {
+                            window.location.href = './login.html'
+                        });
+                    }
+                }
+            });
+        });
+    </script>
+    <!--/请在上方写此页面业务相关的脚本-->
+</body>
+
+</html>
