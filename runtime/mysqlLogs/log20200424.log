@@ -1,0 +1,42 @@
+2020/04/24 19:43:59 sqlE:/GoProject/goods/models/auth.go:2629.9209msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/24 19:43:59 sqlE:/GoProject/goods/models/auth.go:4025.9575msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/24 19:43:59 sqlE:/GoProject/goods/models/auth.go:9625.0546msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/04/24 19:44:00 sqlE:/GoProject/goods/models/auth.go:9728.9221msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-24 19:43:59.9777266 +0800 CST m=+320.895311701 7] 1
+2020/04/24 19:44:02 sqlE:/GoProject/goods/models/auth.go:4624.4881msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/24 19:44:16 sqlE:/GoProject/goods/models/goods.go:9425.9724msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 1[1] 1
+2020/04/24 19:44:16 sqlE:/GoProject/goods/models/order.go:1224.8241msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 1[1] 1
+2020/04/24 19:44:16 sqlE:/GoProject/goods/models/order.go:1325.9245msSELECT * FROM `buyer`  WHERE `buyer`.`deleted_at` IS NULL AND ((buyer_id=?)) LIMIT 1[6] 1
+2020/04/24 19:44:16 sqlE:/GoProject/goods/models/order.go:1424.9307msINSERT  INTO `order` (`order_id`,`goods_id`,`seller_id`,`buyer_id`,`text`,`create_time`,`total_num`,`remain_num`,`total_price`,`total_trans_price`,`deliver_address`,`receive_address`,`state`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)[0 1 7 6 卖东西 2020-04-24 19:44:16.2443538 +0800 CST m=+337.161938901 100 100 10000 100 南京市 13291957258 1 <nil>] 1
+2020/04/24 19:44:16 sqlE:/GoProject/goods/models/goods.go:10226.0062msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 1[1] 1
+2020/04/24 19:44:16 logE:/GoProject/goods/models/goods.go:102Error 1264: Out of range value for column 'remain_num' at row 1
+2020/04/24 19:44:16 sqlE:/GoProject/goods/models/goods.go:10224.5174msUPDATE `goods` SET `remain_num` = ?  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?))[18446744073709551516 1] 0
+2020/04/24 19:47:47 sqlE:/GoProject/goods/models/goods.go:9429.9197msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 1[1] 1
+2020/04/24 19:47:47 sqlE:/GoProject/goods/models/order.go:1226.9265msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 1[1] 1
+2020/04/24 19:47:47 sqlE:/GoProject/goods/models/order.go:1324.9359msSELECT * FROM `buyer`  WHERE `buyer`.`deleted_at` IS NULL AND ((buyer_id=?)) LIMIT 1[6] 1
+2020/04/24 19:47:47 sqlE:/GoProject/goods/models/order.go:1424.611msINSERT  INTO `order` (`order_id`,`goods_id`,`seller_id`,`buyer_id`,`text`,`create_time`,`total_num`,`remain_num`,`total_price`,`total_trans_price`,`deliver_address`,`receive_address`,`state`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)[0 1 7 6 卖东西 2020-04-24 19:47:47.3582959 +0800 CST m=+28.783050601 100 100 10000 100 南京市 13291957258 1 <nil>] 1
+2020/04/24 19:47:47 logE:/GoProject/goods/models/goods.go:102Error 1264: Out of range value for column 'remain_num' at row 1
+2020/04/24 19:47:47 sqlE:/GoProject/goods/models/goods.go:10224.9425msUPDATE `goods` SET `remain_num` = ?  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?))[18446744073709551516 1] 0
+2020/04/24 19:48:14 sqlE:/GoProject/goods/models/goods.go:9430.9254msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 1[1] 1
+2020/04/24 19:48:14 sqlE:/GoProject/goods/models/order.go:1225.2383msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 1[1] 1
+2020/04/24 19:48:14 sqlE:/GoProject/goods/models/order.go:1323.7528msSELECT * FROM `buyer`  WHERE `buyer`.`deleted_at` IS NULL AND ((buyer_id=?)) LIMIT 1[6] 1
+2020/04/24 19:48:14 sqlE:/GoProject/goods/models/order.go:1423.8959msINSERT  INTO `order` (`order_id`,`goods_id`,`seller_id`,`buyer_id`,`text`,`create_time`,`total_num`,`remain_num`,`total_price`,`total_trans_price`,`deliver_address`,`receive_address`,`state`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)[0 1 7 6 卖东西 2020-04-24 19:48:14.1064093 +0800 CST m=+3.124582201 100 100 10000 100 南京市 13291957258 1 <nil>] 1
+2020/04/24 19:50:03 sqlE:/GoProject/goods/models/goods.go:9427.9254msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 1[1] 1
+2020/04/24 19:50:03 sqlE:/GoProject/goods/models/order.go:1225.9365msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 1[1] 1
+2020/04/24 19:50:03 sqlE:/GoProject/goods/models/order.go:1325.0165msSELECT * FROM `buyer`  WHERE `buyer`.`deleted_at` IS NULL AND ((buyer_id=?)) LIMIT 1[6] 1
+2020/04/24 19:50:03 sqlE:/GoProject/goods/models/order.go:1425.4499msINSERT  INTO `order` (`order_id`,`goods_id`,`seller_id`,`buyer_id`,`text`,`create_time`,`total_num`,`remain_num`,`total_price`,`total_trans_price`,`deliver_address`,`receive_address`,`state`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)[0 1 7 6 卖东西 2020-04-24 19:50:03.8628705 +0800 CST m=+26.340891801 100 100 10000 100 南京市 13291957258 1 <nil>] 1
+2020/04/24 19:50:03 logE:/GoProject/goods/models/goods.go:102Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?)) LIMIT 1' at line 1
+2020/04/24 19:50:03 sqlE:/GoProject/goods/models/goods.go:10213.2808msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 1[] 0
+2020/04/24 19:50:03 logE:/GoProject/goods/models/goods.go:104Error 1264: Out of range value for column 'remain_num' at row 1
+2020/04/24 19:50:03 sqlE:/GoProject/goods/models/goods.go:10425.0674msUPDATE `goods` SET `remain_num` = ?  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?))[18446744073709551516 1] 0
+2020/04/24 19:51:15 sqlE:/GoProject/goods/models/goods.go:9425.9309msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 1[1] 1
+2020/04/24 19:51:15 sqlE:/GoProject/goods/models/order.go:1223.9367msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 1[1] 1
+2020/04/24 19:51:15 sqlE:/GoProject/goods/models/order.go:1324.3597msSELECT * FROM `buyer`  WHERE `buyer`.`deleted_at` IS NULL AND ((buyer_id=?)) LIMIT 1[6] 1
+2020/04/24 19:51:15 sqlE:/GoProject/goods/models/order.go:1425.0445msINSERT  INTO `order` (`order_id`,`goods_id`,`seller_id`,`buyer_id`,`text`,`create_time`,`total_num`,`remain_num`,`total_price`,`total_trans_price`,`deliver_address`,`receive_address`,`state`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)[0 1 7 6 卖东西 2020-04-24 19:51:15.3807656 +0800 CST m=+4.190499901 100 100 10000 100 南京市 13291957258 1 <nil>] 1
+2020/04/24 19:51:20 logE:/GoProject/goods/models/goods.go:102Error 1064: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '?)) LIMIT 1' at line 1
+2020/04/24 19:51:20 sqlE:/GoProject/goods/models/goods.go:10211.9777msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 1[] 0
+2020/04/24 19:51:57 sqlE:/GoProject/goods/models/goods.go:9429.919msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 1[1] 1
+2020/04/24 19:51:57 sqlE:/GoProject/goods/models/order.go:1226.9285msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 1[1] 1
+2020/04/24 19:51:57 sqlE:/GoProject/goods/models/order.go:1325.9303msSELECT * FROM `buyer`  WHERE `buyer`.`deleted_at` IS NULL AND ((buyer_id=?)) LIMIT 1[6] 1
+2020/04/24 19:51:58 sqlE:/GoProject/goods/models/order.go:1426.9277msINSERT  INTO `order` (`order_id`,`goods_id`,`seller_id`,`buyer_id`,`text`,`create_time`,`total_num`,`remain_num`,`total_price`,`total_trans_price`,`deliver_address`,`receive_address`,`state`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)[0 1 7 6 卖东西 2020-04-24 19:51:57.9641449 +0800 CST m=+6.439235901 100 100 10000 100 南京市 13291957258 1 <nil>] 1
+2020/04/24 19:52:01 sqlE:/GoProject/goods/models/goods.go:10226.1946msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 1[1] 1
+2020/04/24 19:52:08 sqlE:/GoProject/goods/models/goods.go:10425.4072msUPDATE `goods` SET `remain_num` = ?  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?))[900 1] 1

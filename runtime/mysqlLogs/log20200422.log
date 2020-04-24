@@ -1,0 +1,32 @@
+2020/04/22 21:14:52 sqlE:/GoProject/goods/models/auth.go:2625.9303msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/22 21:14:52 sqlE:/GoProject/goods/models/auth.go:4027.0018msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/22 21:14:52 sqlE:/GoProject/goods/models/auth.go:9625.9185msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/04/22 21:14:52 sqlE:/GoProject/goods/models/auth.go:9724.9338msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-22 21:14:52.1019453 +0800 CST m=+5.856758401 7] 1
+2020/04/22 21:14:52 sqlE:/GoProject/goods/models/auth.go:4625.9356msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/22 21:15:26 sqlE:/GoProject/goods/models/goods.go:4448.8686msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 5 OFFSET 0[6] 0
+2020/04/22 21:15:26 sqlE:/GoProject/goods/models/goods.go:5049.8657msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[6] 0
+2020/04/22 21:16:06 sqlE:/GoProject/goods/models/goods.go:4425.9301msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 5 OFFSET 0[7] 2
+2020/04/22 21:16:06 sqlE:/GoProject/goods/models/goods.go:5024.9771msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[7] 0
+2020/04/22 21:16:20 sqlE:/GoProject/goods/models/goods.go:4427.924msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1 OFFSET 0[7] 1
+2020/04/22 21:16:20 sqlE:/GoProject/goods/models/goods.go:5026.0326msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[7] 0
+2020/04/22 21:16:26 sqlE:/GoProject/goods/models/goods.go:4440.8898msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1 OFFSET 1[7] 1
+2020/04/22 21:16:26 sqlE:/GoProject/goods/models/goods.go:5025.9445msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[7] 0
+2020/04/22 21:17:34 sqlE:/GoProject/goods/models/goods.go:4425.93msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1 OFFSET 1[6] 0
+2020/04/22 21:17:34 sqlE:/GoProject/goods/models/goods.go:5024.9328msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[6] 0
+2020/04/22 21:18:46 sqlE:/GoProject/goods/models/goods.go:4423.936msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1 OFFSET 1[6] 0
+2020/04/22 21:18:46 sqlE:/GoProject/goods/models/goods.go:5021.9915msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[6] 0
+2020/04/22 21:19:17 sqlE:/GoProject/goods/models/auth.go:2627.9266msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 12] 0
+2020/04/22 21:39:30 sqlE:/GoProject/goods/models/auth.go:2624.9345msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 12] 0
+2020/04/22 21:39:32 sqlE:/GoProject/goods/models/auth.go:2631.9135msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/22 21:39:32 sqlE:/GoProject/goods/models/auth.go:4023.9357msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/22 21:39:32 sqlE:/GoProject/goods/models/auth.go:9623.9374msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/04/22 21:39:32 sqlE:/GoProject/goods/models/auth.go:9723.9758msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-22 21:39:32.6297999 +0800 CST m=+63.371294201 7] 0
+2020/04/22 21:39:32 sqlE:/GoProject/goods/models/auth.go:4623.947msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/22 21:39:47 sqlE:/GoProject/goods/models/goods.go:5714.9591msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL ORDER BY price desc LIMIT 5 OFFSET 0[] 2
+2020/04/22 21:39:47 sqlE:/GoProject/goods/models/goods.go:6323.9334msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL[] 0
+2020/04/22 22:04:23 sqlE:/GoProject/goods/models/goods.go:5713.9623msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL ORDER BY price desc LIMIT 5 OFFSET 0[] 2
+2020/04/22 22:04:23 sqlE:/GoProject/goods/models/goods.go:7012.9662msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL[] 0
+2020/04/22 22:04:25 sqlE:/GoProject/goods/models/goods.go:5712.9651msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL ORDER BY price desc LIMIT 5 OFFSET 0[] 2
+2020/04/22 22:04:25 sqlE:/GoProject/goods/models/goods.go:7013.9626msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL[] 0
+2020/04/22 22:04:34 sqlE:/GoProject/goods/models/goods.go:6313.9398msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL ORDER BY price asc LIMIT 5 OFFSET 0[] 2
+2020/04/22 22:04:34 sqlE:/GoProject/goods/models/goods.go:7013.0409msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL[] 0

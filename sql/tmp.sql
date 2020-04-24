@@ -54,6 +54,8 @@ CREATE TABLE `goods`(
     `trans_price` int(11) unsigned NOT NULL COMMENT '运输单价',
     `deliver_address` varchar(84) NOT NULL COMMENT'发货地址',
     `create_time` date NOT NULL COMMENT '创建时间',
+    `detail` text COMMENT'详细信息',
+    `state` int(4) unsigned NOT NULL COMMENT'状态码',
     `identification` varchar(84) NOT NULL COMMENT'唯一标识',
     `deleted_at` date,
     PRIMARY KEY (`goods_id`)
@@ -78,12 +80,18 @@ CREATE TABLE `address`(
 
 CREATE TABLE `order`(
     `order_id`int(11) unsigned NOT NULL AUTO_INCREMENT ,
+    `goods_id` int(11) unsigned NOT NULL COMMENT'商品id',
+    `seller_id` int(11) unsigned NOT NULL COMMENT'卖家id',
+    `buyer_id` int(11) unsigned NOT NULL COMMENT'买家id',
     `text` text COMMENT'订单标题',
-    `complete` enum('True','False') NOT NULL DEFAULT 'False' COMMENT '是否完成',
     `create_time` date NOT NULL COMMENT '创建时间',
-    `complete_time` date DEFAULT NULL COMMENT '完成时间',
-    `price` int(11) unsigned NOT NULL COMMENT '价格',
-    `distance` decimal(10,2) unsigned NOT NULL COMMENT '距离',
+    `total_num` int(11) unsigned NOT NULL COMMENT '总共数量',
+    `remain_num`int(11) unsigned NOT NULL COMMENT '剩余数量',
+    `total_price` int(11) unsigned NOT NULL COMMENT '商品总价格',
+    `total_trans_price` int(11) unsigned NOT NULL COMMENT '运输总价格',
+    `deliver_address` varchar(84) NOT NULL COMMENT'发货地址',
+    `receive_address` varchar(84) NOT NULL COMMENT'收货地址',
+    `state` int(4) unsigned NOT NULL COMMENT'状态码',
     `deleted_at` date,
     PRIMARY KEY(`order_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'订单';

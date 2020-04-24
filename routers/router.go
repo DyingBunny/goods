@@ -38,16 +38,32 @@ func InitRouter() *gin.Engine{
 	api := r.Group("/api/v1")
 	api.Use(jwt.JWT())
 	{
+
+		//-----auth
+
 		//查看买家信息
 		api.POST("/profile",v1.Profile)
 		//查看卖家信息
-		api.POST("seller_profile",v1.SellerProfile)
+		api.POST("/seller_profile",v1.SellerProfile)
 		//增加、修改地址
 		api.POST("/modify_address",v1.ModifyAddress)
+
+		//-----goods
+
 		//卖家发布商品
 		api.POST("/release_commodities",v1.ReleaseCommodities)
-		//查看商品信息
-		api.POST("commodities_profile",v1.CommoditiesProfile)
+		//查看一个卖家目前的商品上架与下架数量
+		api.POST("/seller_com_num",v1.SellerComNum)
+		//查看卖家发布的所有上架商品
+		api.POST("/all_seller_com_pro_up",v1.AllSellerComProUp)
+		//查看卖家发布的所有下架商品
+		api.POST("/all_seller_com_pro_low",v1.AllSellerComProLow)
+		//按照价格降序查看所有已发布的商品
+		api.POST("/view_item_desc",v1.ViewItemDesc)
+		//按照价格升序查看所有已发布的商品
+		api.POST("/view_item_asc",v1.ViewItemAsc)
+		//买家购买商品
+		api.POST("/purchase_commodities",v1.PurchaseCommodities)
 	}
 	return r
 }

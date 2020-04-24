@@ -12,7 +12,7 @@ type Login struct{
 	PhoneNumber string 	`json:"phone_number"`
 	Gender   	string 	`json:"gender"`
 	Login    	string 	`gorm:"default:'False'"json:"login"`
-	LastTime	time.Time	`json:"last_time"`
+	LastTime	*time.Time	`json:"last_time"`
 	Role     	string 	`json:"role"`
 	DeletedAt 	*time.Time `json:"deleted_at"`
 }
@@ -61,6 +61,8 @@ type Goods struct{
 	TransPrice	uint	`json:"trans_price"`
 	DeliverAddress	string	`json:"deliver_address"`
 	CreateTime	time.Time	`json:"create_time"`
+	Detail 		string	`json:"detail"`
+	State 		uint	`json:"state"`
 	Identification	string	`json:"identification"`
 	DeletedAt *time.Time `json:"deleted_at"`
 }
@@ -69,6 +71,23 @@ type SellerGoods struct{
 	SellerGoodsID	uint	`json:"seller_goods_id"`
 	GoodsId 	uint	`json:"goods_id"`
 	SellerId	uint	`json:"seller_id"`
+	DeletedAt *time.Time `json:"deleted_at"`
+}
+//订单
+type Order struct {
+	OrderId		uint	`json:"order_id"`
+	GoodsId		uint	`json:"goods_id"`
+	SellerId	uint	`json:"seller_id"`
+	BuyerId		uint	`json:"buyer_id"`
+	Text		string	`json:"text"`
+	CreateTime	time.Time	`json:"create_time"`
+	TotalNum	uint	`json:"total_num"`
+	RemainNum	uint	`json:"remain_num"`
+	TotalPrice	uint	`json:"total_price"`
+	TotalTransPrice	uint	`json:"total_trans_price"`
+	DeliverAddress	string	`json:"deliver_address"`
+	ReceiveAddress	string	`json:"receive_address"`
+	State		uint		`json:"state"`
 	DeletedAt *time.Time `json:"deleted_at"`
 }
 

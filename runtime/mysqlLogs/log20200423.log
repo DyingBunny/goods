@@ -1,0 +1,54 @@
+2020/04/23 14:47:55 sqlE:/GoProject/goods/models/auth.go:26245.7674msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/23 14:47:55 sqlE:/GoProject/goods/models/auth.go:40243.347msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/23 14:47:56 sqlE:/GoProject/goods/models/auth.go:9623.1298msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/04/23 14:47:56 sqlE:/GoProject/goods/models/auth.go:9726.1633msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-23 14:47:56.029965 +0800 CST m=+20.381005301 7] 1
+2020/04/23 14:47:56 sqlE:/GoProject/goods/models/auth.go:46239.6078msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/23 14:51:10 sqlE:/GoProject/goods/models/auth.go:12457.9207msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[7] 1
+2020/04/23 14:51:38 sqlE:/GoProject/goods/models/auth.go:1227.9257msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[7] 1
+2020/04/23 14:51:38 sqlE:/GoProject/goods/models/goods.go:1325.0144msINSERT  INTO `goods` (`goods_id`,`text`,`seller_id`,`seller_username`,`total_num`,`remain_num`,`price`,`trans_price`,`deliver_address`,`create_time`,`detail`,`state`,`identification`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)[0 卖东西 7 wx 1000 1000 100 1 南京市 2020-04-23 14:51:38.2101102 +0800 CST m=+16.703631701 送到楼下 1 1587624698 <nil>] 1
+2020/04/23 14:51:38 sqlE:/GoProject/goods/models/goods.go:3925.9294msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=? AND identification=?)) LIMIT 1[7 1587624698] 1
+2020/04/23 14:51:38 sqlE:/GoProject/goods/models/goods.go:31237.2463msINSERT  INTO `seller_goods` (`seller_goods_id`,`goods_id`,`seller_id`,`deleted_at`) VALUES (?,?,?,?)[0 1 7 <nil>] 1
+2020/04/23 14:52:19 sqlE:/GoProject/goods/models/auth.go:2632.9133msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/23 14:52:19 sqlE:/GoProject/goods/models/auth.go:4028.9219msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/23 14:52:19 sqlE:/GoProject/goods/models/auth.go:9624.9314msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/04/23 14:52:19 sqlE:/GoProject/goods/models/auth.go:9723.9489msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-23 14:52:19.9174275 +0800 CST m=+58.410949001 7] 0
+2020/04/23 14:52:20 sqlE:/GoProject/goods/models/auth.go:46662.5763msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/23 14:52:41 sqlE:/GoProject/goods/routers/v1/goods.go:51248.6569msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 1[1] 1
+2020/04/23 14:53:14 sqlE:/GoProject/goods/models/goods.go:4632.9093msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1 OFFSET 1[6] 0
+2020/04/23 14:53:14 sqlE:/GoProject/goods/models/goods.go:5222.9493msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[6] 0
+2020/04/23 14:53:21 sqlE:/GoProject/goods/models/goods.go:46237.3639msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1 OFFSET 1[7] 0
+2020/04/23 14:53:21 sqlE:/GoProject/goods/models/goods.go:5224.9692msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[7] 0
+2020/04/23 14:53:58 sqlE:/GoProject/goods/models/goods.go:4624.9338msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1 OFFSET 1[7] 0
+2020/04/23 14:53:58 sqlE:/GoProject/goods/models/goods.go:5224.9341msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[7] 0
+2020/04/23 14:54:14 sqlE:/GoProject/goods/models/goods.go:5923.9365msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((state=?)) ORDER BY price desc LIMIT 5 OFFSET 0[1] 1
+2020/04/23 14:54:14 sqlE:/GoProject/goods/models/goods.go:7212.9664msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL[] 0
+2020/04/23 14:56:13 sqlE:/GoProject/goods/models/goods.go:4624.9345msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 5 OFFSET 0[7] 1
+2020/04/23 14:56:14 sqlE:/GoProject/goods/models/goods.go:52241.7639msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[7] 0
+2020/04/23 14:56:55 sqlE:/GoProject/goods/models/goods.go:4626.9285msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 5 OFFSET 0[6] 0
+2020/04/23 14:56:55 sqlE:/GoProject/goods/models/goods.go:5223.944msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[6] 0
+2020/04/23 16:04:27 sqlE:/GoProject/goods/models/auth.go:2633.9msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/23 16:04:27 sqlE:/GoProject/goods/models/auth.go:40241.1413msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/23 16:04:27 sqlE:/GoProject/goods/models/auth.go:9625.9207msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/04/23 16:04:28 sqlE:/GoProject/goods/models/auth.go:9725.6801msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-23 16:04:28.2687598 +0800 CST m=+61.583500101 7] 0
+2020/04/23 16:04:28 sqlE:/GoProject/goods/models/auth.go:4626.9476msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/23 16:05:26 sqlE:/GoProject/goods/models/auth.go:12888.3888msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[7] 1
+2020/04/23 16:05:26 sqlE:/GoProject/goods/models/goods.go:13240.4795msINSERT  INTO `goods` (`goods_id`,`text`,`seller_id`,`seller_username`,`total_num`,`remain_num`,`price`,`trans_price`,`deliver_address`,`create_time`,`detail`,`state`,`identification`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)[0 卖东西 7 wx 100 100 10 1 南京市 2020-04-23 16:05:26.72387 +0800 CST m=+120.038610301 送到楼下 1 1587629126 <nil>] 1
+2020/04/23 16:05:28 sqlE:/GoProject/goods/models/goods.go:39671.5974msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=? AND identification=?)) LIMIT 1[7 1587629126] 1
+2020/04/23 16:05:28 sqlE:/GoProject/goods/models/goods.go:3125.9057msINSERT  INTO `seller_goods` (`seller_goods_id`,`goods_id`,`seller_id`,`deleted_at`) VALUES (?,?,?,?)[0 2 7 <nil>] 1
+2020/04/23 16:07:59 sqlE:/GoProject/goods/models/auth.go:1245.8661msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[7] 1
+2020/04/23 16:08:00 sqlE:/GoProject/goods/models/goods.go:1324.9311msINSERT  INTO `goods` (`goods_id`,`text`,`seller_id`,`seller_username`,`total_num`,`remain_num`,`price`,`trans_price`,`deliver_address`,`create_time`,`detail`,`state`,`identification`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)[0 卖东西 7 wx 100 100 10 1 北京市 2020-04-23 16:07:59.9855726 +0800 CST m=+273.300312901 送到楼下 1 1587629279 <nil>] 1
+2020/04/23 16:08:00 sqlE:/GoProject/goods/models/goods.go:3925.9318msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=? AND identification=?)) LIMIT 1[7 1587629279] 1
+2020/04/23 16:08:00 sqlE:/GoProject/goods/models/goods.go:3124.9234msINSERT  INTO `seller_goods` (`seller_goods_id`,`goods_id`,`seller_id`,`deleted_at`) VALUES (?,?,?,?)[0 3 7 <nil>] 1
+2020/04/23 16:08:38 sqlE:/GoProject/goods/models/goods.go:4625.9297msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=? AND state=?)) LIMIT 5 OFFSET 0[6 1] 0
+2020/04/23 16:08:38 sqlE:/GoProject/goods/models/goods.go:60242.7477msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=? AND state=?))[6 1] 0
+2020/04/23 16:08:43 sqlE:/GoProject/goods/models/goods.go:4625.9564msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=? AND state=?)) LIMIT 5 OFFSET 0[7 1] 1
+2020/04/23 16:08:43 sqlE:/GoProject/goods/models/goods.go:6024.9083msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=? AND state=?))[7 1] 0
+2020/04/23 16:10:09 sqlE:/GoProject/goods/models/goods.go:5328.913msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=? AND state=?)) LIMIT 5 OFFSET 0[7 0] 2
+2020/04/23 16:10:10 sqlE:/GoProject/goods/models/goods.go:67239.5047msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=? AND state=?))[7 0] 0
+2020/04/23 16:12:06 sqlE:/GoProject/goods/models/auth.go:2629.9188msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/23 16:12:06 sqlE:/GoProject/goods/models/auth.go:4023.9574msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/23 16:12:07 sqlE:/GoProject/goods/models/auth.go:96238.387msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/04/23 16:12:07 sqlE:/GoProject/goods/models/auth.go:9723.9354msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-23 16:12:07.4098772 +0800 CST m=+23.019159601 7] 0
+2020/04/23 16:12:07 sqlE:/GoProject/goods/models/auth.go:4623.9373msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/23 16:12:17 sqlE:/GoProject/goods/models/goods.go:6046.8738msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=? AND state=?))[7 1] 0
+2020/04/23 16:12:18 sqlE:/GoProject/goods/models/goods.go:67667.7638msSELECT count(*) FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=? AND state=?))[7 0] 0

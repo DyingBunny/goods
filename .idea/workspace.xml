@@ -2,165 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e6a26e2-250a-4548-8361-06dcbde7330e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/models/order.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/v1/order.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/afford.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/comprehensive.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/css/UserCSS.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/css/bootstrap-theme.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/css/bootstrap-theme.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/css/bootstrap-theme.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/css/bootstrap.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/css/bootstrap.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/css/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/css/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/css/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/css/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/css/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/css/login2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/css/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/css/v2-svg.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/css/v2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/Jcrop.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ajax-loader.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ajax-loader1.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ajax-loader2.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/avatar_default.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/back.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/back_top.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/bank_ico.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/btn.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/btn_arrow.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/camera.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/daichuli.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/daisonghuo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/dingdan_top_line.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/duihuan.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/goods-img.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/guanggao_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/guanggao_02.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/guizhe.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/hengxian.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico-03.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico-bottom-right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico-lock.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico-money.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico-phone.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico_anzhuang.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico_cang.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico_dianti.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico_dingdan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico_fuwu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico_gouwuche.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico_jifen_huoche.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico_jifen_jifen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico_jifen_time.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico_liebiao.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico_louti.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico_ren.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico_shop.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico_song.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico_time.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico_wenhao.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ico_yunshu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/jiantou-down.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/jiantou_right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/jiantou_right_w.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/jiantou_right_ws.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/jifen/01.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/jifen/02.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/jifen/03.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/jifen/04.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/jifen/05.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/jifen/06.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/jifen/07.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/jifen/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/ld_btn.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/level_ico_new.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/list2-a.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/list2-q.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/loading_32x32.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/loading_div.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/loan_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/logo_mini.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/logo_mini1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/main.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/main2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/nav_line.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/nav_x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/navbar-dingdan-active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/navbar-dingdan.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/navbar-renwu-active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/navbar-renwu.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/navbar-wode-active.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/navbar-wode.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/oline.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/peisongzhong.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/phone_01.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/pop_bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/print_footer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/qrcode_500.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/repeat_x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/sel_ico.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/shangchang.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/stars-001.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/stars-002.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/tel_ico.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/test/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/test/brand_logo.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/top_back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/tx_img.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/tx_img.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/u_nav.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/images/yiwancheng.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/UserJS.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/_notes/login.js.mno" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/autobid.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/bootstrap_modal_confirm.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/funds.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/html5shiv.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/jquery-1.11.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/jquery-1.9.0.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/jquery-2.2.3.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/jquery.Jcrop.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/jquery.ajaxfile.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/jquery.datepicker.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/jquery.form.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/jquery.placeholder.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/jquery.template.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/jquery1.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/json2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/layer.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/login.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/ops.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/profile.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/respond.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/stars.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/trm.action.ajax.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/trm.action.error.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/trm.com.domutil.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/trm.com.util.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/trm.com.variable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/js/xiongxiong8.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/login.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/map.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/menu.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/个人资料.htm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/密码管理.htm" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/huolaile/认证管理.htm" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/goods.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/goods.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/table/table.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/table/table.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/v1/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/v1/auth.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/v1/goods.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/v1/goods.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/runtime/mysqlLogs/log20200417.log" beforeDir="false" afterPath="$PROJECT_DIR$/runtime/mysqlLogs/log20200417.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sql/tmp.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/tmp.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -174,35 +23,29 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routers/router.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+            <state relative-caret-position="145">
+              <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routers/v1/auth.go">
+        <entry file="file://$PROJECT_DIR$/routers/v1/order.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="228">
-              <caret line="59" column="44" lean-forward="true" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+            <state relative-caret-position="311">
+              <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+              <folding>
+                <element signature="e#12#151#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sql/tmp.sql">
+        <entry file="file://$PROJECT_DIR$/routers/v1/goods.go">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="228">
-              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/models/goods.go">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="209">
-              <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
+              <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -241,6 +84,7 @@
       <find>borrow your</find>
       <find>spank</find>
       <find>jen</find>
+      <find>up</find>
     </findStrings>
   </component>
   <component name="GOROOT" path="E:\Go" />
@@ -279,7 +123,6 @@
         <option value="$PROJECT_DIR$/routers/v1/map.go" />
         <option value="$PROJECT_DIR$/pkg/sdk/map.go" />
         <option value="$PROJECT_DIR$/models/test/test.go" />
-        <option value="$PROJECT_DIR$/models/order.go" />
         <option value="$PROJECT_DIR$/routers/v1/map_test.go" />
         <option value="$PROJECT_DIR$/data/Map047.json" />
         <option value="$PROJECT_DIR$/data/Map007.json" />
@@ -291,20 +134,22 @@
         <option value="$PROJECT_DIR$/models/models.go" />
         <option value="$PROJECT_DIR$/middleware/jwt/jwt.go" />
         <option value="$PROJECT_DIR$/models/auth.go" />
-        <option value="$PROJECT_DIR$/routers/router.go" />
-        <option value="$PROJECT_DIR$/sql/tmp.sql" />
-        <option value="$PROJECT_DIR$/models/table/table.go" />
-        <option value="$PROJECT_DIR$/models/goods.go" />
-        <option value="$PROJECT_DIR$/routers/v1/goods.go" />
         <option value="$PROJECT_DIR$/routers/v1/auth.go" />
+        <option value="$PROJECT_DIR$/routers/v1/goods.go" />
+        <option value="$PROJECT_DIR$/sql/tmp.sql" />
+        <option value="$PROJECT_DIR$/models/order.go" />
+        <option value="$PROJECT_DIR$/models/table/table.go" />
+        <option value="$PROJECT_DIR$/routers/router.go" />
+        <option value="$PROJECT_DIR$/routers/v1/order.go" />
+        <option value="$PROJECT_DIR$/models/goods.go" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1823" />
-    <option name="y" value="3" />
-    <option name="width" value="1552" />
-    <option name="height" value="880" />
+    <option name="x" value="-729" />
+    <option name="y" value="60" />
+    <option name="width" value="2425" />
+    <option name="height" value="1375" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -324,7 +169,13 @@
             <path>
               <item name="goods" type="b2602c69:ProjectViewProjectNode" />
               <item name="goods" type="462c0819:PsiDirectoryNode" />
-              <item name="sql" type="462c0819:PsiDirectoryNode" />
+              <item name="routers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="goods" type="b2602c69:ProjectViewProjectNode" />
+              <item name="goods" type="462c0819:PsiDirectoryNode" />
+              <item name="routers" type="462c0819:PsiDirectoryNode" />
+              <item name="v1" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -395,10 +246,10 @@
     </recent_temporary>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1912" y="-8" width="1456" height="916" extended-state="6" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18696275" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15549597" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -447,29 +298,13 @@
     <integration-enabled>true</integration-enabled>
     <proxy>https://goproxy.io</proxy>
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DlvLineBreakpoint">
-          <url>file://$PROJECT_DIR$/routers/v1/auth.go</url>
-          <line>174</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/data/Map021.json" />
-    <entry file="file://$PROJECT_DIR$/data/Map018.json" />
-    <entry file="file://$PROJECT_DIR$/data/Map019.json" />
-    <entry file="file://$PROJECT_DIR$/data/Map152.json" />
     <entry file="file://$PROJECT_DIR$/data/Map001.json" />
     <entry file="file://$PROJECT_DIR$/data/Map010.json" />
     <entry file="file://$PROJECT_DIR$/data/Map008.json" />
     <entry file="file://$PROJECT_DIR$/data/Map002.json" />
     <entry file="file://$PROJECT_DIR$/models/address.go" />
     <entry file="file://$PROJECT_DIR$/models/driver.go" />
-    <entry file="file://$PROJECT_DIR$/models/order.go" />
     <entry file="file://$PROJECT_DIR$/routers/v1/driver.go" />
     <entry file="file://$PROJECT_DIR$/routers/v1/location.go" />
     <entry file="file://$PROJECT_DIR$/pkg/setting/setting.go">
@@ -591,30 +426,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/auth.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="371">
-          <caret line="51" column="27" lean-forward="true" selection-start-line="51" selection-start-column="27" selection-end-line="51" selection-end-column="27" />
-          <folding>
-            <element signature="e#16#122#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/table/table.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1121">
-          <caret line="61" column="52" selection-start-line="61" selection-start-column="52" selection-end-line="61" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routers/v1/goods.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="331">
-          <caret line="49" column="35" selection-start-line="49" selection-start-column="35" selection-end-line="49" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/H-ui.admin/_menu.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -661,31 +472,91 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/jspx/login.html" />
     <entry file="file://$PROJECT_DIR$/jspx/login.php" />
-    <entry file="file://$PROJECT_DIR$/routers/router.go">
+    <entry file="file://$PROJECT_DIR$/H-ui.admin/shop-add.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="30" column="25" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
-        </state>
+        <state relative-caret-position="-4275" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/goods.go">
+    <entry file="file://$PROJECT_DIR$/runtime/mysqlLogs/log20200421.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="15" column="38" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routers/v1/auth.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="59" column="44" lean-forward="true" selection-start-line="59" selection-start-column="44" selection-end-line="59" selection-end-column="44" />
+        <state relative-caret-position="304">
+          <caret line="16" column="83" selection-start-line="16" selection-start-column="83" selection-end-line="16" selection-end-column="83" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/sql/tmp.sql">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="278">
+          <caret line="80" selection-start-line="80" selection-end-line="96" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/order.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="28" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/table/table.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="90" column="44" lean-forward="true" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/v1/auth.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1596">
+          <caret line="95" column="28" lean-forward="true" selection-start-line="95" selection-start-column="28" selection-end-line="95" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/router.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="145">
+          <caret line="56" column="22" selection-start-line="56" selection-start-column="22" selection-end-line="56" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/auth.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="75" column="5" lean-forward="true" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
+          <folding>
+            <element signature="e#16#122#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/runtime/mysqlLogs/log20200424.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="172">
+          <caret line="18" column="72" lean-forward="true" selection-start-line="18" selection-start-column="72" selection-end-line="18" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/goods.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/v1/order.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="311">
+          <caret line="30" column="42" lean-forward="true" selection-start-line="30" selection-start-column="42" selection-end-line="30" selection-end-column="42" />
+          <folding>
+            <element signature="e#12#151#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/v1/goods.go">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
-          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <caret line="21" column="24" lean-forward="true" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
         </state>
       </provider>
     </entry>

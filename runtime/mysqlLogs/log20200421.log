@@ -1,0 +1,40 @@
+2020/04/21 09:14:58 sqlE:/GoProject/goods/models/auth.go:26240.1468msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qzh 123] 0
+2020/04/21 09:14:58 logE:/GoProject/goods/models/auth.go:52Error 1292: Incorrect date value: '0000-00-00' for column 'last_time' at row 1
+2020/04/21 09:14:58 sqlE:/GoProject/goods/models/auth.go:5222.9395msINSERT  INTO `login` (`user_id`,`username`,`password`,`phone_number`,`gender`,`last_time`,`role`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?)[0 qzh 123 15245983268 male 0001-01-01 00:00:00 +0000 UTC seller <nil>] 0
+2020/04/21 09:14:58 sqlE:/GoProject/goods/models/auth.go:520sSELECT `login` FROM `login`  [] 0
+2020/04/21 09:14:58 sqlE:/GoProject/goods/models/auth.go:4021.912msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qzh 123] 0
+2020/04/21 09:14:58 logE:/GoProject/goods/models/auth.go:80Error 1062: Duplicate entry '0' for key 'seller.PRIMARY'
+2020/04/21 09:14:58 sqlE:/GoProject/goods/models/auth.go:80236.4715msINSERT  INTO `seller` (`seller_id`,`deliver_address`,`name`,`deliver_number`,`deleted_at`) VALUES (?,?,?,?,?)[0    <nil>] 0
+2020/04/21 09:14:58 sqlE:/GoProject/goods/models/auth.go:800sSELECT `evaluation`, `count`, `comprehensive` FROM `seller`  [] 0
+2020/04/21 09:15:36 sqlE:/GoProject/goods/models/auth.go:2624.9333msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qzh 123] 0
+2020/04/21 09:15:38 logE:/GoProject/goods/models/auth.go:52Error 1292: Incorrect date value: '0000-00-00' for column 'last_time' at row 1
+2020/04/21 09:15:38 sqlE:/GoProject/goods/models/auth.go:5225.9443msINSERT  INTO `login` (`user_id`,`username`,`password`,`phone_number`,`gender`,`last_time`,`role`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?)[0 qzh 123 15245983268 male 0001-01-01 00:00:00 +0000 UTC seller <nil>] 0
+2020/04/21 09:15:38 sqlE:/GoProject/goods/models/auth.go:520sSELECT `login` FROM `login`  [] 0
+2020/04/21 09:15:41 sqlE:/GoProject/goods/models/auth.go:4026.0753msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qzh 123] 0
+2020/04/21 09:20:05 sqlE:/GoProject/goods/models/auth.go:2625.098msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qzh 123] 0
+2020/04/21 09:20:06 sqlE:/GoProject/goods/models/auth.go:521.0853519sINSERT  INTO `login` (`user_id`,`username`,`password`,`phone_number`,`gender`,`last_time`,`role`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?)[0 qzh 123 15245983268 male <nil> seller <nil>] 1
+2020/04/21 09:20:06 sqlE:/GoProject/goods/models/auth.go:5211.6498msSELECT `login` FROM `login`  [] 3
+2020/04/21 09:20:09 sqlE:/GoProject/goods/models/auth.go:401.1100684sSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[qzh 123] 1
+2020/04/21 09:36:56 logE:/GoProject/goods/models/goods.go:44Error 1054: Unknown column 'seler_id' in 'where clause'
+2020/04/21 09:36:56 sqlE:/GoProject/goods/models/goods.go:4495.8719msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seler_id=?))[2] 0
+2020/04/21 09:37:17 sqlE:/GoProject/goods/models/goods.go:4429.0811msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[2] 0
+2020/04/21 09:38:06 sqlE:/GoProject/goods/models/goods.go:4428.9715msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[7] 2
+2020/04/21 09:38:40 sqlE:/GoProject/goods/models/goods.go:44241.4258msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[7] 2
+2020/04/21 09:40:50 sqlE:/GoProject/goods/models/goods.go:4414.0481msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL[] 2
+2020/04/21 09:42:02 sqlE:/GoProject/goods/models/goods.go:4425.3294msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/04/21 09:43:44 sqlE:/GoProject/goods/models/goods.go:4526.8097msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/04/21 09:45:43 sqlE:/GoProject/goods/models/goods.go:4425.9421msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/04/21 09:46:21 logE:/GoProject/goods/models/goods.go:44unsupported destination, should be slice or struct
+2020/04/21 09:46:47 sqlE:/GoProject/goods/models/goods.go:4414.1364msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL LIMIT 1[] 1
+2020/04/21 09:47:06 sqlE:/GoProject/goods/models/goods.go:4423.0245msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[7] 2
+2020/04/21 10:01:05 sqlE:/GoProject/goods/models/auth.go:26665.0789msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/21 10:01:05 sqlE:/GoProject/goods/models/auth.go:4025.9311msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/21 10:01:05 sqlE:/GoProject/goods/models/auth.go:9625.9305msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/04/21 10:01:05 sqlE:/GoProject/goods/models/auth.go:9724.9337msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-21 10:01:05.6252244 +0800 CST m=+82.117210201 7] 1
+2020/04/21 10:01:05 sqlE:/GoProject/goods/models/auth.go:4625.0959msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/21 10:01:14 sqlE:/GoProject/goods/models/goods.go:4427.9257msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[0] 0
+2020/04/21 10:01:24 sqlE:/GoProject/goods/models/goods.go:4428.9316msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[0] 0
+2020/04/21 10:01:39 sqlE:/GoProject/goods/models/goods.go:44237.3642msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[7] 2
+2020/04/21 10:01:47 sqlE:/GoProject/goods/models/goods.go:44237.6739msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[6] 0
+2020/04/21 10:01:53 sqlE:/GoProject/goods/models/goods.go:4425.9181msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[7] 2
+2020/04/21 10:02:20 sqlE:/GoProject/goods/models/goods.go:4429.9201msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=?))[6] 0

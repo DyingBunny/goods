@@ -19,6 +19,7 @@ require (
 	github.com/swaggo/swag v1.4.0
 	github.com/unknwon/com v1.0.1
 	golang.org/x/sys v0.0.0-20190921204832-2dccfee4fd3e // indirect
+	golang.org/x/tools v0.0.0-20190606124116-d0a3d012864b
 	google.golang.org/appengine v1.6.3 // indirect
 	gopkg.in/ini.v1 v1.51.0 // indirect
 )
