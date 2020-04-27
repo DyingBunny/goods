@@ -1,0 +1,24 @@
+2020/04/27 11:44:49 sqlE:/GoProject/goods/models/auth.go:2623.9143msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/27 11:44:49 sqlE:/GoProject/goods/models/auth.go:4024.0464msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/27 11:44:49 sqlE:/GoProject/goods/models/auth.go:9623.0223msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/04/27 11:44:49 sqlE:/GoProject/goods/models/auth.go:9722.7963msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-27 11:44:49.6059222 +0800 CST m=+22.333306001 7] 1
+2020/04/27 11:44:49 sqlE:/GoProject/goods/models/auth.go:4623.9357msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/27 11:45:00 sqlE:/GoProject/goods/models/order.go:5025.9218msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?)) LIMIT 5 OFFSET 0[7 1] 0
+2020/04/27 11:45:00 sqlE:/GoProject/goods/models/order.go:3223.9805msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?))[7 1] 0
+2020/04/27 11:46:15 sqlE:/GoProject/goods/models/order.go:5023.9367msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?)) LIMIT 5 OFFSET 0[6 1] 5
+2020/04/27 11:46:16 sqlE:/GoProject/goods/models/order.go:3234.9022msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?))[6 1] 0
+2020/04/27 11:46:37 sqlE:/GoProject/goods/models/order.go:5025.9306msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?)) LIMIT 5 OFFSET 0[6 1] 5
+2020/04/27 11:46:37 sqlE:/GoProject/goods/models/order.go:3224.0861msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?))[6 1] 0
+2020/04/27 11:52:32 sqlE:/GoProject/goods/models/auth.go:2623.9367msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/27 11:52:32 sqlE:/GoProject/goods/models/auth.go:4024.1903msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/27 11:52:32 sqlE:/GoProject/goods/models/auth.go:9623.4111msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/04/27 11:52:32 sqlE:/GoProject/goods/models/auth.go:9722.945msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-27 11:52:32.5805891 +0800 CST m=+31.000491501 7] 0
+2020/04/27 11:52:32 sqlE:/GoProject/goods/models/auth.go:4623.255msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/27 11:52:52 sqlE:/GoProject/goods/models/order.go:5635.9081msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?)) LIMIT 5 OFFSET 0[6 2] 2
+2020/04/27 11:52:52 sqlE:/GoProject/goods/models/order.go:3823.958msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?))[6 2] 0
+2020/04/27 11:53:10 sqlE:/GoProject/goods/models/order.go:6244.8847msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?)) LIMIT 5 OFFSET 0[6 3] 1
+2020/04/27 11:53:10 sqlE:/GoProject/goods/models/order.go:4442.8803msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?))[6 3] 0
+2020/04/27 11:54:00 sqlE:/GoProject/goods/models/order.go:6224.9334msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?)) LIMIT 5 OFFSET 0[6 3] 1
+2020/04/27 11:54:00 sqlE:/GoProject/goods/models/order.go:4423.9349msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?))[6 3] 0
+2020/04/27 11:54:10 sqlE:/GoProject/goods/models/order.go:5625.9205msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?)) LIMIT 5 OFFSET 0[6 2] 2
+2020/04/27 11:54:10 sqlE:/GoProject/goods/models/order.go:3824.9692msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?))[6 2] 0

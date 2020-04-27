@@ -64,6 +64,14 @@ func InitRouter() *gin.Engine{
 		api.POST("/view_item_asc",v1.ViewItemAsc)
 		//买家购买商品
 		api.POST("/purchase_commodities",v1.PurchaseCommodities)
+		//买家查看订单的数量
+		api.POST("/buyer_order_num",v1.BuyerOrderNum)
+		//买家查看待付款的订单
+		api.POST("/all_buyer_order_pay",v1.AllBuyerOrderPay)
+		//买家查看配送中的订单
+		api.POST("/all_buyer_order_deli",v1.AllBuyerOrderDeli)
+		//买家查看已完成的订单
+		api.POST("/all_buyer_order_complete",v1.AllBuyerOrderComplete)
 	}
 	return r
 }
