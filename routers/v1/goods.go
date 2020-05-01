@@ -187,3 +187,14 @@ func ViewItemAsc(context *gin.Context){
 		})
 	}
 }
+//卖家主动下架商品
+func LowCommodity(context *gin.Context){
+	var good table.Goods
+	_=context.ShouldBindBodyWith(&good,binding.JSON)
+	models.LowCommodity(good.GoodsId)
+	code:=e.SUCCESS
+	context.JSON(http.StatusOK,gin.H{
+		"code":code,
+		"msg":e.GetMsg(code),
+	})
+}

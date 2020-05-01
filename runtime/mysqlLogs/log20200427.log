@@ -22,3 +22,12 @@
 2020/04/27 11:54:00 sqlE:/GoProject/goods/models/order.go:4423.9349msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?))[6 3] 0
 2020/04/27 11:54:10 sqlE:/GoProject/goods/models/order.go:5625.9205msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?)) LIMIT 5 OFFSET 0[6 2] 2
 2020/04/27 11:54:10 sqlE:/GoProject/goods/models/order.go:3824.9692msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?))[6 2] 0
+2020/04/27 19:42:47 sqlE:/GoProject/goods/models/auth.go:2625.9189msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/27 19:42:48 sqlE:/GoProject/goods/models/auth.go:4024.963msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/27 19:42:48 sqlE:/GoProject/goods/models/auth.go:9623.9325msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/04/27 19:42:48 sqlE:/GoProject/goods/models/auth.go:9723.9167msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-27 19:42:48.1551226 +0800 CST m=+33.999849401 7] 0
+2020/04/27 19:42:48 sqlE:/GoProject/goods/models/auth.go:4625.4733msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/27 19:42:59 sqlE:/GoProject/goods/models/order.go:6827.9359msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[0] 0
+2020/04/27 19:45:30 sqlE:/GoProject/goods/models/order.go:6824.9324msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[0] 0
+2020/04/27 19:47:36 sqlE:/GoProject/goods/models/order.go:6827.9253msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[2] 1
+2020/04/27 19:47:36 sqlE:/GoProject/goods/models/order.go:6824.9368msUPDATE `order` SET `state` = ?  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?))[2 2] 1

@@ -49,15 +49,8 @@ func InitRouter() *gin.Engine{
 		api.POST("/modify_address",v1.ModifyAddress)
 
 		//-----goods
+			//买家
 
-		//卖家发布商品
-		api.POST("/release_commodities",v1.ReleaseCommodities)
-		//查看一个卖家目前的商品上架与下架数量
-		api.POST("/seller_com_num",v1.SellerComNum)
-		//查看卖家发布的所有上架商品
-		api.POST("/all_seller_com_pro_up",v1.AllSellerComProUp)
-		//查看卖家发布的所有下架商品
-		api.POST("/all_seller_com_pro_low",v1.AllSellerComProLow)
 		//按照价格降序查看所有已发布的商品
 		api.POST("/view_item_desc",v1.ViewItemDesc)
 		//按照价格升序查看所有已发布的商品
@@ -72,6 +65,32 @@ func InitRouter() *gin.Engine{
 		api.POST("/all_buyer_order_deli",v1.AllBuyerOrderDeli)
 		//买家查看已完成的订单
 		api.POST("/all_buyer_order_complete",v1.AllBuyerOrderComplete)
+		//买家订单付款
+		api.POST("/buyer_pay",v1.BuyerPay)
+		//买家确认收货
+		api.POST("/buyer_complete",v1.BuyerComplete)
+
+			//卖家
+
+		//卖家发布商品
+		api.POST("/release_commodities",v1.ReleaseCommodities)
+		//卖家主动下架商品
+		api.POST("/low_commodity",v1.LowCommodity)
+		//查看一个卖家目前的商品上架与下架数量
+		api.POST("/seller_com_num",v1.SellerComNum)
+		//查看卖家发布的所有上架商品
+		api.POST("/all_seller_com_pro_up",v1.AllSellerComProUp)
+		//查看卖家发布的所有下架商品
+		api.POST("/all_seller_com_pro_low",v1.AllSellerComProLow)
+		//查看卖家目前的订单数量
+		api.POST("/buyer_seller_num",v1.BuyerSellerNum)
+		//查看卖家的配送中订单
+		api.POST("/all_buyer_seller_pay",v1.AllBuyerSellerPay)
+		//查看卖家的配送中订单
+		api.POST("/all_buyer_seller_deli",v1.AllBuyerSellerDeli)
+		//查看卖家的已完成订单
+		api.POST("/all_buyer_seller_complete",v1.AllBuyerSellerComplete)
+
 	}
 	return r
 }

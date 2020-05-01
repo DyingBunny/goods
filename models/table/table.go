@@ -91,6 +91,17 @@ type Order struct {
 	DeletedAt *time.Time `json:"deleted_at"`
 }
 
+//评价
+type Evaluation struct{
+	EvaluationId	uint	`json:"evaluation_id"`
+	Score		    uint	`json:"score"`
+	GoodsId		uint	`json:"goods_id"`
+	SellerId	uint	`json:"seller_id"`
+	BuyerId		uint	`json:"buyer_id"`
+	Comment 		string	`json:"detail"`
+	DeletedAt *time.Time `json:"deleted_at"`
+}
+
 ////地址
 //type Address struct{
 //	AddressId	uint	`json:"address_id"`

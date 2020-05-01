@@ -1,0 +1,9 @@
+2020/04/28 12:18:33 sqlE:/GoProject/goods/models/auth.go:2625.9298msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/28 12:18:33 sqlE:/GoProject/goods/models/auth.go:4024.9547msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/28 12:18:33 sqlE:/GoProject/goods/models/auth.go:9624.4923msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/04/28 12:18:33 sqlE:/GoProject/goods/models/auth.go:9723.5509msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-28 12:18:33.3056792 +0800 CST m=+3.019956401 7] 0
+2020/04/28 12:18:33 sqlE:/GoProject/goods/models/auth.go:4625.5568msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/28 12:18:45 sqlE:/GoProject/goods/models/auth.go:1224.9559msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[7] 1
+2020/04/28 12:18:45 sqlE:/GoProject/goods/models/goods.go:1323.9809msINSERT  INTO `goods` (`goods_id`,`text`,`seller_id`,`seller_username`,`total_num`,`remain_num`,`price`,`trans_price`,`deliver_address`,`create_time`,`detail`,`state`,`identification`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?)[0 卖东西 7 wx 100 100 10 1 北京市 2020-04-28 12:18:45.9065237 +0800 CST m=+15.620800901 送到楼下 1 1588047525 <nil>] 1
+2020/04/28 12:18:46 sqlE:/GoProject/goods/models/goods.go:3925.012msSELECT * FROM `goods`  WHERE `goods`.`deleted_at` IS NULL AND ((seller_id=? AND identification=?)) LIMIT 1[7 1588047525] 1
+2020/04/28 12:18:46 sqlE:/GoProject/goods/models/goods.go:3124.8618msINSERT  INTO `seller_goods` (`seller_goods_id`,`goods_id`,`seller_id`,`deleted_at`) VALUES (?,?,?,?)[0 5 7 <nil>] 1

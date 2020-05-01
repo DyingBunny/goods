@@ -1,0 +1,23 @@
+2020/04/30 22:11:48 sqlE:/GoProject/goods/models/auth.go:2644.8808msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/30 22:11:48 sqlE:/GoProject/goods/models/auth.go:4024.9656msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/30 22:11:48 sqlE:/GoProject/goods/models/auth.go:9625.0253msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/04/30 22:11:48 sqlE:/GoProject/goods/models/auth.go:9739.0279msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-04-30 22:11:48.153256 +0800 CST m=+36.381659801 7] 1
+2020/04/30 22:11:48 sqlE:/GoProject/goods/models/auth.go:4624.9334msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/04/30 22:12:01 sqlE:/GoProject/goods/models/order.go:8624.965msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((seller_id=? AND state=?))[6 1] 0
+2020/04/30 22:12:01 sqlE:/GoProject/goods/models/order.go:9224.9227msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((seller_id=? AND state=?))[6 2] 0
+2020/04/30 22:12:01 sqlE:/GoProject/goods/models/order.go:4424.9706msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?))[0 3] 0
+2020/04/30 22:12:36 sqlE:/GoProject/goods/models/order.go:8624.9411msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((seller_id=? AND state=?))[7 1] 0
+2020/04/30 22:12:36 sqlE:/GoProject/goods/models/order.go:9224.9621msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((seller_id=? AND state=?))[7 2] 0
+2020/04/30 22:12:36 sqlE:/GoProject/goods/models/order.go:4424.9424msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?))[0 3] 0
+2020/04/30 22:12:53 sqlE:/GoProject/goods/models/order.go:10426.8566msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((seller_id=? AND state=?)) LIMIT 5 OFFSET 0[7 1] 1
+2020/04/30 22:12:53 sqlE:/GoProject/goods/models/order.go:8624.9345msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((seller_id=? AND state=?))[7 1] 0
+2020/04/30 22:13:05 sqlE:/GoProject/goods/models/order.go:11633.9108msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((seller_id=? AND state=?)) LIMIT 5 OFFSET 0[7 3] 1
+2020/04/30 22:13:05 sqlE:/GoProject/goods/models/order.go:9824.9531msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((seller_id=? AND state=?))[7 3] 0
+2020/04/30 22:13:17 sqlE:/GoProject/goods/models/order.go:6224.9405msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?)) LIMIT 5 OFFSET 0[0 3] 0
+2020/04/30 22:13:17 sqlE:/GoProject/goods/models/order.go:4424.9266msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?))[0 3] 0
+2020/04/30 22:14:41 sqlE:/GoProject/goods/models/order.go:6251.8601msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?)) LIMIT 5 OFFSET 0[0 3] 0
+2020/04/30 22:14:41 sqlE:/GoProject/goods/models/order.go:4423.9356msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?))[0 3] 0
+2020/04/30 22:14:52 sqlE:/GoProject/goods/models/order.go:6223.9461msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?)) LIMIT 5 OFFSET 0[0 3] 0
+2020/04/30 22:14:52 sqlE:/GoProject/goods/models/order.go:4423.9528msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((buyer_id=? AND state=?))[0 3] 0
+2020/04/30 22:15:21 sqlE:/GoProject/goods/models/order.go:11629.9215msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((seller_id=? AND state=?)) LIMIT 5 OFFSET 0[7 3] 1
+2020/04/30 22:15:21 sqlE:/GoProject/goods/models/order.go:9824.9337msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((seller_id=? AND state=?))[7 3] 0

@@ -95,3 +95,14 @@ CREATE TABLE `order`(
     `deleted_at` date,
     PRIMARY KEY(`order_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'订单';
+
+CREATE TABLE `evaluation`(
+    `evaluation_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+    `score` int(11) unsigned NOT NULL COMMENT'评分',
+    `goods_id` int(11) unsigned NOT NULL COMMENT'商品id',
+    `seller_id` int(11) unsigned NOT NULL COMMENT'卖家id',
+    `buyer_id` int(11) unsigned NOT NULL COMMENT'买家id',
+    `comment` text COMMENT'评论内容',
+    `deleted_at` date,
+    PRIMARY KEY(`evaluation_id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'评价';
