@@ -1,0 +1,12 @@
+2020/05/02 13:11:41 sqlE:/GoProject/goods/models/auth.go:2626.9275msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/02 13:11:41 sqlE:/GoProject/goods/models/auth.go:4024.885msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/02 13:11:41 sqlE:/GoProject/goods/models/auth.go:9624.9893msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/05/02 13:11:41 sqlE:/GoProject/goods/models/auth.go:9725.1123msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-05-02 13:11:41.7592999 +0800 CST m=+11.183416901 7] 1
+2020/05/02 13:11:41 sqlE:/GoProject/goods/models/auth.go:4624.5239msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/02 13:11:50 sqlE:/GoProject/goods/models/evaluation.go:1725.9468msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 13:11:50 sqlE:/GoProject/goods/models/evaluation.go:2125.9171msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 13:11:50 sqlE:/GoProject/goods/models/evaluation.go:2125.03msUPDATE `seller` SET `evaluation` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 1
+2020/05/02 13:11:50 sqlE:/GoProject/goods/models/evaluation.go:2224.1862msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 13:11:50 sqlE:/GoProject/goods/models/evaluation.go:2224.1144msUPDATE `seller` SET `count` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[1 7] 1
+2020/05/02 13:11:50 sqlE:/GoProject/goods/models/evaluation.go:2324.8367msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 13:11:50 sqlE:/GoProject/goods/models/evaluation.go:2324.7573msUPDATE `seller` SET `comprehensive` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 1

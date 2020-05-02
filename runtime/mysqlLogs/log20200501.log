@@ -1,0 +1,7 @@
+2020/05/01 22:29:12 sqlE:/GoProject/goods/models/auth.go:2634.5732msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/01 22:29:12 sqlE:/GoProject/goods/models/auth.go:4029.942msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/01 22:29:12 sqlE:/GoProject/goods/models/auth.go:9626.9226msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/05/01 22:29:12 sqlE:/GoProject/goods/models/auth.go:9727.9313msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-05-01 22:29:12.6587476 +0800 CST m=+54.628215501 7] 1
+2020/05/01 22:29:12 sqlE:/GoProject/goods/models/auth.go:4629.4238msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/01 22:29:27 sqlE:/GoProject/goods/models/evaluation.go:739.9268msINSERT  INTO `evaluation` (`evaluation_id`,`score`,`goods_id`,`seller_id`,`buyer_id`,`comment`,`deleted_at`) VALUES (?,?,?,?,?,?,?)[0 0 2 2 2  <nil>] 1
+2020/05/01 22:30:23 sqlE:/GoProject/goods/models/evaluation.go:727.9263msINSERT  INTO `evaluation` (`evaluation_id`,`score`,`goods_id`,`seller_id`,`buyer_id`,`comment`,`deleted_at`) VALUES (?,?,?,?,?,?,?)[0 0 2 2 2  <nil>] 1
