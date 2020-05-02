@@ -69,10 +69,10 @@ func InitRouter() *gin.Engine{
 		api.POST("/buyer_pay",v1.BuyerPay)
 		//买家确认收货
 		api.POST("/buyer_complete",v1.BuyerComplete)
-		//买家评论商品
-		api.POST("/buyer_evaluate_goods",v1.BuyerEvaluateGoods)
-		//买家评论卖家
-		api.POST("/buyer_evaluate_seller",v1.BuyerEvaluateSeller)
+		//买家评论
+		api.POST("/buyer_evaluate",v1.BuyerEvaluate)
+		//查看商品的评价
+		api.POST("/all_goods_evaluation",v1.AllGoodsEvaluation)
 
 			//卖家
 

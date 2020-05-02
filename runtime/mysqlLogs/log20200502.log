@@ -10,3 +10,229 @@
 2020/05/02 13:11:50 sqlE:/GoProject/goods/models/evaluation.go:2224.1144msUPDATE `seller` SET `count` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[1 7] 1
 2020/05/02 13:11:50 sqlE:/GoProject/goods/models/evaluation.go:2324.8367msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
 2020/05/02 13:11:50 sqlE:/GoProject/goods/models/evaluation.go:2324.7573msUPDATE `seller` SET `comprehensive` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 1
+2020/05/02 20:38:03 sqlE:/GoProject/goods/models/auth.go:2624.9225msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/02 20:38:03 sqlE:/GoProject/goods/models/auth.go:4024.0133msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/02 20:38:03 sqlE:/GoProject/goods/models/auth.go:9622.8281msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/05/02 20:38:03 sqlE:/GoProject/goods/models/auth.go:9723.9296msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-05-02 20:38:03.7536379 +0800 CST m=+2.180347301 7] 0
+2020/05/02 20:38:03 sqlE:/GoProject/goods/models/auth.go:4623.9355msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/02 20:38:25 sqlE:/GoProject/goods/models/evaluation.go:722.9391msINSERT  INTO `evaluation` (`evaluation_id`,`score`,`goods_id`,`seller_id`,`buyer_id`,`comment`,`deleted_at`) VALUES (?,?,?,?,?,?,?)[0 2 2 7 6 服务好 <nil>] 1
+2020/05/02 20:38:25 sqlE:/GoProject/goods/models/evaluation.go:1722.9392msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:38:25 sqlE:/GoProject/goods/models/evaluation.go:2122.9382msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:38:25 sqlE:/GoProject/goods/models/evaluation.go:2123.735msUPDATE `seller` SET `evaluation` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[4 7] 1
+2020/05/02 20:38:25 sqlE:/GoProject/goods/models/evaluation.go:2223.0121msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:38:25 sqlE:/GoProject/goods/models/evaluation.go:2224.1235msUPDATE `seller` SET `count` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 1
+2020/05/02 20:38:25 sqlE:/GoProject/goods/models/evaluation.go:2322.9539msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:38:25 sqlE:/GoProject/goods/models/evaluation.go:2323.7497msUPDATE `seller` SET `comprehensive` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 0
+2020/05/02 20:38:25 logE:/GoProject/goods/models/evaluation.go:28sql: expected 0 arguments, got 1
+2020/05/02 20:38:25 sqlE:/GoProject/goods/models/evaluation.go:2811.9801msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id)) LIMIT 1[0] 0
+2020/05/02 20:38:25 sqlE:/GoProject/goods/models/evaluation.go:3223.052msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[2] 0
+2020/05/02 20:38:25 sqlE:/GoProject/goods/models/evaluation.go:3323.898msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[2] 0
+2020/05/02 20:38:25 sqlE:/GoProject/goods/models/evaluation.go:3423.2344msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[2] 0
+2020/05/02 20:40:42 sqlE:/GoProject/goods/models/evaluation.go:724.976msINSERT  INTO `evaluation` (`evaluation_id`,`score`,`goods_id`,`seller_id`,`buyer_id`,`comment`,`deleted_at`) VALUES (?,?,?,?,?,?,?)[0 2 2 7 6 服务好 <nil>] 1
+2020/05/02 20:40:42 sqlE:/GoProject/goods/models/evaluation.go:1724.9582msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:40:42 sqlE:/GoProject/goods/models/evaluation.go:2126.3427msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:40:42 sqlE:/GoProject/goods/models/evaluation.go:2124.7266msUPDATE `seller` SET `evaluation` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[6 7] 1
+2020/05/02 20:40:42 sqlE:/GoProject/goods/models/evaluation.go:2224.9338msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:40:42 sqlE:/GoProject/goods/models/evaluation.go:2224.6818msUPDATE `seller` SET `count` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[3 7] 1
+2020/05/02 20:40:42 sqlE:/GoProject/goods/models/evaluation.go:2326.7831msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:40:42 sqlE:/GoProject/goods/models/evaluation.go:2324.9711msUPDATE `seller` SET `comprehensive` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 0
+2020/05/02 20:40:42 logE:/GoProject/goods/models/evaluation.go:28sql: expected 0 arguments, got 1
+2020/05/02 20:40:42 sqlE:/GoProject/goods/models/evaluation.go:2812.7771msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id)) LIMIT 1[2] 0
+2020/05/02 20:40:42 sqlE:/GoProject/goods/models/evaluation.go:3225.0414msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[2] 0
+2020/05/02 20:40:42 sqlE:/GoProject/goods/models/evaluation.go:3325.1969msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[2] 0
+2020/05/02 20:40:42 sqlE:/GoProject/goods/models/evaluation.go:3425.3391msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[2] 0
+2020/05/02 20:41:51 sqlE:/GoProject/goods/models/evaluation.go:723.9456msINSERT  INTO `evaluation` (`evaluation_id`,`score`,`goods_id`,`seller_id`,`buyer_id`,`comment`,`deleted_at`) VALUES (?,?,?,?,?,?,?)[0 2 2 7 6 服务好 <nil>] 1
+2020/05/02 20:41:51 sqlE:/GoProject/goods/models/evaluation.go:1723.9614msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:41:51 sqlE:/GoProject/goods/models/evaluation.go:2123.9484msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:41:51 sqlE:/GoProject/goods/models/evaluation.go:2123.4726msUPDATE `seller` SET `evaluation` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[8 7] 1
+2020/05/02 20:41:51 sqlE:/GoProject/goods/models/evaluation.go:2224.2015msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:41:51 sqlE:/GoProject/goods/models/evaluation.go:2224.0182msUPDATE `seller` SET `count` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[4 7] 1
+2020/05/02 20:41:51 sqlE:/GoProject/goods/models/evaluation.go:2324.8846msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:41:51 sqlE:/GoProject/goods/models/evaluation.go:2322.8264msUPDATE `seller` SET `comprehensive` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 0
+2020/05/02 20:41:51 logE:/GoProject/goods/models/evaluation.go:28sql: expected 0 arguments, got 1
+2020/05/02 20:41:51 sqlE:/GoProject/goods/models/evaluation.go:2813.9629msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id)) LIMIT 1[1] 0
+2020/05/02 20:41:51 sqlE:/GoProject/goods/models/evaluation.go:3223.9053msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:41:51 sqlE:/GoProject/goods/models/evaluation.go:3223.9653msUPDATE `driver` SET `evaluation` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[5 1] 1
+2020/05/02 20:41:51 sqlE:/GoProject/goods/models/evaluation.go:3323.0349msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:41:51 sqlE:/GoProject/goods/models/evaluation.go:3323.866msUPDATE `driver` SET `count` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[1 1] 1
+2020/05/02 20:41:51 sqlE:/GoProject/goods/models/evaluation.go:3423.9283msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:43:04 sqlE:/GoProject/goods/models/evaluation.go:725.6382msINSERT  INTO `evaluation` (`evaluation_id`,`score`,`goods_id`,`seller_id`,`buyer_id`,`comment`,`deleted_at`) VALUES (?,?,?,?,?,?,?)[0 2 2 7 6 服务好 <nil>] 1
+2020/05/02 20:43:04 sqlE:/GoProject/goods/models/evaluation.go:1724.152msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:43:04 sqlE:/GoProject/goods/models/evaluation.go:2124.9733msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:43:04 sqlE:/GoProject/goods/models/evaluation.go:2124.3167msUPDATE `seller` SET `evaluation` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[10 7] 1
+2020/05/02 20:43:04 sqlE:/GoProject/goods/models/evaluation.go:2224.7705msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:43:05 sqlE:/GoProject/goods/models/evaluation.go:2223.9381msUPDATE `seller` SET `count` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[5 7] 1
+2020/05/02 20:43:05 sqlE:/GoProject/goods/models/evaluation.go:2324.8896msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:43:05 sqlE:/GoProject/goods/models/evaluation.go:2323.9569msUPDATE `seller` SET `comprehensive` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 0
+2020/05/02 20:43:12 logE:/GoProject/goods/models/evaluation.go:28sql: expected 0 arguments, got 1
+2020/05/02 20:43:12 sqlE:/GoProject/goods/models/evaluation.go:2812.0121msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id)) LIMIT 1[1] 0
+2020/05/02 20:43:16 sqlE:/GoProject/goods/models/evaluation.go:3225.1536msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:43:16 sqlE:/GoProject/goods/models/evaluation.go:3223.9069msUPDATE `driver` SET `evaluation` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[5 1] 0
+2020/05/02 20:43:17 sqlE:/GoProject/goods/models/evaluation.go:3324.1577msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:43:18 sqlE:/GoProject/goods/models/evaluation.go:3323.2062msUPDATE `driver` SET `count` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[1 1] 0
+2020/05/02 20:43:20 sqlE:/GoProject/goods/models/evaluation.go:3424.936msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:45:17 sqlE:/GoProject/goods/models/evaluation.go:723.9385msINSERT  INTO `evaluation` (`evaluation_id`,`score`,`goods_id`,`seller_id`,`buyer_id`,`comment`,`deleted_at`) VALUES (?,?,?,?,?,?,?)[0 2 2 7 6 服务好 <nil>] 1
+2020/05/02 20:45:17 sqlE:/GoProject/goods/models/evaluation.go:1724.5253msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:45:17 sqlE:/GoProject/goods/models/evaluation.go:2123.9378msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:45:17 sqlE:/GoProject/goods/models/evaluation.go:2122.9762msUPDATE `seller` SET `evaluation` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[12 7] 1
+2020/05/02 20:45:17 sqlE:/GoProject/goods/models/evaluation.go:2223.1139msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:45:17 sqlE:/GoProject/goods/models/evaluation.go:2224.2437msUPDATE `seller` SET `count` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[6 7] 1
+2020/05/02 20:45:17 sqlE:/GoProject/goods/models/evaluation.go:2322.8277msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:45:17 sqlE:/GoProject/goods/models/evaluation.go:2324.0047msUPDATE `seller` SET `comprehensive` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 0
+2020/05/02 20:45:17 logE:/GoProject/goods/models/evaluation.go:28sql: expected 0 arguments, got 1
+2020/05/02 20:45:17 sqlE:/GoProject/goods/models/evaluation.go:2811.7892msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id)) LIMIT 1[1] 0
+2020/05/02 20:45:17 sqlE:/GoProject/goods/models/evaluation.go:3224.0734msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:45:17 sqlE:/GoProject/goods/models/evaluation.go:3223.9199msUPDATE `driver` SET `evaluation` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[5 1] 0
+2020/05/02 20:45:17 sqlE:/GoProject/goods/models/evaluation.go:3322.9966msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:45:17 sqlE:/GoProject/goods/models/evaluation.go:3324.9394msUPDATE `driver` SET `count` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[1 1] 0
+2020/05/02 20:45:17 sqlE:/GoProject/goods/models/evaluation.go:3423.2614msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:46:06 sqlE:/GoProject/goods/models/evaluation.go:728.9571msINSERT  INTO `evaluation` (`evaluation_id`,`score`,`goods_id`,`seller_id`,`buyer_id`,`comment`,`deleted_at`) VALUES (?,?,?,?,?,?,?)[0 2 2 7 6 服务好 <nil>] 1
+2020/05/02 20:46:06 sqlE:/GoProject/goods/models/evaluation.go:1726.052msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:46:06 sqlE:/GoProject/goods/models/evaluation.go:2127.0427msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:46:06 sqlE:/GoProject/goods/models/evaluation.go:2126.4118msUPDATE `seller` SET `evaluation` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[14 7] 1
+2020/05/02 20:46:06 sqlE:/GoProject/goods/models/evaluation.go:2226.5148msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:46:06 sqlE:/GoProject/goods/models/evaluation.go:2226.0527msUPDATE `seller` SET `count` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[7 7] 1
+2020/05/02 20:46:06 sqlE:/GoProject/goods/models/evaluation.go:2325.3036msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:46:06 sqlE:/GoProject/goods/models/evaluation.go:2326.9264msUPDATE `seller` SET `comprehensive` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 0
+2020/05/02 20:46:11 logE:/GoProject/goods/models/evaluation.go:28sql: expected 0 arguments, got 1
+2020/05/02 20:46:11 sqlE:/GoProject/goods/models/evaluation.go:2813.9816msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id)) LIMIT 1[1] 0
+2020/05/02 20:46:39 sqlE:/GoProject/goods/models/evaluation.go:3227.6955msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:46:39 sqlE:/GoProject/goods/models/evaluation.go:3226.2051msUPDATE `driver` SET `evaluation` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[5 1] 0
+2020/05/02 20:46:40 sqlE:/GoProject/goods/models/evaluation.go:3325.6653msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:46:40 sqlE:/GoProject/goods/models/evaluation.go:3325.614msUPDATE `driver` SET `count` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[1 1] 0
+2020/05/02 20:47:42 sqlE:/GoProject/goods/models/evaluation.go:723.936msINSERT  INTO `evaluation` (`evaluation_id`,`score`,`goods_id`,`seller_id`,`buyer_id`,`comment`,`deleted_at`) VALUES (?,?,?,?,?,?,?)[0 2 2 7 6 服务好 <nil>] 1
+2020/05/02 20:47:42 sqlE:/GoProject/goods/models/evaluation.go:1724.9524msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:47:42 sqlE:/GoProject/goods/models/evaluation.go:2125.0461msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:47:42 sqlE:/GoProject/goods/models/evaluation.go:2122.9267msUPDATE `seller` SET `evaluation` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[16 7] 1
+2020/05/02 20:47:42 sqlE:/GoProject/goods/models/evaluation.go:2222.9709msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:47:42 sqlE:/GoProject/goods/models/evaluation.go:2223.1412msUPDATE `seller` SET `count` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[8 7] 1
+2020/05/02 20:47:42 sqlE:/GoProject/goods/models/evaluation.go:2322.8903msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:47:42 sqlE:/GoProject/goods/models/evaluation.go:2323.2471msUPDATE `seller` SET `comprehensive` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 0
+2020/05/02 20:47:48 logE:/GoProject/goods/models/evaluation.go:28sql: expected 0 arguments, got 1
+2020/05/02 20:47:48 sqlE:/GoProject/goods/models/evaluation.go:2811.9783msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id)) LIMIT 1[1] 0
+2020/05/02 20:48:31 sqlE:/GoProject/goods/models/evaluation.go:726.9291msINSERT  INTO `evaluation` (`evaluation_id`,`score`,`goods_id`,`seller_id`,`buyer_id`,`comment`,`deleted_at`) VALUES (?,?,?,?,?,?,?)[0 2 2 7 6 服务好 <nil>] 1
+2020/05/02 20:48:31 sqlE:/GoProject/goods/models/evaluation.go:1727.9361msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:48:31 sqlE:/GoProject/goods/models/evaluation.go:2126.9865msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:48:31 sqlE:/GoProject/goods/models/evaluation.go:2126.9317msUPDATE `seller` SET `evaluation` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[18 7] 1
+2020/05/02 20:48:31 sqlE:/GoProject/goods/models/evaluation.go:2226.9014msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:48:31 sqlE:/GoProject/goods/models/evaluation.go:2227.1117msUPDATE `seller` SET `count` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[9 7] 1
+2020/05/02 20:48:32 sqlE:/GoProject/goods/models/evaluation.go:2326.9385msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:48:32 sqlE:/GoProject/goods/models/evaluation.go:2325.9311msUPDATE `seller` SET `comprehensive` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 0
+2020/05/02 20:48:40 logE:/GoProject/goods/models/evaluation.go:28sql: expected 0 arguments, got 1
+2020/05/02 20:48:40 sqlE:/GoProject/goods/models/evaluation.go:2814.4045msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id)) LIMIT 1[1] 0
+2020/05/02 20:49:07 sqlE:/GoProject/goods/models/evaluation.go:727.9609msINSERT  INTO `evaluation` (`evaluation_id`,`score`,`goods_id`,`seller_id`,`buyer_id`,`comment`,`deleted_at`) VALUES (?,?,?,?,?,?,?)[0 2 2 7 6 服务好 <nil>] 1
+2020/05/02 20:49:07 sqlE:/GoProject/goods/models/evaluation.go:1727.5444msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:49:07 sqlE:/GoProject/goods/models/evaluation.go:2127.9809msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:49:07 sqlE:/GoProject/goods/models/evaluation.go:2127.1494msUPDATE `seller` SET `evaluation` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[20 7] 1
+2020/05/02 20:49:07 sqlE:/GoProject/goods/models/evaluation.go:2228.8091msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:49:07 sqlE:/GoProject/goods/models/evaluation.go:2227.14msUPDATE `seller` SET `count` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[10 7] 1
+2020/05/02 20:49:07 sqlE:/GoProject/goods/models/evaluation.go:2326.9902msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:49:07 sqlE:/GoProject/goods/models/evaluation.go:2327.3424msUPDATE `seller` SET `comprehensive` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 0
+2020/05/02 20:49:07 sqlE:/GoProject/goods/models/evaluation.go:2827.5478msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:49:07 sqlE:/GoProject/goods/models/evaluation.go:3227.8065msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:49:07 sqlE:/GoProject/goods/models/evaluation.go:3228.0172msUPDATE `driver` SET `evaluation` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[10 1] 1
+2020/05/02 20:49:07 sqlE:/GoProject/goods/models/evaluation.go:3328.0454msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:49:07 sqlE:/GoProject/goods/models/evaluation.go:3327.1186msUPDATE `driver` SET `count` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[2 1] 1
+2020/05/02 20:49:07 sqlE:/GoProject/goods/models/evaluation.go:3427.0188msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:49:47 sqlE:/GoProject/goods/models/evaluation.go:728.43msINSERT  INTO `evaluation` (`evaluation_id`,`score`,`goods_id`,`seller_id`,`buyer_id`,`comment`,`deleted_at`) VALUES (?,?,?,?,?,?,?)[0 2 2 7 6 服务好 <nil>] 1
+2020/05/02 20:49:47 sqlE:/GoProject/goods/models/evaluation.go:1728.8384msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:49:47 sqlE:/GoProject/goods/models/evaluation.go:2130.0727msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:49:47 sqlE:/GoProject/goods/models/evaluation.go:2129.0339msUPDATE `seller` SET `evaluation` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[22 7] 1
+2020/05/02 20:49:47 sqlE:/GoProject/goods/models/evaluation.go:2228.2783msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:49:47 sqlE:/GoProject/goods/models/evaluation.go:2229.1677msUPDATE `seller` SET `count` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[11 7] 1
+2020/05/02 20:49:47 sqlE:/GoProject/goods/models/evaluation.go:2330.2032msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:49:48 sqlE:/GoProject/goods/models/evaluation.go:2328.7848msUPDATE `seller` SET `comprehensive` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 0
+2020/05/02 20:49:52 sqlE:/GoProject/goods/models/evaluation.go:2828.9617msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:50:11 sqlE:/GoProject/goods/models/evaluation.go:3229.2033msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:50:11 sqlE:/GoProject/goods/models/evaluation.go:3227.3318msUPDATE `driver` SET `evaluation` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[15 1] 1
+2020/05/02 20:50:13 sqlE:/GoProject/goods/models/evaluation.go:3329.4817msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:50:13 sqlE:/GoProject/goods/models/evaluation.go:3329.1624msUPDATE `driver` SET `count` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[3 1] 1
+2020/05/02 20:50:16 sqlE:/GoProject/goods/models/evaluation.go:3428.4426msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:51:31 sqlE:/GoProject/goods/models/evaluation.go:724.9427msINSERT  INTO `evaluation` (`evaluation_id`,`score`,`goods_id`,`seller_id`,`buyer_id`,`comment`,`deleted_at`) VALUES (?,?,?,?,?,?,?)[0 2 2 7 6 服务好 <nil>] 1
+2020/05/02 20:51:31 sqlE:/GoProject/goods/models/evaluation.go:1724.1626msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:51:31 sqlE:/GoProject/goods/models/evaluation.go:2125.5417msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:51:31 sqlE:/GoProject/goods/models/evaluation.go:2123.9045msUPDATE `seller` SET `evaluation` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[24 7] 1
+2020/05/02 20:51:32 sqlE:/GoProject/goods/models/evaluation.go:2223.7657msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:51:32 sqlE:/GoProject/goods/models/evaluation.go:2222.7579msUPDATE `seller` SET `count` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[12 7] 1
+2020/05/02 20:51:32 sqlE:/GoProject/goods/models/evaluation.go:2324.6946msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 20:51:32 sqlE:/GoProject/goods/models/evaluation.go:2323.9834msUPDATE `seller` SET `comprehensive` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 0
+2020/05/02 20:51:32 sqlE:/GoProject/goods/models/evaluation.go:2824.3956msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:51:32 sqlE:/GoProject/goods/models/evaluation.go:3224.8678msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:51:32 sqlE:/GoProject/goods/models/evaluation.go:3223.1101msUPDATE `driver` SET `evaluation` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[20 1] 1
+2020/05/02 20:51:32 sqlE:/GoProject/goods/models/evaluation.go:3322.9346msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:51:32 sqlE:/GoProject/goods/models/evaluation.go:3323.573msUPDATE `driver` SET `count` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[4 1] 1
+2020/05/02 20:51:32 sqlE:/GoProject/goods/models/evaluation.go:3422.9392msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 20:51:32 sqlE:/GoProject/goods/models/evaluation.go:3424.1925msUPDATE `driver` SET `comprehensive` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[5 1] 1
+2020/05/02 21:11:10 sqlE:/GoProject/goods/models/evaluation.go:824.1758msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[6] 1
+2020/05/02 21:11:10 sqlE:/GoProject/goods/models/evaluation.go:922.9636msINSERT  INTO `evaluation` (`evaluation_id`,`score`,`goods_id`,`seller_id`,`buyer_id`,`buyer_username`,`comment`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?)[0 2 2 7 6 jk 服务好 <nil>] 1
+2020/05/02 21:11:10 sqlE:/GoProject/goods/models/evaluation.go:2022.6055msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 21:11:10 sqlE:/GoProject/goods/models/evaluation.go:2424.9567msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 21:11:10 sqlE:/GoProject/goods/models/evaluation.go:2421.9544msUPDATE `seller` SET `evaluation` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[26 7] 1
+2020/05/02 21:11:10 sqlE:/GoProject/goods/models/evaluation.go:2523.1993msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 21:11:10 sqlE:/GoProject/goods/models/evaluation.go:2522.4045msUPDATE `seller` SET `count` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[13 7] 1
+2020/05/02 21:11:10 sqlE:/GoProject/goods/models/evaluation.go:2622.9201msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 21:11:10 sqlE:/GoProject/goods/models/evaluation.go:2622.2501msUPDATE `seller` SET `comprehensive` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 0
+2020/05/02 21:11:10 sqlE:/GoProject/goods/models/evaluation.go:3121.8348msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 21:11:10 sqlE:/GoProject/goods/models/evaluation.go:3522.9459msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 21:11:10 sqlE:/GoProject/goods/models/evaluation.go:3522.9382msUPDATE `driver` SET `evaluation` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[25 1] 1
+2020/05/02 21:11:10 sqlE:/GoProject/goods/models/evaluation.go:3622.039msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 21:11:10 sqlE:/GoProject/goods/models/evaluation.go:3622.03msUPDATE `driver` SET `count` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[5 1] 1
+2020/05/02 21:11:10 sqlE:/GoProject/goods/models/evaluation.go:3721.9405msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 21:11:10 sqlE:/GoProject/goods/models/evaluation.go:3721.6135msUPDATE `driver` SET `comprehensive` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[5 1] 0
+2020/05/02 21:21:34 sqlE:/GoProject/goods/models/auth.go:2624.9424msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/02 21:21:34 sqlE:/GoProject/goods/models/auth.go:4024.7909msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/02 21:21:34 sqlE:/GoProject/goods/models/auth.go:9623.6213msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/05/02 21:21:34 sqlE:/GoProject/goods/models/auth.go:9723.2931msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-05-02 21:21:34.841151 +0800 CST m=+3.097868901 7] 0
+2020/05/02 21:21:34 sqlE:/GoProject/goods/models/auth.go:4624.0064msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/02 21:21:48 sqlE:/GoProject/goods/models/evaluation.go:825.9283msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[6] 1
+2020/05/02 21:21:48 sqlE:/GoProject/goods/models/evaluation.go:923.8542msINSERT  INTO `evaluation` (`evaluation_id`,`score`,`goods_id`,`seller_id`,`buyer_id`,`buyer_username`,`comment`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?)[0 2 2 7 6 jk 服务好 <nil>] 1
+2020/05/02 21:21:48 sqlE:/GoProject/goods/models/evaluation.go:2023.1887msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 21:21:48 sqlE:/GoProject/goods/models/evaluation.go:2423.9424msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 21:21:48 sqlE:/GoProject/goods/models/evaluation.go:2423.6778msUPDATE `seller` SET `evaluation` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[28 7] 1
+2020/05/02 21:21:48 sqlE:/GoProject/goods/models/evaluation.go:2524.16msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 21:21:48 sqlE:/GoProject/goods/models/evaluation.go:2523.8939msUPDATE `seller` SET `count` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[14 7] 1
+2020/05/02 21:21:49 sqlE:/GoProject/goods/models/evaluation.go:2622.909msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 21:21:49 sqlE:/GoProject/goods/models/evaluation.go:2622.9362msUPDATE `seller` SET `comprehensive` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 0
+2020/05/02 21:21:49 sqlE:/GoProject/goods/models/evaluation.go:3123.3849msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 21:21:49 sqlE:/GoProject/goods/models/evaluation.go:3523.0217msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 21:21:49 sqlE:/GoProject/goods/models/evaluation.go:3524.8321msUPDATE `driver` SET `evaluation` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[30 1] 1
+2020/05/02 21:21:49 sqlE:/GoProject/goods/models/evaluation.go:3623.2663msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 21:21:49 sqlE:/GoProject/goods/models/evaluation.go:3622.9569msUPDATE `driver` SET `count` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[6 1] 1
+2020/05/02 21:21:49 sqlE:/GoProject/goods/models/evaluation.go:3723.2042msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 21:21:49 sqlE:/GoProject/goods/models/evaluation.go:3722.9251msUPDATE `driver` SET `comprehensive` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[5 1] 0
+2020/05/02 21:21:50 sqlE:/GoProject/goods/models/evaluation.go:828.9226msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[6] 1
+2020/05/02 21:21:50 sqlE:/GoProject/goods/models/evaluation.go:923.9991msINSERT  INTO `evaluation` (`evaluation_id`,`score`,`goods_id`,`seller_id`,`buyer_id`,`buyer_username`,`comment`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?)[0 2 2 7 6 jk 服务好 <nil>] 1
+2020/05/02 21:21:50 sqlE:/GoProject/goods/models/evaluation.go:2024.0469msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 21:21:50 sqlE:/GoProject/goods/models/evaluation.go:2423.1373msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 21:21:50 sqlE:/GoProject/goods/models/evaluation.go:2423.5405msUPDATE `seller` SET `evaluation` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[30 7] 1
+2020/05/02 21:21:50 sqlE:/GoProject/goods/models/evaluation.go:2524.8688msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 21:21:50 sqlE:/GoProject/goods/models/evaluation.go:2523.08msUPDATE `seller` SET `count` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[15 7] 1
+2020/05/02 21:21:50 sqlE:/GoProject/goods/models/evaluation.go:2623.7574msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 21:21:50 sqlE:/GoProject/goods/models/evaluation.go:2623.8426msUPDATE `seller` SET `comprehensive` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 0
+2020/05/02 21:21:50 sqlE:/GoProject/goods/models/evaluation.go:3123.2168msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 21:21:50 sqlE:/GoProject/goods/models/evaluation.go:3524.1674msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 21:21:50 sqlE:/GoProject/goods/models/evaluation.go:3524.5063msUPDATE `driver` SET `evaluation` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[35 1] 1
+2020/05/02 21:21:50 sqlE:/GoProject/goods/models/evaluation.go:3624.6283msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 21:21:50 sqlE:/GoProject/goods/models/evaluation.go:3623.157msUPDATE `driver` SET `count` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[7 1] 1
+2020/05/02 21:21:50 sqlE:/GoProject/goods/models/evaluation.go:3724.0086msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 21:21:50 sqlE:/GoProject/goods/models/evaluation.go:3723.0206msUPDATE `driver` SET `comprehensive` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[5 1] 0
+2020/05/02 21:21:51 sqlE:/GoProject/goods/models/evaluation.go:834.891msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[6] 1
+2020/05/02 21:21:51 sqlE:/GoProject/goods/models/evaluation.go:934.9068msINSERT  INTO `evaluation` (`evaluation_id`,`score`,`goods_id`,`seller_id`,`buyer_id`,`buyer_username`,`comment`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?)[0 2 2 7 6 jk 服务好 <nil>] 1
+2020/05/02 21:21:51 sqlE:/GoProject/goods/models/evaluation.go:2026.9293msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 21:21:51 sqlE:/GoProject/goods/models/evaluation.go:2424.6625msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 21:21:51 sqlE:/GoProject/goods/models/evaluation.go:2424.0901msUPDATE `seller` SET `evaluation` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[32 7] 1
+2020/05/02 21:21:51 sqlE:/GoProject/goods/models/evaluation.go:2523.644msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 21:21:51 sqlE:/GoProject/goods/models/evaluation.go:2523.0745msUPDATE `seller` SET `count` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[16 7] 1
+2020/05/02 21:21:51 sqlE:/GoProject/goods/models/evaluation.go:2624.053msSELECT * FROM `seller`  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?)) LIMIT 1[7] 1
+2020/05/02 21:21:51 sqlE:/GoProject/goods/models/evaluation.go:2624.0293msUPDATE `seller` SET `comprehensive` = ?  WHERE `seller`.`deleted_at` IS NULL AND ((seller_id=?))[2 7] 0
+2020/05/02 21:21:51 sqlE:/GoProject/goods/models/evaluation.go:3123.8844msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 21:21:51 sqlE:/GoProject/goods/models/evaluation.go:3524.08msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 21:21:51 sqlE:/GoProject/goods/models/evaluation.go:3523.5542msUPDATE `driver` SET `evaluation` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[40 1] 1
+2020/05/02 21:21:51 sqlE:/GoProject/goods/models/evaluation.go:3623.21msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 21:21:51 sqlE:/GoProject/goods/models/evaluation.go:3623.3885msUPDATE `driver` SET `count` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[8 1] 1
+2020/05/02 21:21:51 sqlE:/GoProject/goods/models/evaluation.go:3723.679msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[1] 1
+2020/05/02 21:21:51 sqlE:/GoProject/goods/models/evaluation.go:3722.6183msUPDATE `driver` SET `comprehensive` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[5 1] 0
+2020/05/02 21:22:47 sqlE:/GoProject/goods/models/evaluation.go:4230.918msSELECT * FROM `evaluation`  WHERE `evaluation`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 5 OFFSET 0[7] 0
+2020/05/02 21:22:47 sqlE:/GoProject/goods/models/evaluation.go:4825.93msSELECT count(*) FROM `evaluation`  WHERE `evaluation`.`deleted_at` IS NULL AND ((goods_id=?))[7] 0
+2020/05/02 21:23:19 sqlE:/GoProject/goods/models/evaluation.go:4229.9026msSELECT * FROM `evaluation`  WHERE `evaluation`.`deleted_at` IS NULL AND ((goods_id=?)) LIMIT 5 OFFSET 0[2] 4
+2020/05/02 21:23:19 sqlE:/GoProject/goods/models/evaluation.go:4823.9485msSELECT count(*) FROM `evaluation`  WHERE `evaluation`.`deleted_at` IS NULL AND ((goods_id=?))[2] 0

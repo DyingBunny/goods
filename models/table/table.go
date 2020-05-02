@@ -45,7 +45,7 @@ type Driver struct{
 	Identity    string  `json:"identity"`
 	Evaluation 	uint	`gorm:"default:0"json:"evaluation"`
 	Count 		uint	`gorm:"default:0"json:"count"`
-	AddressId 	uint	`json:"address_id"`
+	Comprehensive	uint	`gorm:"default:0"json:"comprehensive"`
 	DeletedAt *time.Time `json:"deleted_at"`
 }
 
@@ -98,6 +98,7 @@ type Evaluation struct{
 	GoodsId		uint	`json:"goods_id"`
 	SellerId	uint	`json:"seller_id"`
 	BuyerId		uint	`json:"buyer_id"`
+	BuyerUsername 	string 	`json:"buyer_username"`
 	Comment 		string	`json:"detail"`
 	DeletedAt *time.Time `json:"deleted_at"`
 }

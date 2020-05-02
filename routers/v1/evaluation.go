@@ -4,7 +4,6 @@ import (
 	"github.com/gin-gonic/gin"
 	"github.com/gin-gonic/gin/binding"
 	"goods/models"
-	"goods/models/table"
 	"goods/pkg/e"
 	"net/http"
 )
@@ -14,8 +13,16 @@ type BuyerEvaluation struct{
 	GoodsId  uint `json:"goods_id"`
 	SellerId uint `json:"seller_id"`
 	BuyerId  uint `json:"buyer_id"`
+	DriverId uint `json:"driver_id"`
 	Comment  string `json:"comment"`
 	SellerScore uint `json:"seller_score"`
+	DriverScore uint `json:"driver_score"`
+}
+
+type GoodsEvaluation struct{
+	GoodsId	uint	`json:"goods_id"`
+	Page 		int		`json:"page"`
+	PageSize	int		`json:"page_size"`
 }
 
 //买家评论商品与卖家
@@ -24,20 +31,34 @@ func BuyerEvaluate(context *gin.Context){
 	_=context.ShouldBindBodyWith(&evaluation,binding.JSON)
 	models.AddEvaluation(evaluation.GoodsScore,evaluation.GoodsId,evaluation.SellerId,evaluation.BuyerId,evaluation.Comment)
 	models.BuyerEvaluateSeller(evaluation.SellerScore,evaluation.SellerId)
+	models.BuyerEvaluateDriver(evaluation.DriverScore,evaluation.DriverId)
 	code:=e.SUCCESS
 	context.JSON(http.StatusOK,gin.H{
 		"code":code,
 		"msg":e.GetMsg(code),
 	})
 }
-//买家评论卖家
-func BuyerEvaluateSeller(context *gin.Context){
-	var evaluation table.Evaluation
-	_=context.ShouldBindBodyWith(&evaluation,binding.JSON)
-	models.BuyerEvaluateSeller(evaluation.Score,evaluation.SellerId)
-	code:=e.SUCCESS
-	context.JSON(http.StatusOK,gin.H{
-		"code":code,
-		"msg":e.GetMsg(code),
-	})
+//查看商品的评论
+func AllGoodsEvaluation(context *gin.Context){
+	var goodsEvaluation GoodsEvaluation
+	_=context.ShouldBindBodyWith(&goodsEvaluation,binding.JSON)
+	goods:=models.FindGoodsEvaluation(goodsEvaluation.GoodsId,goodsEvaluation.Page,goodsEvaluation.PageSize)
+	total:=models.FindGoodsEvaNum(goodsEvaluation.GoodsId)
+	if len(goods)==0{
+		code:=e.SUCCESS
+		context.JSON(http.StatusOK,gin.H{
+			"code":code,
+			"msg":"该商品还没有评论",
+		})
+	}else{
+		data:=make(map[string]interface{})
+		data["total"]=total
+		data["goods"]=goods
+		code:=e.SUCCESS
+		context.JSON(http.StatusOK,gin.H{
+			"code":code,
+			"msg":e.GetMsg(code),
+			"data":data,
+		})
+	}
 }

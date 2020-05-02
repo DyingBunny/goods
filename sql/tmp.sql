@@ -102,6 +102,7 @@ CREATE TABLE `evaluation`(
     `goods_id` int(11) unsigned NOT NULL COMMENT'商品id',
     `seller_id` int(11) unsigned NOT NULL COMMENT'卖家id',
     `buyer_id` int(11) unsigned NOT NULL COMMENT'买家id',
+    `buyer_username` varchar(30) NOT NULL COMMENT'买家用户名',
     `comment` text COMMENT'评论内容',
     `deleted_at` date,
     PRIMARY KEY(`evaluation_id`)
