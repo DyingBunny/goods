@@ -35,6 +35,8 @@ func InitRouter() *gin.Engine{
 	r.POST("/duplicate",v1.Duplicate)
 	//退出登录
 	r.POST("/logout",v1.LogOut)
+	//测试地图
+	r.GET("/display_address",v1.DisplayAddress)
 	api := r.Group("/api/v1")
 	api.Use(jwt.JWT())
 	{
@@ -69,10 +71,16 @@ func InitRouter() *gin.Engine{
 		api.POST("/buyer_pay",v1.BuyerPay)
 		//买家确认收货
 		api.POST("/buyer_complete",v1.BuyerComplete)
-		//买家评论
-		api.POST("/buyer_evaluate",v1.BuyerEvaluate)
+		////买家评论商品和卖家
+		//api.POST("/buyer_evaluate",v1.BuyerEvaluate)
+		////买家评论司机
+		//api.POST("/buyer_evaluate_driver",v1.BuyerEvaluateDriver)
 		//查看商品的评价
 		api.POST("/all_goods_evaluation",v1.AllGoodsEvaluation)
+		//买家卖家按照订单查看配送订单
+		api.POST("/seller_buyer_find_distribution",v1.SellerBuyerFindDistribution)
+		//买家确认配送订单
+		api.POST("/buyer_confirm_distribution",v1.BuyerConfirmDistribution)
 
 			//卖家
 
@@ -88,12 +96,26 @@ func InitRouter() *gin.Engine{
 		api.POST("/all_seller_com_pro_low",v1.AllSellerComProLow)
 		//查看卖家目前的订单数量
 		api.POST("/buyer_seller_num",v1.BuyerSellerNum)
-		//查看卖家的配送中订单
+		//查看卖家的待买家付款订单
 		api.POST("/all_buyer_seller_pay",v1.AllBuyerSellerPay)
 		//查看卖家的配送中订单
 		api.POST("/all_buyer_seller_deli",v1.AllBuyerSellerDeli)
 		//查看卖家的已完成订单
 		api.POST("/all_buyer_seller_complete",v1.AllBuyerSellerComplete)
+
+			//司机
+		//查看司机信息
+		api.POST("/driver_profile",v1.DriverProfile)
+		//填写姓名和身份证
+		api.POST("/modify_identity",v1.ModifyIdentity)
+		//司机查看订单
+		api.POST("/driver_find_all_order",v1.DriverFindAllOrder)
+		//司机配送
+		api.POST("/driver_distribute",v1.DriverDistribute)
+		//司机查看自己的配送订单
+		api.POST("/driver_find_distribution",v1.DriverFindDistribution)
+
+
 
 	}
 	return r

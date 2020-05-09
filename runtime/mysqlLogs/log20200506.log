@@ -1,0 +1,68 @@
+2020/05/06 17:15:53 sqlE:/GoProject/goods/models/auth.go:2637.8986msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/06 17:15:53 sqlE:/GoProject/goods/models/auth.go:4025.9185msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/06 17:15:53 sqlE:/GoProject/goods/models/auth.go:8223.8572msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/05/06 17:15:53 sqlE:/GoProject/goods/models/auth.go:8325.5711msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-05-06 17:15:53.385959 +0800 CST m=+13.090985501 7] 1
+2020/05/06 17:15:55 sqlE:/GoProject/goods/models/auth.go:4625.1348msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/06 17:16:17 sqlE:/GoProject/goods/routers/v1/distribution.go:2932.9154msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:16:17 sqlE:/GoProject/goods/models/distribution.go:1025.9257msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:16:17 sqlE:/GoProject/goods/models/distribution.go:1127.0256msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[11] 1
+2020/05/06 17:16:17 sqlE:/GoProject/goods/models/distribution.go:1225.9343msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[11] 1
+2020/05/06 17:16:17 sqlE:/GoProject/goods/models/distribution.go:1327.25msINSERT  INTO `distribution` (`distribution_id`,`buyer_id`,`seller_id`,`driver_id`,`order_id`,`deliver_address`,`receive_address`,`num`,`trans_price`,`name`,`phone_number`,`state`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)[0 6 7 11 1 南京市 13291957258 50 50 张三 15245983268 1 <nil>] 1
+2020/05/06 17:16:17 sqlE:/GoProject/goods/models/distribution.go:3125.1691msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:16:17 logE:/GoProject/goods/models/distribution.go:33sql: converting argument $2 type: unsupported type table.Order, a struct
+2020/05/06 17:16:17 sqlE:/GoProject/goods/models/distribution.go:330sUPDATE `order` SET `remain_num` = ?  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?))[50 {0 0 0 0  0001-01-01 00:00:00 +0000 UTC 0 0 0 0 0 0   0 <nil>}] 0
+2020/05/06 17:16:19 sqlE:/GoProject/goods/routers/v1/distribution.go:2924.9338msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:16:19 sqlE:/GoProject/goods/models/distribution.go:1043.4447msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:16:19 sqlE:/GoProject/goods/models/distribution.go:1132.6361msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[11] 1
+2020/05/06 17:16:19 sqlE:/GoProject/goods/models/distribution.go:1225.9306msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[11] 1
+2020/05/06 17:16:19 sqlE:/GoProject/goods/models/distribution.go:1325.9481msINSERT  INTO `distribution` (`distribution_id`,`buyer_id`,`seller_id`,`driver_id`,`order_id`,`deliver_address`,`receive_address`,`num`,`trans_price`,`name`,`phone_number`,`state`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)[0 6 7 11 1 南京市 13291957258 50 50 张三 15245983268 1 <nil>] 1
+2020/05/06 17:16:19 sqlE:/GoProject/goods/models/distribution.go:3126.1642msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:16:19 logE:/GoProject/goods/models/distribution.go:33sql: converting argument $2 type: unsupported type table.Order, a struct
+2020/05/06 17:16:19 sqlE:/GoProject/goods/models/distribution.go:330sUPDATE `order` SET `remain_num` = ?  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?))[50 {0 0 0 0  0001-01-01 00:00:00 +0000 UTC 0 0 0 0 0 0   0 <nil>}] 0
+2020/05/06 17:16:20 sqlE:/GoProject/goods/routers/v1/distribution.go:2933.9095msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:16:20 sqlE:/GoProject/goods/models/distribution.go:1026.1726msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:16:20 sqlE:/GoProject/goods/models/distribution.go:1125.5342msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[11] 1
+2020/05/06 17:16:20 sqlE:/GoProject/goods/models/distribution.go:1225.5319msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[11] 1
+2020/05/06 17:16:20 sqlE:/GoProject/goods/models/distribution.go:1325.7062msINSERT  INTO `distribution` (`distribution_id`,`buyer_id`,`seller_id`,`driver_id`,`order_id`,`deliver_address`,`receive_address`,`num`,`trans_price`,`name`,`phone_number`,`state`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)[0 6 7 11 1 南京市 13291957258 50 50 张三 15245983268 1 <nil>] 1
+2020/05/06 17:16:20 sqlE:/GoProject/goods/models/distribution.go:3126.7668msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:16:20 logE:/GoProject/goods/models/distribution.go:33sql: converting argument $2 type: unsupported type table.Order, a struct
+2020/05/06 17:16:20 sqlE:/GoProject/goods/models/distribution.go:330sUPDATE `order` SET `remain_num` = ?  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?))[50 {0 0 0 0  0001-01-01 00:00:00 +0000 UTC 0 0 0 0 0 0   0 <nil>}] 0
+2020/05/06 17:16:21 sqlE:/GoProject/goods/routers/v1/distribution.go:2925.9081msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:16:21 sqlE:/GoProject/goods/models/distribution.go:1025.9435msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:16:21 sqlE:/GoProject/goods/models/distribution.go:1125.5248msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[11] 1
+2020/05/06 17:16:21 sqlE:/GoProject/goods/models/distribution.go:1225.36msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[11] 1
+2020/05/06 17:16:22 sqlE:/GoProject/goods/models/distribution.go:1325.6825msINSERT  INTO `distribution` (`distribution_id`,`buyer_id`,`seller_id`,`driver_id`,`order_id`,`deliver_address`,`receive_address`,`num`,`trans_price`,`name`,`phone_number`,`state`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)[0 6 7 11 1 南京市 13291957258 50 50 张三 15245983268 1 <nil>] 1
+2020/05/06 17:16:22 sqlE:/GoProject/goods/models/distribution.go:3125.7461msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:16:22 logE:/GoProject/goods/models/distribution.go:33sql: converting argument $2 type: unsupported type table.Order, a struct
+2020/05/06 17:16:22 sqlE:/GoProject/goods/models/distribution.go:330sUPDATE `order` SET `remain_num` = ?  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?))[50 {0 0 0 0  0001-01-01 00:00:00 +0000 UTC 0 0 0 0 0 0   0 <nil>}] 0
+2020/05/06 17:17:12 sqlE:/GoProject/goods/models/distribution.go:3925.9329msSELECT * FROM `distribution`  WHERE `distribution`.`deleted_at` IS NULL AND ((driver_id=? AND state=?))[0 1] 0
+2020/05/06 17:17:22 sqlE:/GoProject/goods/models/distribution.go:3925.9182msSELECT * FROM `distribution`  WHERE `distribution`.`deleted_at` IS NULL AND ((driver_id=? AND state=?))[0 1] 0
+2020/05/06 17:19:40 sqlE:/GoProject/goods/models/distribution.go:3924.9424msSELECT * FROM `distribution`  WHERE `distribution`.`deleted_at` IS NULL AND ((driver_id=? AND state=?))[0 1] 0
+2020/05/06 17:19:56 sqlE:/GoProject/goods/models/distribution.go:3929.9188msSELECT * FROM `distribution`  WHERE `distribution`.`deleted_at` IS NULL AND ((driver_id=? AND state=?))[0 1] 0
+2020/05/06 17:20:28 sqlE:/GoProject/goods/models/distribution.go:3930.9507msSELECT * FROM `distribution`  WHERE `distribution`.`deleted_at` IS NULL AND ((driver_id=? AND state=?))[0 1] 0
+2020/05/06 17:21:45 sqlE:/GoProject/goods/models/distribution.go:3925.9305msSELECT * FROM `distribution`  WHERE `distribution`.`deleted_at` IS NULL AND ((driver_id=? AND state=?))[0 1] 0
+2020/05/06 17:22:06 sqlE:/GoProject/goods/models/distribution.go:3925.9305msSELECT * FROM `distribution`  WHERE `distribution`.`deleted_at` IS NULL AND ((driver_id=? AND state=?))[0 1] 0
+2020/05/06 17:22:37 sqlE:/GoProject/goods/models/distribution.go:5227.9259msSELECT * FROM `distribution`  WHERE `distribution`.`deleted_at` IS NULL AND ((order_id=? AND state=?)) LIMIT 5 OFFSET 0[1 1] 4
+2020/05/06 17:22:37 sqlE:/GoProject/goods/models/distribution.go:4625.0885msSELECT count(*) FROM `distribution`  WHERE `distribution`.`deleted_at` IS NULL AND ((order_id=? AND state=?))[1 1] 0
+2020/05/06 17:27:00 sqlE:/GoProject/goods/routers/v1/distribution.go:2931.005msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:27:00 sqlE:/GoProject/goods/models/distribution.go:1028.9883msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:27:00 sqlE:/GoProject/goods/models/distribution.go:1128.0329msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[11] 1
+2020/05/06 17:27:00 sqlE:/GoProject/goods/models/distribution.go:1227.8345msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[11] 1
+2020/05/06 17:27:00 sqlE:/GoProject/goods/models/distribution.go:1328.9017msINSERT  INTO `distribution` (`distribution_id`,`buyer_id`,`seller_id`,`driver_id`,`order_id`,`deliver_address`,`receive_address`,`num`,`trans_price`,`name`,`phone_number`,`state`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)[0 6 7 11 1 南京市 13291957258 50 50 张三 15245983268 1 <nil>] 1
+2020/05/06 17:27:10 sqlE:/GoProject/goods/models/distribution.go:3128.0443msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:28:05 sqlE:/GoProject/goods/routers/v1/distribution.go:2926.9272msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:28:05 sqlE:/GoProject/goods/models/distribution.go:1026.9516msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:28:05 sqlE:/GoProject/goods/models/distribution.go:1125.8681msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[11] 1
+2020/05/06 17:28:05 sqlE:/GoProject/goods/models/distribution.go:1225.897msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[11] 1
+2020/05/06 17:28:05 sqlE:/GoProject/goods/models/distribution.go:1325.7194msINSERT  INTO `distribution` (`distribution_id`,`buyer_id`,`seller_id`,`driver_id`,`order_id`,`deliver_address`,`receive_address`,`num`,`trans_price`,`name`,`phone_number`,`state`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)[0 6 7 11 1 南京市 13291957258 50 50 张三 15245983268 1 <nil>] 1
+2020/05/06 17:28:05 sqlE:/GoProject/goods/models/distribution.go:3125.8116msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:28:05 sqlE:/GoProject/goods/models/distribution.go:3325.5468msUPDATE `order` SET `remain_num` = ?  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?))[50 1] 1
+2020/05/06 17:28:07 sqlE:/GoProject/goods/routers/v1/distribution.go:2925.9305msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:28:07 sqlE:/GoProject/goods/models/distribution.go:1025.9306msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:28:07 sqlE:/GoProject/goods/models/distribution.go:1126.1002msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[11] 1
+2020/05/06 17:28:07 sqlE:/GoProject/goods/models/distribution.go:1225.847msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[11] 1
+2020/05/06 17:28:07 sqlE:/GoProject/goods/models/distribution.go:1324.3481msINSERT  INTO `distribution` (`distribution_id`,`buyer_id`,`seller_id`,`driver_id`,`order_id`,`deliver_address`,`receive_address`,`num`,`trans_price`,`name`,`phone_number`,`state`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)[0 6 7 11 1 南京市 13291957258 50 50 张三 15245983268 1 <nil>] 1
+2020/05/06 17:28:07 sqlE:/GoProject/goods/models/distribution.go:3126.1337msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:28:07 sqlE:/GoProject/goods/models/distribution.go:3324.9231msUPDATE `order` SET `remain_num` = ?  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?))[0 1] 1
+2020/05/06 17:28:08 sqlE:/GoProject/goods/routers/v1/distribution.go:2925.9295msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/06 17:28:11 sqlE:/GoProject/goods/routers/v1/distribution.go:2925.9307msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1

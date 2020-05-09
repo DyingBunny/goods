@@ -1,0 +1,46 @@
+2020/05/07 13:42:17 sqlE:/GoProject/goods/models/auth.go:2625.934msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/07 13:42:17 sqlE:/GoProject/goods/models/auth.go:4025.9272msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/07 13:42:17 sqlE:/GoProject/goods/models/auth.go:8224.9279msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/05/07 13:42:17 sqlE:/GoProject/goods/models/auth.go:8323.9346msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-05-07 13:42:17.4620177 +0800 CST m=+20.075415901 7] 1
+2020/05/07 13:42:17 sqlE:/GoProject/goods/models/auth.go:4624.5545msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/07 13:42:28 sqlE:/GoProject/goods/models/distribution.go:5824.9336msUPDATE `distribution` SET `state` = ?  WHERE `distribution`.`deleted_at` IS NULL AND ((distribution_id=?))[0 6] 1
+2020/05/07 14:59:16 sqlE:/GoProject/goods/models/auth.go:2628.953msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/07 14:59:16 sqlE:/GoProject/goods/models/auth.go:4028.0484msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/07 14:59:16 sqlE:/GoProject/goods/models/auth.go:8226.9388msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/05/07 14:59:16 sqlE:/GoProject/goods/models/auth.go:8327.2621msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-05-07 14:59:16.3428596 +0800 CST m=+32.949474401 7] 0
+2020/05/07 14:59:16 sqlE:/GoProject/goods/models/auth.go:4626.9003msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/07 14:59:41 sqlE:/GoProject/goods/models/distribution.go:6327.9587msSELECT count(*) FROM `distribution`  WHERE `distribution`.`deleted_at` IS NULL AND ((order_id=? AND state=?))[1 1] 0
+2020/05/07 15:00:01 sqlE:/GoProject/goods/models/distribution.go:6330.8231msSELECT count(*) FROM `distribution`  WHERE `distribution`.`deleted_at` IS NULL AND ((order_id=? AND state=?))[1 1] 0
+2020/05/07 15:00:01 sqlE:/GoProject/goods/models/order.go:7527.9892msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/07 15:00:01 sqlE:/GoProject/goods/models/order.go:7526.9571msUPDATE `order` SET `state` = ?  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?))[3 1] 1
+2020/05/07 15:31:20 sqlE:/GoProject/goods/models/auth.go:2626.9281msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/07 15:31:20 sqlE:/GoProject/goods/models/auth.go:4046.8928msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/07 15:31:20 sqlE:/GoProject/goods/models/auth.go:8227.915msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/05/07 15:31:20 sqlE:/GoProject/goods/models/auth.go:8324.932msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-05-07 15:31:20.7757588 +0800 CST m=+34.749764201 7] 0
+2020/05/07 15:31:20 sqlE:/GoProject/goods/models/auth.go:4624.8936msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/07 15:33:10 sqlE:/GoProject/goods/models/evaluation.go:3137.8975msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[11] 1
+2020/05/07 15:33:10 sqlE:/GoProject/goods/models/evaluation.go:3524.9332msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[11] 1
+2020/05/07 15:33:10 sqlE:/GoProject/goods/models/evaluation.go:3525.3363msUPDATE `driver` SET `evaluation` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[5 11] 1
+2020/05/07 15:33:10 sqlE:/GoProject/goods/models/evaluation.go:3624.9615msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[11] 1
+2020/05/07 15:33:10 sqlE:/GoProject/goods/models/evaluation.go:3624.9144msUPDATE `driver` SET `count` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[1 11] 1
+2020/05/07 15:33:10 sqlE:/GoProject/goods/models/evaluation.go:3725.9982msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[11] 1
+2020/05/07 15:33:10 sqlE:/GoProject/goods/models/evaluation.go:3724.9442msUPDATE `driver` SET `comprehensive` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[5 11] 1
+2020/05/07 18:00:26 sqlE:/GoProject/goods/models/auth.go:2624.9372msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/07 18:00:26 sqlE:/GoProject/goods/models/auth.go:4032.908msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/07 18:00:26 sqlE:/GoProject/goods/models/auth.go:8223.9362msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/05/07 18:00:26 sqlE:/GoProject/goods/models/auth.go:8325.9307msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-05-07 18:00:26.7278332 +0800 CST m=+18.998377401 7] 0
+2020/05/07 18:00:26 sqlE:/GoProject/goods/models/auth.go:4628.9233msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/07 18:00:41 sqlE:/GoProject/goods/routers/v1/distribution.go:2923.896msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/07 18:01:02 sqlE:/GoProject/goods/routers/v1/distribution.go:2924.9348msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/07 18:01:02 sqlE:/GoProject/goods/models/distribution.go:7422.9562msSELECT count(*) FROM `distribution`  WHERE `distribution`.`deleted_at` IS NULL AND ((driver_id=? AND state=?))[11 1] 0
+2020/05/07 18:01:02 sqlE:/GoProject/goods/models/distribution.go:1023.6301msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/07 18:01:02 sqlE:/GoProject/goods/models/distribution.go:1124.9123msSELECT * FROM `driver`  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?)) LIMIT 1[11] 1
+2020/05/07 18:01:02 sqlE:/GoProject/goods/models/distribution.go:1223.931msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[11] 1
+2020/05/07 18:01:02 sqlE:/GoProject/goods/models/distribution.go:1324.0255msINSERT  INTO `distribution` (`distribution_id`,`buyer_id`,`seller_id`,`driver_id`,`order_id`,`deliver_address`,`receive_address`,`num`,`trans_price`,`name`,`phone_number`,`state`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?)[0 6 7 11 1 南京市 13291957258 50 50 张三 15245983268 1 <nil>] 1
+2020/05/07 18:01:02 sqlE:/GoProject/goods/models/distribution.go:3123.9401msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/07 18:01:02 sqlE:/GoProject/goods/models/distribution.go:3322.9395msUPDATE `order` SET `remain_num` = ?  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?))[0 1] 1
+2020/05/07 18:01:11 sqlE:/GoProject/goods/routers/v1/distribution.go:2923.9377msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/07 18:02:15 sqlE:/GoProject/goods/routers/v1/distribution.go:2923.9345msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/07 18:02:21 sqlE:/GoProject/goods/models/distribution.go:7423.9488msSELECT count(*) FROM `distribution`  WHERE `distribution`.`deleted_at` IS NULL AND ((driver_id=? AND state=?))[11 1] 0
+2020/05/07 18:02:52 sqlE:/GoProject/goods/routers/v1/distribution.go:2925.9295msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((order_id=?)) LIMIT 1[1] 1
+2020/05/07 18:02:52 sqlE:/GoProject/goods/models/distribution.go:7423.3616msSELECT count(*) FROM `distribution`  WHERE `distribution`.`deleted_at` IS NULL AND ((driver_id=? AND state=?))[11 1] 0

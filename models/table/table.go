@@ -85,6 +85,8 @@ type Order struct {
 	RemainNum	uint	`json:"remain_num"`
 	TotalPrice	uint	`json:"total_price"`
 	TotalTransPrice	uint	`json:"total_trans_price"`
+	Price		uint	`json:"price"`
+	TransPrice	uint	`json:"trans_price"`
 	DeliverAddress	string	`json:"deliver_address"`
 	ReceiveAddress	string	`json:"receive_address"`
 	State		uint		`json:"state"`
@@ -103,12 +105,32 @@ type Evaluation struct{
 	DeletedAt *time.Time `json:"deleted_at"`
 }
 
-////地址
-//type Address struct{
-//	AddressId	uint	`json:"address_id"`
-//	Address		string	`json:"address"`
-//	Lng			float64	`json:"lng"`
-//	Lat  		float64	`jsn:"lat"`
-//	DeletedAt 	*time.Time `json:"deleted_at"`
-//}
+//配送
+type Distribution struct{
+	DistributionId	uint	`json:"distribution_id"`
+	BuyerId		uint	`json:"buyer_id"`
+	SellerId	uint	`json:"seller_id"`
+	DriverId 	uint   	`json:"driver_id"`
+	OrderId		uint	`json:"order_id"`
+	DeliverAddress	string	`json:"deliver_address"`
+	ReceiveAddress	string	`json:"receive_address"`
+	Num	uint	`json:"num"`
+	TransPrice	uint	`json:"trans_price"`
+	Name 		string	`json:"name"`
+	PhoneNumber string 	`json:"phone_number"`
+	State		uint		`json:"state"`
+	DeletedAt *time.Time `json:"deleted_at"`
+}
+
+//地址
+type Address struct{
+	AddressId	uint	`json:"address_id"`
+	DriverId 	uint   	`json:"driver_id"`
+	Address		string	`json:"address"`
+	DeliverAddress	string	`json:"deliver_address"`
+	ReceiveAddress	string	`json:"receive_address"`
+	Lng	string	`json:"lng"`
+	Lat string	`jsn:"lat"`
+	DeletedAt 	*time.Time `json:"deleted_at"`
+}
 

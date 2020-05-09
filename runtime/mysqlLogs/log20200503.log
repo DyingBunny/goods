@@ -1,0 +1,22 @@
+2020/05/03 15:25:01 sqlE:/GoProject/goods/models/auth.go:26247.6775msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[sxc 123] 0
+2020/05/03 15:25:02 sqlE:/GoProject/goods/models/auth.go:52244.3883msINSERT  INTO `login` (`user_id`,`username`,`password`,`phone_number`,`gender`,`last_time`,`role`,`deleted_at`) VALUES (?,?,?,?,?,?,?,?)[0 sxc 123 15245983268 male <nil> driver <nil>] 1
+2020/05/03 15:25:02 sqlE:/GoProject/goods/models/auth.go:5214.0531msSELECT `login` FROM `login`  [] 3
+2020/05/03 15:25:02 sqlE:/GoProject/goods/models/auth.go:4027.9522msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[sxc 123] 1
+2020/05/03 15:25:02 sqlE:/GoProject/goods/models/auth.go:8527.9805msINSERT  INTO `driver` (`driver_id`,`name`,`identity`,`deleted_at`) VALUES (?,?,?,?)[11   <nil>] 1
+2020/05/03 15:25:02 sqlE:/GoProject/goods/models/auth.go:8514.0968msSELECT `evaluation`, `count`, `comprehensive` FROM `driver`  [] 1
+2020/05/03 16:25:13 sqlE:/GoProject/goods/models/auth.go:2625.9312msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/03 16:25:15 sqlE:/GoProject/goods/models/auth.go:4024.8818msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/03 16:25:15 sqlE:/GoProject/goods/models/auth.go:8224.9337msUPDATE `login` SET `login` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[True 7] 0
+2020/05/03 16:25:15 sqlE:/GoProject/goods/models/auth.go:8325.941msUPDATE `login` SET `last_time` = ?  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?))[2020-05-03 16:25:15.5295431 +0800 CST m=+426.374835601 7] 1
+2020/05/03 16:25:15 sqlE:/GoProject/goods/models/auth.go:4625.9451msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((Username=? AND Password=?)) LIMIT 1[wx 123] 1
+2020/05/03 16:26:26 sqlE:/GoProject/goods/models/auth.go:1225.9302msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[11] 1
+2020/05/03 16:26:26 logE:/GoProject/goods/models/auth.go:102Error 1054: Unknown column 'driver' in 'where clause'
+2020/05/03 16:26:26 sqlE:/GoProject/goods/models/auth.go:10212.9643msUPDATE `driver` SET `name` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver=?))[张三 11] 0
+2020/05/03 16:26:26 logE:/GoProject/goods/models/auth.go:103Error 1054: Unknown column 'driver' in 'where clause'
+2020/05/03 16:26:26 sqlE:/GoProject/goods/models/auth.go:10311.9698msUPDATE `driver` SET `identity` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver=?))[6001245685234 11] 0
+2020/05/03 16:27:08 sqlE:/GoProject/goods/models/auth.go:1222.9385msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[11] 1
+2020/05/03 16:27:33 logE:/GoProject/goods/models/auth.go:102Error 1054: Unknown column 'driver' in 'where clause'
+2020/05/03 16:27:33 sqlE:/GoProject/goods/models/auth.go:10210.9938msUPDATE `driver` SET `name` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver=?))[张三 11] 0
+2020/05/03 16:28:13 sqlE:/GoProject/goods/models/auth.go:1226.9286msSELECT * FROM `login`  WHERE `login`.`deleted_at` IS NULL AND ((user_id=?)) LIMIT 1[11] 1
+2020/05/03 16:28:13 sqlE:/GoProject/goods/models/auth.go:10225.1199msUPDATE `driver` SET `name` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[张三 11] 1
+2020/05/03 16:28:13 sqlE:/GoProject/goods/models/auth.go:10324.934msUPDATE `driver` SET `identity` = ?  WHERE `driver`.`deleted_at` IS NULL AND ((driver_id=?))[6001245685234 11] 1

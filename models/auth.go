@@ -61,6 +61,27 @@ func AddBuyer(buyerId uint){
 	Db.Create(&table.Buyer{
 		BuyerId:buyerId})
 }
+//增加卖家
+func AddSeller(sellerId uint){
+	Db.Create(&table.Seller{
+		SellerId:sellerId})
+}
+//增加车主
+func AddDriver(driverId uint){
+	Db.Create(&table.Driver{
+		DriverId:driverId})
+}
+//登录状态更新
+func UpdateSta(userid interface{})bool{
+	var auth table.Login
+	Turnstatus(userid,auth,"True")
+	return true
+}
+//改变登录状态
+func Turnstatus(userid interface{},people table.Login,change interface{}){
+	Db.Model(&people).Where("user_id=?",userid).Update("login",change)
+	Db.Model(&people).Where("user_id=?",userid).Update("last_time",time.Now())
+}
 //填写收货地址
 func ModifyAddress(people table.Login,address string,name string,receiveNumber string){
 	if people.Role=="buyer"{
@@ -75,26 +96,11 @@ func ModifyAddress(people table.Login,address string,name string,receiveNumber s
 		Db.Model(&seller).Where("seller_id=?",people.UserId).Update("deliver_number",receiveNumber)
 	}
 }
-//增加卖家
-func AddSeller(sellerId uint){
-	Db.Create(&table.Seller{
-		SellerId:sellerId})
-}
-//增加车主
-func AddDriver(sellerId uint){
-	Db.Create(&table.Seller{
-		SellerId:sellerId})
-}
-//登录状态更新
-func UpdateSta(userid interface{})bool{
-	var auth table.Login
-	Turnstatus(userid,auth,"True")
-	return true
-}
-//改变登录状态
-func Turnstatus(userid interface{},people table.Login,change interface{}){
-	Db.Model(&people).Where("user_id=?",userid).Update("login",change)
-	Db.Model(&people).Where("user_id=?",userid).Update("last_time",time.Now())
+//填写姓名和身份证
+func ModifyIdentity(driverId uint,name string,identity string){
+	var driver table.Driver
+	Db.Model(&driver).Where("driver_id=?",driverId).Update("name",name)
+	Db.Model(&driver).Where("driver_id=?",driverId).Update("identity",identity)
 }
 
 

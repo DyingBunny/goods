@@ -10,7 +10,6 @@ import (
 func main() {
 	//注册一个默认的路由
 	router:=routers.InitRouter()
-
 	s := &http.Server{
 		Addr:           fmt.Sprintf(":%d", setting.HTTPPort),
 		Handler:        router,

@@ -1,0 +1,2 @@
+2020/05/04 18:26:45 sqlE:/GoProject/goods/models/order.go:12342.8853msSELECT * FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((state=?)) LIMIT 5 OFFSET 0[2] 3
+2020/05/04 18:26:45 sqlE:/GoProject/goods/models/order.go:12951.8639msSELECT count(*) FROM `order`  WHERE `order`.`deleted_at` IS NULL AND ((state=?))[3] 0

@@ -95,7 +95,7 @@ func AllSellerComProUp(context *gin.Context){
 	goods:=models.FindSellerAllComUp(good.SellerId,good.Page,good.PageSize)
 	total:=models.FindSellerComUp(good.SellerId)
 	if len(goods)==0{
-		code:=e.SUCCESS
+		code:=e.DISPLAY
 		context.JSON(http.StatusOK,gin.H{
 			"code":code,
 			"msg":"该用户尚未发布商品",
@@ -120,7 +120,7 @@ func AllSellerComProLow(context *gin.Context){
 	goods:=models.FindSellerAllComLow(good.SellerId,good.Page,good.PageSize)
 	total:=models.FindSellerComLow(good.SellerId)
 	if len(goods)==0{
-		code:=e.SUCCESS
+		code:=e.DISPLAY
 		context.JSON(http.StatusOK,gin.H{
 			"code":code,
 			"msg":"该用户尚未发布商品",
@@ -145,10 +145,10 @@ func ViewItemDesc(context *gin.Context){
 	goods:=models.FindAllComByPriceDesc(good.Page,good.PageSize)
 	total:=models.FindAllComPageNum()
 	if len(goods)==0{
-		code:=e.SUCCESS
+		code:=e.DISPLAY
 		context.JSON(http.StatusOK,gin.H{
 			"code":code,
-			"msg":"还未有买家发布商品",
+			"msg":"还未有卖家发布商品",
 		})
 	}else{
 		data:=make(map[string]interface{})
@@ -170,10 +170,10 @@ func ViewItemAsc(context *gin.Context){
 	goods:=models.FindAllComByPriceAsc(good.Page,good.PageSize)
 	total:=models.FindAllComPageNum()
 	if len(goods)==0{
-		code:=e.SUCCESS
+		code:=e.DISPLAY
 		context.JSON(http.StatusOK,gin.H{
 			"code":code,
-			"msg":"还未有买家发布商品",
+			"msg":"还未有卖家发布商品",
 		})
 	}else{
 		data:=make(map[string]interface{})

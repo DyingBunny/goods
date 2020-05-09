@@ -90,6 +90,7 @@ func Register(context *gin.Context){
 				models.AddSeller(userid)
 			}else{
 				models.AddDriver(userid)
+				models.AddressInsertDriver(userid)
 			}
 			code:=e.SUCCESS
 			context.JSON(http.StatusOK,gin.H{
@@ -105,28 +106,6 @@ func Register(context *gin.Context){
 		}
 	}
 }
-//填写/修改收货/发货地址
-func ModifyAddress(context *gin.Context){
-	var buyer table.Buyer
-	_ = context.ShouldBindBodyWith(&buyer,binding.JSON)
-	auth,isExist := models.Find(buyer.BuyerId)
-	if isExist==false{
-		code:=e.ERROR
-		context.JSON(http.StatusOK, gin.H{
-			"code" : code,
-			"msg" : e.GetMsg(code),
-		})
-	}else{
-		code:=e.SUCCESS
-		models.ModifyAddress(auth,buyer.ReceiveAddress,buyer.Name,buyer.ReceiveNumber)
-		context.JSON(http.StatusOK, gin.H{
-			"code" : code,
-			"msg" : e.GetMsg(code),
-			//"data":auth.UserId,auth.Username,
-		})
-	}
-}
-
 //退出登录
 func LogOut(context *gin.Context){
 	var people table.Login
@@ -201,6 +180,77 @@ func SellerProfile(context *gin.Context){
 		data["evaluation"]=seller.Evaluation
 		data["count"]=seller.Count
 		data["comprehensive"]=seller.Comprehensive
+		context.JSON(http.StatusOK, gin.H{
+			"code" : code,
+			"msg" : e.GetMsg(code),
+			"data":data,
+			//"data":auth.UserId,auth.Username,
+		})
+	}
+}
+//填写/修改收货/发货地址
+func ModifyAddress(context *gin.Context){
+	var buyer table.Buyer
+	_ = context.ShouldBindBodyWith(&buyer,binding.JSON)
+	auth,isExist := models.Find(buyer.BuyerId)
+	if isExist==false{
+		code:=e.ERROR
+		context.JSON(http.StatusOK, gin.H{
+			"code" : code,
+			"msg" : e.GetMsg(code),
+		})
+	}else{
+		code:=e.SUCCESS
+		models.ModifyAddress(auth,buyer.ReceiveAddress,buyer.Name,buyer.ReceiveNumber)
+		context.JSON(http.StatusOK, gin.H{
+			"code" : code,
+			"msg" : e.GetMsg(code),
+			//"data":auth.UserId,auth.Username,
+		})
+	}
+}
+
+
+//填写司机姓名身份证
+func ModifyIdentity(context *gin.Context){
+	var driver table.Driver
+	_=context.ShouldBindBodyWith(&driver,binding.JSON)
+	_,isExist := models.Find(driver.DriverId)
+	if isExist==false{
+		code:=e.ERROR
+		context.JSON(http.StatusOK, gin.H{
+			"code" : code,
+			"msg" : e.GetMsg(code),
+		})
+	}else{
+		code:=e.SUCCESS
+		models.ModifyIdentity(driver.DriverId,driver.Name,driver.Identity)
+		context.JSON(http.StatusOK, gin.H{
+			"code" : code,
+			"msg" : e.GetMsg(code),
+			//"data":auth.UserId,auth.Username,
+		})
+	}
+}
+
+//查看司机信息
+func DriverProfile(context *gin.Context){
+	var auth table.Login
+	_ = context.ShouldBindBodyWith(&auth,binding.JSON)
+	auth,isExist := models.Find(auth.UserId)
+	if isExist==false{
+		code:=e.ERROR
+		context.JSON(http.StatusOK, gin.H{
+			"code" : code,
+			"msg" : e.GetMsg(code),
+		})
+	}else{
+		code:=e.SUCCESS
+		var driver table.Driver
+		models.Db.First(&driver,"driver_id=?",auth.UserId)
+		data := make(map[string]interface{})
+		data["auth"]=auth
+		data["driver"]=driver
 		context.JSON(http.StatusOK, gin.H{
 			"code" : code,
 			"msg" : e.GetMsg(code),

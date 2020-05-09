@@ -17,7 +17,7 @@ type PurchaseBuyer struct{
 }
 
 type GoodsBuyer struct{
-	BuyerId	uint	`json:"Buyer_id"`
+	BuyerId	uint	`json:"buyer_id"`
 	Page 		int		`json:"page"`
 	PageSize	int		`json:"page_size"`
 }
@@ -47,7 +47,7 @@ func PurchaseCommodities(context *gin.Context){
 			"msg":e.GetMsg(code),
 		})
 	}else{
-		code:=e.ERROR
+		code:=e.DISPLAY
 		context.JSON(http.StatusOK,gin.H{
 			"code":code,
 			"msg":"商品库存不足",
@@ -82,7 +82,7 @@ func AllBuyerOrderPay(context *gin.Context){
 	orders:=models.FindBuyerAllOrderPay(order.BuyerId,order.Page,order.PageSize)
 	total:=models.FindBuyerOrderPay(order.BuyerId)
 	if len(orders)==0{
-		code:=e.SUCCESS
+		code:=e.DISPLAY
 		context.JSON(http.StatusOK,gin.H{
 			"code":code,
 			"msg":"用户没有待付款的订单",
@@ -107,7 +107,7 @@ func AllBuyerOrderDeli(context *gin.Context){
 	orders:=models.FindBuyerAllOrderDeliv(order.BuyerId,order.Page,order.PageSize)
 	total:=models.FindBuyerOrderDeli(order.BuyerId)
 	if len(orders)==0{
-		code:=e.SUCCESS
+		code:=e.DISPLAY
 		context.JSON(http.StatusOK,gin.H{
 			"code":code,
 			"msg":"用户没有配送中的订单",
@@ -132,7 +132,7 @@ func AllBuyerOrderComplete(context *gin.Context){
 	orders:=models.FindBuyerAllOrderComplete(order.BuyerId,order.Page,order.PageSize)
 	total:=models.FindBuyerOrderComple(order.BuyerId)
 	if len(orders)==0{
-		code:=e.SUCCESS
+		code:=e.DISPLAY
 		context.JSON(http.StatusOK,gin.H{
 			"code":code,
 			"msg":"用户没有完成的订单",
@@ -162,14 +162,25 @@ func BuyerPay(context *gin.Context){
 }
 //买家确认收货
 func BuyerComplete(context *gin.Context){
-	var order table.Order
+	var order BuyerEvaluation
 	_=context.ShouldBindBodyWith(&order,binding.JSON)
-	models.BuyerComplete(order.OrderId)
-	code:=e.SUCCESS
-	context.JSON(http.StatusOK,gin.H{
-		"code":code,
-		"msg":e.GetMsg(code),
-	})
+	if models.ConfirmAllDistribution(order.OrderId)==1{
+		models.BuyerComplete(order.OrderId)
+		models.AddEvaluation(order.GoodsScore,order.GoodsId,order.SellerId,order.BuyerId,order.Comment)
+		models.BuyerEvaluateSeller(order.SellerScore,order.SellerId)
+		models.BuyerEvaluateDriver(order.DriverScore,order.DriverId)
+		code:=e.SUCCESS
+		context.JSON(http.StatusOK,gin.H{
+			"code":code,
+			"msg":e.GetMsg(code),
+		})
+	}else{
+		code:=e.DISPLAY
+		context.JSON(http.StatusOK,gin.H{
+			"code":code,
+			"msg":"您有尚未确认收货的配送订单",
+		})
+	}
 }
 
 //*****卖家*****\\
@@ -194,14 +205,14 @@ func BuyerSellerNum(context *gin.Context){
 }
 
 
-//查看卖家的配送中订单
+//查看卖家的买家待付款订单
 func AllBuyerSellerPay(context *gin.Context){
 	var order GoodsSeller
 	_=context.ShouldBindBodyWith(&order,binding.JSON)
 	orders:=models.FindSellerAllOrderPay(order.SellerId,order.Page,order.PageSize)
 	total:=models.FindSellerOrderPay(order.SellerId)
 	if len(orders)==0{
-		code:=e.SUCCESS
+		code:=e.DISPLAY
 		context.JSON(http.StatusOK,gin.H{
 			"code":code,
 			"msg":"用户没有待付款的订单",
@@ -226,7 +237,7 @@ func AllBuyerSellerDeli(context *gin.Context){
 	orders:=models.FindSellerAllOrderDeliv(order.SellerId,order.Page,order.PageSize)
 	total:=models.FindSellerOrderDeli(order.SellerId)
 	if len(orders)==0{
-		code:=e.SUCCESS
+		code:=e.DISPLAY
 		context.JSON(http.StatusOK,gin.H{
 			"code":code,
 			"msg":"用户没有配送中的订单",
@@ -251,10 +262,37 @@ func AllBuyerSellerComplete(context *gin.Context){
 	orders:=models.FindSellerAllOrderComplete(order.SellerId,order.Page,order.PageSize)
 	total:=models.FindSellerOrderComple(order.SellerId)
 	if len(orders)==0{
-		code:=e.SUCCESS
+		code:=e.DISPLAY
 		context.JSON(http.StatusOK,gin.H{
 			"code":code,
 			"msg":"用户没有完成的订单",
+		})
+	}else{
+		data:=make(map[string]interface{})
+		data["total"]=total
+		data["orders"]=orders
+		code:=e.SUCCESS
+		context.JSON(http.StatusOK,gin.H{
+			"code":code,
+			"msg":e.GetMsg(code),
+			"data":data,
+		})
+	}
+}
+
+//*****司机*****\\
+
+//司机查看订单
+func DriverFindAllOrder(context *gin.Context){
+	var order GoodsSeller
+	_=context.ShouldBindBodyWith(&order,binding.JSON)
+	orders:=models.DriverFindAllOrder(order.Page,order.PageSize)
+	total:=models.AllOrderNum()
+	if len(orders)==0{
+		code:=e.DISPLAY
+		context.JSON(http.StatusOK,gin.H{
+			"code":code,
+			"msg":"尚未有待配送订单",
 		})
 	}else{
 		data:=make(map[string]interface{})

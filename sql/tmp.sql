@@ -89,6 +89,8 @@ CREATE TABLE `order`(
     `remain_num`int(11) unsigned NOT NULL COMMENT '剩余数量',
     `total_price` int(11) unsigned NOT NULL COMMENT '商品总价格',
     `total_trans_price` int(11) unsigned NOT NULL COMMENT '运输总价格',
+    `price` int(11) unsigned NOT NULL COMMENT '商品单价',
+    `trans_price` int(11) unsigned NOT NULL COMMENT '运输单价',
     `deliver_address` varchar(84) NOT NULL COMMENT'发货地址',
     `receive_address` varchar(84) NOT NULL COMMENT'收货地址',
     `state` int(4) unsigned NOT NULL COMMENT'状态码',
@@ -107,3 +109,32 @@ CREATE TABLE `evaluation`(
     `deleted_at` date,
     PRIMARY KEY(`evaluation_id`)
 )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'评价';
+
+CREATE TABLE `distribution`(
+    `distribution_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+    `buyer_id` int(11) unsigned NOT NULL COMMENT'买家id',
+    `seller_id` int(11) unsigned NOT NULL COMMENT'卖家id',
+    `driver_id` int(11) unsigned NOT NULL COMMENT'司机id',
+    `order_id`int(11) unsigned NOT NULL COMMENT'商品id',
+    `deliver_address` varchar(84) NOT NULL COMMENT'发货地址',
+    `receive_address` varchar(84) NOT NULL COMMENT'收货地址',
+    `num` int(11) unsigned NOT NULL COMMENT '数量',
+    `trans_price` int(11) unsigned NOT NULL COMMENT '运输价格',
+    `name` varchar(30) COMMENT'姓名',
+    `phone_number` varchar(11) NOT NULL COMMENT'手机号',
+    `state` int(4) unsigned NOT NULL COMMENT'状态码',
+    `deleted_at` date,
+    PRIMARY KEY(`distribution_id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'配送';
+
+CREATE TABLE `address`(
+    `address_id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+    `driver_id` int(11) unsigned NOT NULL COMMENT'司机id',
+    `address` varchar(84) COMMENT'地址',
+    `deliver_address` varchar(84) COMMENT'发货地址',
+    `receive_address` varchar(84) COMMENT'收货地址',
+    `lng` varchar(84) COMMENT'经度',
+    `lat` varchar(84) COMMENT'纬度',
+    `deleted_at` date,
+    PRIMARY KEY(`address_id`)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT'地址';

@@ -17,6 +17,8 @@ type BuyerEvaluation struct{
 	Comment  string `json:"comment"`
 	SellerScore uint `json:"seller_score"`
 	DriverScore uint `json:"driver_score"`
+	DistributionId	uint	`json:"distribution_id"`
+	OrderId		uint	`json:"order_id"`
 }
 
 type GoodsEvaluation struct{
@@ -25,19 +27,19 @@ type GoodsEvaluation struct{
 	PageSize	int		`json:"page_size"`
 }
 
-//买家评论商品与卖家
-func BuyerEvaluate(context *gin.Context){
-	var evaluation BuyerEvaluation
-	_=context.ShouldBindBodyWith(&evaluation,binding.JSON)
-	models.AddEvaluation(evaluation.GoodsScore,evaluation.GoodsId,evaluation.SellerId,evaluation.BuyerId,evaluation.Comment)
-	models.BuyerEvaluateSeller(evaluation.SellerScore,evaluation.SellerId)
-	models.BuyerEvaluateDriver(evaluation.DriverScore,evaluation.DriverId)
-	code:=e.SUCCESS
-	context.JSON(http.StatusOK,gin.H{
-		"code":code,
-		"msg":e.GetMsg(code),
-	})
-}
+////买家评论商品与卖家
+//func BuyerEvaluate(context *gin.Context){
+//	var evaluation BuyerEvaluation
+//	_=context.ShouldBindBodyWith(&evaluation,binding.JSON)
+//	models.AddEvaluation(evaluation.GoodsScore,evaluation.GoodsId,evaluation.SellerId,evaluation.BuyerId,evaluation.Comment)
+//	models.BuyerEvaluateSeller(evaluation.SellerScore,evaluation.SellerId)
+//	models.BuyerEvaluateDriver(evaluation.DriverScore,evaluation.DriverId)
+//	code:=e.SUCCESS
+//	context.JSON(http.StatusOK,gin.H{
+//		"code":code,
+//		"msg":e.GetMsg(code),
+//	})
+//}
 //查看商品的评论
 func AllGoodsEvaluation(context *gin.Context){
 	var goodsEvaluation GoodsEvaluation
@@ -45,7 +47,7 @@ func AllGoodsEvaluation(context *gin.Context){
 	goods:=models.FindGoodsEvaluation(goodsEvaluation.GoodsId,goodsEvaluation.Page,goodsEvaluation.PageSize)
 	total:=models.FindGoodsEvaNum(goodsEvaluation.GoodsId)
 	if len(goods)==0{
-		code:=e.SUCCESS
+		code:=e.DISPLAY
 		context.JSON(http.StatusOK,gin.H{
 			"code":code,
 			"msg":"该商品还没有评论",
@@ -62,3 +64,14 @@ func AllGoodsEvaluation(context *gin.Context){
 		})
 	}
 }
+////评论司机
+//func BuyerEvaluateDriver(context *gin.Context){
+//	var evaluation BuyerEvaluation
+//	_=context.ShouldBindBodyWith(&evaluation,binding.JSON)
+//	models.BuyerEvaluateDriver(evaluation.DriverScore,evaluation.DriverId)
+//	code:=e.SUCCESS
+//	context.JSON(http.StatusOK,gin.H{
+//		"code":code,
+//		"msg":e.GetMsg(code),
+//	})
+//}

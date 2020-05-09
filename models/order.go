@@ -21,6 +21,8 @@ func AddOrder(goodsId uint,sellerId uint,buyerId uint,num uint){
 		RemainNum:num,
 		TotalPrice:num*good.Price,
 		TotalTransPrice:num*good.TransPrice,
+		Price:good.Price,
+		TransPrice:good.TransPrice,
 		DeliverAddress:good.DeliverAddress,
 		ReceiveAddress:buyer.ReceiveNumber,
 		State:1})
@@ -113,4 +115,19 @@ func FindSellerAllOrderComplete(sellerId uint,page int,pageSize int)[]table.Orde
 	var orders []table.Order
 	Db.Where("seller_id=? AND state=?",sellerId,3).Limit(pageSize).Offset((page-1)*pageSize).Find(&orders)
 	return orders
+}
+
+
+//----------------driver---------------------------
+//司机查看订单
+func DriverFindAllOrder(page int,pageSize int)[]table.Order{
+	var orders []table.Order
+	Db.Where("state=?",2).Limit(pageSize).Offset((page-1)*pageSize).Find(&orders)
+	return orders
+}
+//所有订单的数量
+func AllOrderNum()int{
+	var total=0
+	Db.Model(&table.Order{}).Where("state=?",3).Count(&total)
+	return total
 }
