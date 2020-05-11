@@ -47,7 +47,7 @@ func PurchaseCommodities(context *gin.Context){
 			"msg":e.GetMsg(code),
 		})
 	}else{
-		code:=e.DISPLAY
+		code:=e.ERROR
 		context.JSON(http.StatusOK,gin.H{
 			"code":code,
 			"msg":"商品库存不足",

@@ -109,3 +109,10 @@ func LowCommodity(goodsId uint){
 	var good table.Goods
 	Db.Where("goods_id=?",goodsId).First(&good).Update("state",0)
 }
+
+//卖家修改价格
+func SellerChangePrice(goodsId uint,price uint,transPrice uint){
+	var good table.Goods
+	Db.Model(&good).Where("goods_id=?",goodsId).Update("price",price)
+	Db.Model(&good).Where("goods_id=?",goodsId).Update("trans_price",transPrice)
+}

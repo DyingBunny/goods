@@ -10,7 +10,7 @@ import (
 )
 
 //司机上传位置
-func DisplayAddress(context *gin.Context){
+func DriverUploadAddress(context *gin.Context){
 	var addressDriver table.Address
 	_=context.ShouldBindBodyWith(&addressDriver,binding.JSON)
 	ip:=context.ClientIP()

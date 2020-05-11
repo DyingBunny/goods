@@ -44,6 +44,18 @@ func ReleaseCommodities(context *gin.Context){
 	}
 }
 
+//卖家修改价格
+func SellerChangePrice(context *gin.Context){
+	var good table.Goods
+	_=context.ShouldBindBodyWith(&good,binding.JSON)
+	models.SellerChangePrice(good.GoodsId,good.Price,good.TransPrice)
+	code:=e.SUCCESS
+	context.JSON(http.StatusOK,gin.H{
+		"code":code,
+		"msg":e.GetMsg(code),
+	})
+}
+
 //查看商品
 func CommoditiesProfile(context *gin.Context){
 	var good table.Goods
@@ -123,7 +135,7 @@ func AllSellerComProLow(context *gin.Context){
 		code:=e.DISPLAY
 		context.JSON(http.StatusOK,gin.H{
 			"code":code,
-			"msg":"该用户尚未发布商品",
+			"msg":"该用户尚未有下架商品",
 		})
 	}else{
 		data:=make(map[string]interface{})
@@ -186,15 +198,4 @@ func ViewItemAsc(context *gin.Context){
 			"data":data,
 		})
 	}
-}
-//卖家主动下架商品
-func LowCommodity(context *gin.Context){
-	var good table.Goods
-	_=context.ShouldBindBodyWith(&good,binding.JSON)
-	models.LowCommodity(good.GoodsId)
-	code:=e.SUCCESS
-	context.JSON(http.StatusOK,gin.H{
-		"code":code,
-		"msg":e.GetMsg(code),
-	})
 }

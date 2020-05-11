@@ -35,13 +35,9 @@ func InitRouter() *gin.Engine{
 	r.POST("/duplicate",v1.Duplicate)
 	//退出登录
 	r.POST("/logout",v1.LogOut)
-	//测试地图
-	r.GET("/display_address",v1.DisplayAddress)
 	api := r.Group("/api/v1")
 	api.Use(jwt.JWT())
 	{
-
-		//-----auth
 
 		//查看买家信息
 		api.POST("/profile",v1.Profile)
@@ -50,7 +46,6 @@ func InitRouter() *gin.Engine{
 		//增加、修改地址
 		api.POST("/modify_address",v1.ModifyAddress)
 
-		//-----goods
 			//买家
 
 		//按照价格降序查看所有已发布的商品
@@ -86,8 +81,8 @@ func InitRouter() *gin.Engine{
 
 		//卖家发布商品
 		api.POST("/release_commodities",v1.ReleaseCommodities)
-		//卖家主动下架商品
-		api.POST("/low_commodity",v1.LowCommodity)
+		//卖家修改价格
+		api.POST("/seller_change_price",v1.SellerChangePrice)
 		//查看一个卖家目前的商品上架与下架数量
 		api.POST("/seller_com_num",v1.SellerComNum)
 		//查看卖家发布的所有上架商品
@@ -104,6 +99,7 @@ func InitRouter() *gin.Engine{
 		api.POST("/all_buyer_seller_complete",v1.AllBuyerSellerComplete)
 
 			//司机
+
 		//查看司机信息
 		api.POST("/driver_profile",v1.DriverProfile)
 		//填写姓名和身份证
@@ -114,9 +110,32 @@ func InitRouter() *gin.Engine{
 		api.POST("/driver_distribute",v1.DriverDistribute)
 		//司机查看自己的配送订单
 		api.POST("/driver_find_distribution",v1.DriverFindDistribution)
+		//司机更新自己的地址
+		api.POST("/driver_upload_address",v1.DriverUploadAddress)
 
-
-
+			//管理员
+		//管理员下架商品
+		api.POST("/admin_low_commodity",v1.AdminLowCommodity)
+		//管理员查看所有上架商品
+		api.POST("/admin_find_all_goods_up",v1.AdminFindAllGoodsUp)
+		//管理员查看所有下架商品
+		api.POST("/admin_find_all_goods_low",v1.AdminFindAllGoodsLow)
+		//管理员查看待付款订单
+		r.POST("/admin_find_all_order_pay",v1.AdminFindAllOrderPay)
+		//管理员查看正在配送订单
+		api.POST("/admin_find_all_order_del",v1.AdminFindAllOrderDel)
+		//管理员查看已完成订单
+		api.POST("/admin_find_all_order_com",v1.AdminFindAllOrderCom)
+		//管理员改变订单状态
+		api.POST("/admin_change_order_state",v1.AdminChangeOrderState)
+		//管理员查看所有配送中的配送订单
+		api.POST("/admin_find_distribution_del",v1.AdminFindDistributionDel)
+		//管理员查看所有已完成的配送订单
+		api.POST("/admin_find_distribution_com",v1.AdminFindDistributionCom)
+		//管理员改变配送订单状态
+		api.POST("/admin_change_distribution_state",v1.AdminChangeDistributionState)
+		//用户信息管理
+		api.POST("/admin_find_all_user",v1.AdminFindAllUser)
 	}
 	return r
 }
