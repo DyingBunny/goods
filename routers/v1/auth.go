@@ -176,7 +176,7 @@ func SellerProfile(context *gin.Context){
 		data["role"]=auth.Role
 		data["deliver_address"]=seller.DeliverAddress
 		data["name"]=seller.Name
-		data["receive_number"]=seller.DeliverNumber
+		data["deliver_number"]=seller.DeliverNumber
 		data["evaluation"]=seller.Evaluation
 		data["count"]=seller.Count
 		data["comprehensive"]=seller.Comprehensive

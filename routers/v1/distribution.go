@@ -16,7 +16,8 @@ type DistributeDriver struct{
 }
 
 type DistributeSellerBuyer struct{
-	OrderId	uint	`json:"order_id"`
+	SellerId	uint	`json:"seller_id"`
+	BuyerId	uint	`json:"buyer_id"`
 	Page 		int		`json:"page"`
 	PageSize	int		`json:"page_size"`
 }
@@ -76,12 +77,28 @@ func DriverFindDistribution(context *gin.Context){
 		})
 	}
 }
-//买家卖家按照订单查看配送订单
-func SellerBuyerFindDistribution(context *gin.Context){
+//买家确认配送订单
+func BuyerConfirmDistribution(context *gin.Context){
+	var distribution BuyerEvaluation
+	_=context.ShouldBindBodyWith(&distribution,binding.JSON)
+	models.ConfirmDistribution(distribution.DistributionId)
+	models.BuyerEvaluateDriver(distribution.DriverScore,distribution.DriverId)
+	if models.ConfirmAllDistribution(distribution.OrderId)==1 {
+		models.BuyerComplete(distribution.OrderId)
+	}
+	code:=e.SUCCESS
+	context.JSON(http.StatusOK,gin.H{
+		"code":code,
+		"msg":e.GetMsg(code),
+	})
+}
+
+//卖家查看司机的配送状态
+func SellerFindDistribution(context *gin.Context){
 	var distribution DistributeSellerBuyer
 	_=context.ShouldBindBodyWith(&distribution,binding.JSON)
-	distributions:=models.SellerBuyerFindDistribution(distribution.OrderId,distribution.Page,distribution.PageSize)
-	total:=models.SellerBuyerFindDistributionNum(distribution.OrderId)
+	distributions:=models.SellerFindDistribution(distribution.SellerId,distribution.Page,distribution.PageSize)
+	total:=models.SellerFindDistributionNum(distribution.SellerId)
 	if len(distributions)==0{
 		code:=e.DISPLAY
 		context.JSON(http.StatusOK,gin.H{
@@ -100,15 +117,76 @@ func SellerBuyerFindDistribution(context *gin.Context){
 		})
 	}
 }
-//买家确认配送订单
-func BuyerConfirmDistribution(context *gin.Context){
-	var distribution BuyerEvaluation
+//卖家查看已完成的配送
+func SellerFindDistributionCom(context *gin.Context){
+	var distribution DistributeSellerBuyer
 	_=context.ShouldBindBodyWith(&distribution,binding.JSON)
-	models.ConfirmDistribution(distribution.DistributionId)
-	models.BuyerEvaluateDriver(distribution.DriverScore,distribution.DriverId)
-	code:=e.SUCCESS
-	context.JSON(http.StatusOK,gin.H{
-		"code":code,
-		"msg":e.GetMsg(code),
-	})
+	distributions:=models.SellerFindDistributionCom(distribution.SellerId,distribution.Page,distribution.PageSize)
+	total:=models.SellerFindDistributionComNum(distribution.SellerId)
+	if len(distributions)==0{
+		code:=e.DISPLAY
+		context.JSON(http.StatusOK,gin.H{
+			"code":code,
+			"msg":"没有配送中的订单",
+		})
+	}else{
+		data:=make(map[string]interface{})
+		data["total"]=total
+		data["distributions"]=distributions
+		code:=e.SUCCESS
+		context.JSON(http.StatusOK,gin.H{
+			"code":code,
+			"msg":e.GetMsg(code),
+			"data":data,
+		})
+	}
+}
+
+//买家查看司机的配送状态
+func BuyerFindDistribution(context *gin.Context){
+	var distribution DistributeSellerBuyer
+	_=context.ShouldBindBodyWith(&distribution,binding.JSON)
+	distributions:=models.BuyerFindDistribution(distribution.BuyerId,distribution.Page,distribution.PageSize)
+	total:=models.BuyerFindDistributionNum(distribution.BuyerId)
+	if len(distributions)==0{
+		code:=e.DISPLAY
+		context.JSON(http.StatusOK,gin.H{
+			"code":code,
+			"msg":"没有配送中的订单",
+		})
+	}else{
+		data:=make(map[string]interface{})
+		data["total"]=total
+		data["distributions"]=distributions
+		code:=e.SUCCESS
+		context.JSON(http.StatusOK,gin.H{
+			"code":code,
+			"msg":e.GetMsg(code),
+			"data":data,
+		})
+	}
+}
+//买家查看已完成的配送
+func BuyerFindDistributionCom(context *gin.Context){
+	var distribution DistributeSellerBuyer
+	_=context.ShouldBindBodyWith(&distribution,binding.JSON)
+	distributions:=models.BuyerFindDistributionCom(distribution.BuyerId,distribution.Page,distribution.PageSize)
+	total:=models.BuyerFindDistributionComNum(distribution.BuyerId)
+	if len(distributions)==0{
+		code:=e.DISPLAY
+		context.JSON(http.StatusOK,gin.H{
+			"code":code,
+			"msg":"没有配送中的订单",
+		})
+	}else{
+		data:=make(map[string]interface{})
+		data["total"]=total
+		data["distributions"]=distributions
+		code:=e.SUCCESS
+		context.JSON(http.StatusOK,gin.H{
+			"code":code,
+			"msg":e.GetMsg(code),
+			"data":data,
+		})
+	}
 }

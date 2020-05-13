@@ -64,17 +64,15 @@ func InitRouter() *gin.Engine{
 		api.POST("/all_buyer_order_complete",v1.AllBuyerOrderComplete)
 		//买家订单付款
 		api.POST("/buyer_pay",v1.BuyerPay)
-		//买家确认收货
-		api.POST("/buyer_complete",v1.BuyerComplete)
-		////买家评论商品和卖家
-		//api.POST("/buyer_evaluate",v1.BuyerEvaluate)
-		////买家评论司机
-		//api.POST("/buyer_evaluate_driver",v1.BuyerEvaluateDriver)
+		//买家评论商品和卖家
+		api.POST("/buyer_evaluate_seller_goods",v1.BuyerEvaluateSellerGoods)
 		//查看商品的评价
 		api.POST("/all_goods_evaluation",v1.AllGoodsEvaluation)
-		//买家卖家按照订单查看配送订单
-		api.POST("/seller_buyer_find_distribution",v1.SellerBuyerFindDistribution)
-		//买家确认配送订单
+		//买家查看司机的配送状态
+		api.POST("/buyer_find_distribution",v1.BuyerFindDistribution)
+		//买家查看已完成的配送
+		api.POST("/buyer_find_distribution_com",v1.BuyerFindDistributionCom)
+		//买家确认司机配送送达并评论司机
 		api.POST("/buyer_confirm_distribution",v1.BuyerConfirmDistribution)
 
 			//卖家
@@ -93,10 +91,14 @@ func InitRouter() *gin.Engine{
 		api.POST("/buyer_seller_num",v1.BuyerSellerNum)
 		//查看卖家的待买家付款订单
 		api.POST("/all_buyer_seller_pay",v1.AllBuyerSellerPay)
-		//查看卖家的配送中订单
+		//查看卖家的待配送订单
 		api.POST("/all_buyer_seller_deli",v1.AllBuyerSellerDeli)
 		//查看卖家的已完成订单
 		api.POST("/all_buyer_seller_complete",v1.AllBuyerSellerComplete)
+		//卖家查看司机的配送状态
+		api.POST("/seller_find_distribution",v1.SellerFindDistribution)
+		//卖家查看已完成的配送
+		api.POST("/seller_find_distribution_com",v1.SellerFindDistributionCom)
 
 			//司机
 

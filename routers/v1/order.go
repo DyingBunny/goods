@@ -160,27 +160,17 @@ func BuyerPay(context *gin.Context){
 		"msg":e.GetMsg(code),
 	})
 }
-//买家确认收货
-func BuyerComplete(context *gin.Context){
+//买家评论商品和卖家
+func BuyerEvaluateSellerGoods(context *gin.Context){
 	var order BuyerEvaluation
 	_=context.ShouldBindBodyWith(&order,binding.JSON)
-	if models.ConfirmAllDistribution(order.OrderId)==1{
-		models.BuyerComplete(order.OrderId)
-		models.AddEvaluation(order.GoodsScore,order.GoodsId,order.SellerId,order.BuyerId,order.Comment)
-		models.BuyerEvaluateSeller(order.SellerScore,order.SellerId)
-		models.BuyerEvaluateDriver(order.DriverScore,order.DriverId)
-		code:=e.SUCCESS
-		context.JSON(http.StatusOK,gin.H{
-			"code":code,
-			"msg":e.GetMsg(code),
-		})
-	}else{
-		code:=e.DISPLAY
-		context.JSON(http.StatusOK,gin.H{
-			"code":code,
-			"msg":"您有尚未确认收货的配送订单",
-		})
-	}
+	models.AddEvaluation(order.GoodsScore,order.GoodsId,order.SellerId,order.BuyerId,order.Comment)
+	models.BuyerEvaluateSeller(order.SellerScore,order.SellerId)
+	code:=e.SUCCESS
+	context.JSON(http.StatusOK,gin.H{
+		"code":code,
+		"msg":e.GetMsg(code),
+	})
 }
 
 //*****卖家*****\\
@@ -191,7 +181,7 @@ func BuyerSellerNum(context *gin.Context){
 	_=context.ShouldBindBodyWith(&order,binding.JSON)
 	one:=models.FindSellerOrderPay(order.SellerId)
 	two:=models.FindSellerOrderDeli(order.SellerId)
-	three:=models.FindBuyerOrderComple(order.BuyerId)
+	three:=models.FindSellerOrderComple(order.BuyerId)
 	data:=make(map[string]interface{})
 	data["to_be_paid"]=one
 	data["to_be_delivered"]=two
@@ -230,7 +220,7 @@ func AllBuyerSellerPay(context *gin.Context){
 	}
 }
 
-//查看卖家的配送中订单
+//查看卖家的待配送订单
 func AllBuyerSellerDeli(context *gin.Context){
 	var order GoodsSeller
 	_=context.ShouldBindBodyWith(&order,binding.JSON)
@@ -240,7 +230,7 @@ func AllBuyerSellerDeli(context *gin.Context){
 		code:=e.DISPLAY
 		context.JSON(http.StatusOK,gin.H{
 			"code":code,
-			"msg":"用户没有配送中的订单",
+			"msg":"用户没有待配送的订单",
 		})
 	}else{
 		data:=make(map[string]interface{})
