@@ -123,7 +123,7 @@ func InitRouter() *gin.Engine{
 		//管理员查看所有下架商品
 		api.POST("/admin_find_all_goods_low",v1.AdminFindAllGoodsLow)
 		//管理员查看待付款订单
-		r.POST("/admin_find_all_order_pay",v1.AdminFindAllOrderPay)
+		api.POST("/admin_find_all_order_pay",v1.AdminFindAllOrderPay)
 		//管理员查看正在配送订单
 		api.POST("/admin_find_all_order_del",v1.AdminFindAllOrderDel)
 		//管理员查看已完成订单
